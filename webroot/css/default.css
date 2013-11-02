@@ -1,0 +1,359 @@
+@font-face {
+    font-family: 'DroidSansRegular';
+    src: url('fonts/droidsans.eot');
+    src: url('fonts/droidsans.eot') format('embedded-opentype'),
+         url('fonts/droidsans.woff') format('woff'),
+         url('fonts/droidsans.ttf') format('truetype'),
+         url('fonts/droidsans.svg#DroidSansRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'PlayfairDisplayRegular';
+    src: url('fonts/playfairdisplay.eot');
+    src: url('fonts/playfairdisplay.eot') format('embedded-opentype'),
+         url('fonts/playfairdisplay.woff') format('woff'),
+         url('fonts/playfairdisplay.ttf') format('truetype'),
+         url('fonts/playfairdisplay.svg#PlayfairDisplayRegular') format('svg');
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	background: #fdfdfe repeat;
+    font: normal 16px/1.4 'DroidSansRegular';
+    margin: 0;
+    padding: 0; 
+}
+
+html {
+	background: none;
+	margin:0;
+	padding:0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+#container-body {
+	margin: 0 auto;
+	max-width: 960px;
+	position: relative;
+	width: 100%;
+}
+
+#footer {
+	border-bottom: 4px solid #cccccc;
+	margin: 0 auto;
+	margin-top: 1.5em;
+	max-width: 960px;
+	padding: 0;
+	position: relative;
+	text-align: left;
+	width: 100%;
+}
+
+	#footer .columns {
+		padding-top: 1.5em;
+	}
+
+	#footer ul {
+		padding: 1em;
+	}
+
+	#footer ul li {
+		list-style: none
+	}
+
+	#footer ul li a, #footer ul li span {
+		color: #505050;
+		font-family: 'Helvetica';
+		font-size: 0.875em;
+		font-weight: normal;
+		margin-right: 1em;
+	}
+
+#logo {
+	text-align: center;
+}
+
+#slide {
+	margin-top: 1.5em;
+}
+
+.articles {
+	background: #141414;
+	margin-bottom: 1.5em;
+	max-height: 448px;
+	padding: 1.5em;
+	width: 100%;
+}
+
+.articles .arts {
+	float: left;
+	height: 400px;
+	overflow: hidden;
+	position: relative;
+	width: 72.5%;
+}
+
+.art {
+	width: 100%;
+	margin-bottom: 1.5em
+}
+
+.art:nth-child(6) {
+	margin-bottom: 0;
+}
+
+	.art .image {
+		border: 3px solid #fff;
+		float: left;
+		width: 21%;
+	}
+
+		.art .image img {
+			width: 100%;
+		}
+
+	.art .content {
+		float: right;
+		height: 115px;
+		width: 77%;
+	}
+
+		.art .content h2 {
+			color: #fff;
+			font-family: 'DroidSansRegular';
+			font-size: 1.125em;
+			font-weight: normal;
+			margin-bottom: 0.5em;
+			margin-top: -5px;
+		}
+
+		.art .content .editor {
+			background: url('../img/editor.png') no-repeat center left;
+			color: #f47321;
+			display: block;
+			margin-bottom: 0.5em;
+			padding-left: 1.5em;
+		}
+
+		.art .content .text {
+			font-size: 0.875em;
+		}
+
+		.art .content .text p {
+			color: #fff;
+			line-height: 1.4;
+		}
+
+.articles .pub {
+	float: right;
+	width: 24.5%;
+}
+
+	.articles .pub .image {
+		margin-bottom: 1.5em;
+		width: 100%;
+	}
+
+.clear {
+	clear: both;
+}
+
+.editions {
+	margin-top: 1.5em !important;
+}
+
+.editions .edition {
+	float: left;
+}
+
+.edition-title h1, .article-title span {
+	color: #f47321;
+	font-family: 'PlayfairDisplayRegular';
+	text-align: center;
+	text-rendering: geometricPrecision;
+}
+
+.edition-title h1 {
+	font-size: 3.5em;
+}
+
+.article-title span {
+	font-size: 3em;
+	font-weight: bold;
+}
+
+.galeries {
+	background: #141414;
+	margin-bottom: 1.5em;
+	padding: 1.5em;
+	width: 100%;
+}
+
+	.galeries .gal {
+		float: left;
+		overflow: hidden;
+		position: relative;
+		width: 72.5%;
+	}
+
+		.galeries .gal .columns {
+			margin-bottom: 1em;
+		}
+
+		.galeries .gal .image {
+			background: #fff;
+			padding: 0.25em;
+		}
+
+			.galeries .gal .image .text {
+				margin-top: 0.5em;
+			}
+
+			.galeries .gal .image .text h4, .galeries .gal .image .text a  {
+				line-height: 2em;
+			}
+
+			.galeries .gal .image .text h4 {
+				float: left;
+				font-size: 0.75em;
+				font-weight: normal;
+			}
+
+			.galeries .gal .image .text a {
+				background: #f47321;
+				border-radius: 1em;
+				color: #fff;
+				display: block;
+				float: right;
+				font-size: 0.75em;
+				padding: 0 0.5em;
+				width: auto;
+			}
+
+	.galeries .pub {
+		float: right;
+		width: 24.5%;
+	}
+
+		.galeries .pub .image {
+			width: 100%;
+		}
+
+.orbit-container .orbit-prev, .orbit-container .orbit-next {
+	background-color: rgba(0, 0, 0, 0);
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	width: 60px;
+}
+
+.orbit-container:hover .orbit-prev, .orbit-container:hover .orbit-next {
+	background-color: rgba(0, 0, 0, 0.6)
+}
+
+.orbit-container .orbit-prev > span, .orbit-container .orbit-next > span {
+	display: none;
+}
+
+.orbit-container .orbit-prev > span {
+	border-right-color: #cdcdcd;
+	margin-left: 2px;
+}
+
+.orbit-container .orbit-next > span {
+	border-left-color: #cdcdcd;
+	margin-left: -6px;
+}
+
+.orbit-container:hover .orbit-prev > span, .orbit-container:hover .orbit-next > span {
+	display: block;
+}
+
+.orbit-container .orbit-prev {
+	left: 1.5em;
+}
+
+.orbit-container .orbit-next {
+	right: 1.5em;
+}
+
+.orbit-container .orbit-timer {
+	display: none;
+}
+
+.pub-horizontal {
+	max-width: 960px;
+	width: 100%;
+}
+
+.social {
+	margin: 0 auto;
+	max-width: 960px;
+	text-align: right;
+}
+
+	.social img {
+		margin-right: 0.5em;
+	}
+
+.top-bar {
+	background: transparent;
+	margin: 0 auto;
+	max-width: 960px;
+}
+
+.top-bar-section ul {
+	background: transparent;
+}
+
+.top-bar-section li a:not(.button) {
+	background: transparent;
+	font-family: 'PlayfairDisplayRegular';
+	color: #8c8c8c;
+	font-size: 1.0625em;
+	padding: 0 12px;
+	text-align: center;
+}
+
+.top-bar-section li a:not(.button):hover {
+	background: transparent;
+	color: #f47321;
+}
+
+.top-bar.expanded .top-bar-section li a:not(.button) {
+	border-top: 1px dotted #cdcdcd;
+	color: #fff;
+	line-height: 45px;
+}
+
+.top-bar.expanded .top-bar-section li a:not(.button):hover {
+	background: #cc621e;
+}
+
+.top-bar.expanded .title-area, .top-bar .title-area, .top-bar.expanded ul {
+	background: #f47321;
+}
+
+.top-bar.expanded .toggle-topbar a {
+	color: #fff;
+}
+
+.top-bar.expanded .toggle-topbar a span {
+	-webkit-box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
+	box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
+}
+
+.transition, .orbit-container .orbit-prev, .orbit-container .orbit-next, .orbit-container .orbit-prev > span, .orbit-container .orbit-next > span {
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}

@@ -1,0 +1,86 @@
+2013-10-01 02:40:57 Error: [MissingPluginException] Plugin DebugKit could not be found.
+Exception Attributes: array (
+  'plugin' => 'DebugKit',
+)
+Stack Trace:
+#0 C:\wamp\www\alice\Config\bootstrap.php(75): CakePlugin::load('DebugKit')
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\Configure.php(94): include('C:\wamp\www\ali...')
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\bootstrap.php(171): Configure::bootstrap(true)
+#3 C:\wamp\www\alice\webroot\index.php(96): include('C:\wamp\www\cak...')
+#4 {main}
+2013-10-01 02:42:10 Error: [MissingControllerException] Controller class HomeController could not be found.
+Exception Attributes: array (
+  'class' => 'HomeController',
+  'plugin' => NULL,
+)
+Request URL: /alice/
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-01 02:46:30 Error: [MissingViewException] View file "C:\wamp\www\alice\View\Home\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\alice\\View\\Home\\index.ctp',
+)
+Request URL: /alice/
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-10-01 04:27:38 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\alice\View\Elements\header.ctp, line 29]
+2013-10-01 04:27:38 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /alice/
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 29, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\ali...', 29, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-02 03:33:26 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/anuncio1.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-02 03:33:47 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/anuncio1.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-05 05:34:56 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/pub2.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-05 05:34:56 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/pub1.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-12 03:00:05 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/galery.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
