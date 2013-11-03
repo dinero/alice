@@ -322,6 +322,7 @@ ul {
 .social {
 	margin: 0 auto;
 	max-width: 960px;
+	padding: 0.5em;
 	text-align: right;
 }
 

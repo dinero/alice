@@ -438,3 +438,12 @@ Request URL: /alice/config.xml
 Stack Trace:
 #0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-11-03 04:20:54 Error: [MissingControllerException] Controller class Config.xmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Config.xmlController',
+  'plugin' => NULL,
+)
+Request URL: /alice/config.xml
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
