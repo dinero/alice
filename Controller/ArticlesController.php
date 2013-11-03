@@ -7,5 +7,13 @@ App::uses('AppController', 'Controller');
  */
 class ArticlesController extends AppController {
 
+	public function index() {
+
+	}
+
+	public function view() {
+		
+	}
+
 
 }
