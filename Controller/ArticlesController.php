@@ -15,5 +15,9 @@ class ArticlesController extends AppController {
 		
 	}
 
+	public function tumama() {
+		
+	}
+
 
 }
