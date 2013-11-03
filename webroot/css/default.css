@@ -83,7 +83,7 @@ ul {
 	text-align: center;
 }
 
-#slide {
+#slide, #contentBody {
 	margin-top: 1.5em;
 }
 
@@ -441,6 +441,7 @@ ul {
 
 	.galeries .pub {
 		padding-right: 1.5em;
+		text-align: center;
 		width: 100%;
 	}
 }

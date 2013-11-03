@@ -12,7 +12,9 @@ class ArticlesController extends AppController {
 	}
 
 	public function view() {
-		
+
+		$this->layout = 'into';
+
 	}
 
 
