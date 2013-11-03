@@ -7,6 +7,9 @@
 			    		'/files/image.png'
 			    	); ?>
 	    		</div>
+	    		<div class="edition-title">
+	    			<h2>Titulo del articulo</h2>
+	    		</div>
 	    	</a>
 	  	</li>
 	  	<li>		
@@ -16,13 +19,14 @@
 			    		'/files/image.png'
 			    	); ?>
 	    		</div>
+	    		<div class="edition-title">
+	    			<h2>Titulo del articulo</h2>
+	    		</div>
 	    	</a>
 	  	</li>
 	</ul>
 </div>
-	<div class="edition-title">
-		<h1>Septiembre 2013</h1>
-	</div>
+
 <div id="container-body">
 	<div class="pub-horizontal">
 		<?php echo $this->Html->image(
@@ -169,21 +173,21 @@
     	); ?>
 	</div>
 	<div class="editions row">
-		<div class="large-4 columns edition">
+		<div class="large-4 small-4 columns edition">
 			<a href="">
 				<?php echo $this->Html->image(
 		    		'/files/edition.jpg'
 		    	); ?>
 			</a>
 		</div>
-		<div class="large-4 columns edition">
+		<div class="large-4 small-4 columns edition">
 			<a href="">
 				<?php echo $this->Html->image(
 		    		'/files/edition.jpg'
 		    	); ?>
 			</a>
 		</div>
-		<div class="large-4 columns edition">
+		<div class="large-4 small-4 columns edition">
 			<a href="">
 				<?php echo $this->Html->image(
 		    		'/files/edition.jpg'

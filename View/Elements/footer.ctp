@@ -27,6 +27,17 @@
 		<li>
 			<?php
 			echo $this->Html->link(
+				'Ediciones Anteriores',
+				array(
+					'controller' => '',
+					'action' => ''
+				)
+			);
+			?>
+		</li>
+		<li>
+			<?php
+			echo $this->Html->link(
 				'Galerías de Fotos',
 				array(
 					'controller' => '',
@@ -155,3 +166,4 @@
 		</li>
 	</ul>
 </div>
+<div class="clear"></div>

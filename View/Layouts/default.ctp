@@ -58,6 +58,14 @@
 		<div id="footer">
 			<?php echo $this->element('footer'); ?>
 		</div>
+		<aside class="logoPiggy">
+			Dise&ntilde;o y Desarrollo
+			<?php
+			echo $this->Html->image(
+				'logoPiggy.png'
+			);
+			?>
+		</aside>
 	</div>
 	<?php //echo $this->element('sql_dump'); ?>
 	<script>

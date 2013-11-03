@@ -40,13 +40,15 @@ ul {
 
 #container-body {
 	margin: 0 auto;
+	margin-top: 1.5em;
 	max-width: 960px;
 	position: relative;
 	width: 100%;
 }
 
 #footer {
-	border-bottom: 4px solid #cccccc;
+	border-top: 4px solid #f47321;
+	border-bottom: 4px solid #f47321;
 	margin: 0 auto;
 	margin-top: 1.5em;
 	max-width: 960px;
@@ -62,6 +64,7 @@ ul {
 
 	#footer ul {
 		padding: 1em;
+		padding-left: 0;
 	}
 
 	#footer ul li {
@@ -87,7 +90,6 @@ ul {
 .articles {
 	background: #141414;
 	margin-bottom: 1.5em;
-	max-height: 448px;
 	padding: 1.5em;
 	width: 100%;
 }
@@ -96,6 +98,7 @@ ul {
 	float: left;
 	height: 400px;
 	overflow: hidden;
+	padding-right: 1em;
 	position: relative;
 	width: 72.5%;
 }
@@ -173,15 +176,20 @@ ul {
 	float: left;
 }
 
-.edition-title h1, .article-title span {
+	.editions .edition img {
+		width: 100%;
+	}
+
+.edition-title h2, .article-title span {
 	color: #f47321;
 	font-family: 'PlayfairDisplayRegular';
 	text-align: center;
 	text-rendering: geometricPrecision;
 }
 
-.edition-title h1 {
-	font-size: 3.5em;
+.edition-title h2 {
+	font-size: 2.5em;
+	margin-bottom: 0.2em;
 }
 
 .article-title span {
@@ -246,6 +254,14 @@ ul {
 			width: 100%;
 		}
 
+.logoPiggy {
+	font-size: 0.875em;
+	margin: 0 auto;
+	max-width: 960px;
+	padding: 1em 0;
+	text-align: right;
+}
+
 .orbit-container .orbit-prev, .orbit-container .orbit-next {
 	background-color: rgba(0, 0, 0, 0);
 	-webkit-border-radius: 50%;
@@ -286,6 +302,16 @@ ul {
 
 .orbit-container .orbit-timer {
 	display: none;
+}
+
+.ps-container .ps-scrollbar-x-rail {
+	display: none;
+}
+
+.ps-container .ps-scrollbar-y-rail {
+	background: #fff;
+	opacity: 0.6 !important;
+	filter: alpha(opacity = 60) !important;
 }
 
 .pub-horizontal {
@@ -356,4 +382,82 @@ ul {
 	-ms-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
+}
+
+@media only screen and (max-width: 768px) {
+	.art .content .text {
+		display: none;
+	}
+
+	.galeries .gal {
+		width: 75%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.articles .arts {
+		width: 100%;
+	}
+
+		.art .image {
+			width: 40%;
+		}
+
+		.art .content {
+			width: 50%;
+		}
+
+			.art .content h2 {
+				margin-top: 0; 	
+			}
+
+	.articles .pub {
+		margin-top: 1.5em;
+		width: 100%;
+	}
+
+		.articles .pub .image {
+			float: left;
+			padding: 0.75em;
+			width: 50%;
+		}
+
+	.edition-title h2 {
+		font-size: 2em;
+	}
+
+	.editions .edition {
+		margin-bottom: 1.5em;
+	}
+
+	.galeries {
+		padding-right: 0;
+	}
+
+		.galeries .gal {
+			width: 100%;
+		}
+
+	.galeries .pub {
+		padding-right: 1.5em;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.editions .edition {
+		width: 100%;
+	}
+
+	.galeries .gal .columns {
+		width: 100%;
+	}
+
+	.galeries .gal .columns img {
+		width: 100%;
+	}
+
+	.galeries .pub img {
+		width: 100%;
+	}
 }
