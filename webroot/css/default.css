@@ -244,6 +244,84 @@ ul {
 	margin-bottom: 0.2em;
 }
 
+.editTop {
+	background: #f1f1f1;
+	padding: 1.5em 0.75em;
+}
+
+	.editTop .largeL {
+		width: 28.5%;
+	}
+
+		.editTop .largeL img {
+			width: 100%;
+		}
+
+	.editTop .largeR {
+		width: 71.5%;
+	}
+
+	.editTop #slide {
+		margin-top: 0;
+	}
+
+.edit {
+	margin-top: 1.5em !important;
+}
+
+	.edit .image {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+	}
+
+		.edit .image img {
+			width: 100%;
+		}
+
+		.edit:hover .image img {
+			-webkit-transform: scale(1.2);
+			-moz-transform: scale(1.2);
+			-ms-transform: scale(1.2);
+			-o-transform: scale(1.2);
+			transform: scale(1.2);
+		}
+
+		.edit .image img, .edit .image .text {
+			-webkit-transition: all 0.5s ease;
+			-moz-transition: all 0.5s ease;
+			-ms-transition: all 0.5s ease;
+			-o-transition: all 0.5s ease;
+			transition: all 0.5s ease;
+		}
+
+		.edit .image .text {
+			background: rgba(0,0,0,0.6);
+			opacity:0;
+			height: 100%;
+			left: 0;
+			overflow: hidden;
+			padding: 1.5em;
+			position: absolute;
+			text-align: center;
+			top: 0;
+			width: 100%;
+		}
+
+		.edit:hover .image .text {
+			opacity:1;
+		}
+
+		.edit .image .text h3 {
+			display: inline;
+			color: #fff;
+			font-family: 'PlayfairDisplayRegular';
+			font-size: 2.8em;
+		}
+.editTop .edit {
+	margin-top: 0 !important;
+}
+
 .article-title span {
 	font-size: 3em;
 	font-weight: bold;
@@ -583,9 +661,19 @@ li.otherB:last-child {}
 	transition: all 0.5s ease;
 }
 
+@media only screen and (max-width: 1024px) {
+	.edit .image .text h3 {
+		font-size: 2em;
+	}
+}
+
 @media only screen and (max-width: 768px) {
 	.art .content .text {
 		display: none;
+	}
+
+	.edit {
+		width: 33.3333%;
 	}
 
 	.galeries .gal {
@@ -595,10 +683,6 @@ li.otherB:last-child {}
 	.other .image, .other .text {
 		width: 100%;
 	}
-}
-
-@media only screen and (max-width: 327px) {
-
 }
 
 @media only screen and (max-width: 480px) {
@@ -639,6 +723,22 @@ li.otherB:last-child {}
 
 	.asideR {
 		padding-left: 0;
+	}
+
+	.edit {
+		width: 50%;
+	}
+
+	.edit .image .text h3 {
+		font-size: 2em;
+	}
+
+	.editTop .edit .image .text {
+		padding: 1em;
+	}
+
+	.editTop .edit .image .text h3 {
+		font-size: 0.8em;
 	}
 
 	.edition-title h2 {
@@ -709,6 +809,20 @@ li.otherB:last-child {}
 		margin-top: 0;
 	}
 
+	.edit {
+		padding: 1.5em;
+		width: 100%;
+	}
+
+	.edit .image .text h3, .editTop .edit .image .text h3 {
+		font-size: 3em;
+	}
+
+	.editTop .edit {
+		margin-bottom: 1.5em;
+		padding: 0;
+	}
+
 	.editions .edition {
 		width: 100%;
 	}
@@ -722,6 +836,10 @@ li.otherB:last-child {}
 	}
 
 	.galeries .pub img {
+		width: 100%;
+	}
+
+	.editTop .largeL, .editTop .largeR {
 		width: 100%;
 	}
 

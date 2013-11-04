@@ -7,10 +7,6 @@ App::uses('AppController', 'Controller');
  */
 class ArticlesController extends AppController {
 
-	public $helpers = array(
-		'Form'
-	);
-
 	public function index() {
 
 	}
@@ -18,6 +14,12 @@ class ArticlesController extends AppController {
 	public function view() {
 
 		$this->layout = 'into';
+
+		$this->set(
+			array(
+				'title_for_section' => 'Titulo del articulo'
+			)
+		);
 
 	}
 

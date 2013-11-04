@@ -63,7 +63,7 @@
 		</div>
 		<div class="titleTop">
 			<div class="row">
-				<h2>Titulo del articulo</h2>
+				<h2><?php echo $title_for_section; ?></h2>
 				<?php
 				echo $this->Form->create(
 					false,
