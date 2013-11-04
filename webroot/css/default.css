@@ -47,10 +47,8 @@ ul {
 }
 
 #footer {
-	border-top: 4px solid #f47321;
 	border-bottom: 4px solid #f47321;
 	margin: 0 auto;
-	margin-top: 1.5em;
 	max-width: 960px;
 	padding: 0;
 	position: relative;
@@ -83,8 +81,35 @@ ul {
 	text-align: center;
 }
 
-#slide, #contentBody {
+#slide, #contentBody, .imageInto {
 	margin-top: 1.5em;
+}
+
+.artAuthor {
+	background: #f47321;
+	float: right;
+	height: 50px;
+}
+
+.artText {
+	font-size: 1.125em;
+	margin-top: 1.25em;
+	text-align: justify;
+}
+
+	.artAuthor span {
+		color: #fff;
+		font-family: 'PlayfairDisplayRegular';
+		font-size: 1.25em;
+		font-weight: bold;
+		line-height: 50px;
+		padding: 0 1em;
+	}
+
+.articleInto {
+	border-right: 1px dotted #cdcdcd;
+	padding-left: 0;
+	padding-right: 1.5em;
 }
 
 .articles {
@@ -163,6 +188,33 @@ ul {
 		margin-bottom: 1.5em;
 		width: 100%;
 	}
+
+.asideR {
+	padding-left: 1.5em;
+	padding-right: 0; 
+}
+
+.asideB {
+	background: #f1f1f1;
+	margin-top: 1.5em;
+	width: 100%;
+}
+
+	.asideB .title {
+		text-align: center;
+		margin-top: 1.5em;
+	}
+
+	.asideB .content {
+		border-left: 2px solid #fff;
+		margin: 1.5em 0;
+	}
+
+		.asideB .title span {
+			font-family: 'PlayfairDisplayRegular';
+			font-size: 1.8em;
+			font-weight: bold;
+		}
 
 .clear {
 	clear: both;
@@ -254,6 +306,19 @@ ul {
 			width: 100%;
 		}
 
+.intro {
+	font-family: 'PlayfairDisplayRegular';
+	font-size: 2em;
+	font-weight: bold;
+	margin-top: 0.75em;
+	text-align: center;
+}
+
+.linea {
+	border-top: 4px solid #f47321;
+	margin-top: 1.5em;
+}
+
 .logoPiggy {
 	font-size: 0.875em;
 	margin: 0 auto;
@@ -304,6 +369,62 @@ ul {
 	display: none;
 }
 
+.otherArt {
+	background: #f1f1f1;
+	padding: 1.5em;
+}
+
+	.otherArt .title {
+		display: block;
+		font-family: 'PlayfairDisplayRegular';
+		font-size: 1.125em;
+		font-weight: bold;
+		text-align: center;
+	}
+
+.other {
+	float: left;
+	padding: 1.5em 0;
+	border-bottom: 2px solid #fff;
+}
+.other:last-child {
+	border: 0;
+	padding-bottom: 0;
+}
+
+	.other .image {
+		float: left;
+		width: 38%;
+	}
+
+	.other .text {
+		float: right;
+		width: 55%;
+	}
+
+		.other .text h4, li.otherB .title h4 {
+			color: #9f9e9e;
+			font-family: 'PlayfairDisplayRegular';
+			font-size: 1em;
+		}
+
+		.other:hover .text h4, li.otherB:hover .title h4 {
+			color: #707070;	
+		}
+
+li.otherB {
+	float: left;
+	list-style: none;
+	padding-right: 0.75em;
+	padding-left: 0.75em;
+	width: 20%;
+}
+li.otherB:last-child {}
+
+	li.otherB .title h4 {
+		margin-bottom: 0;
+	}
+
 .ps-container .ps-scrollbar-x-rail {
 	display: none;
 }
@@ -319,6 +440,67 @@ ul {
 	width: 100%;
 }
 
+.pubIntoH {
+	margin-top: 1.5em;
+	width: 100%;
+}
+
+	.pubIntoH img {
+		width: 100%;
+	}
+
+.public, .public img {
+	width: 100%;
+}
+
+.public img {
+	margin-top: 1.5em;
+}
+
+.searchForm {
+	float: right;
+	margin: 0;
+	width: 330px;
+}
+
+.searchForm input {
+	float: right;
+	margin: 0;
+}
+
+.searchForm .inputSearch {
+	background: #f99351;
+	border: 0;
+	height: 50px;
+	width: 280px;
+}
+
+.share {
+	float: right;
+}
+
+.share .fb-like, .share .twitter {
+	float: right;
+	height: 50px;
+	padding: 15px 1em;
+	float: left;
+}
+
+.share .fb-like {
+	background: #1b47a1;
+}
+
+.share .twitter {
+	background: #4ec0fc;
+}
+
+.inputSearch::-webkit-input-placeholder {
+    color:    #fff;
+}
+.inputSearch:-moz-placeholder {
+    color:    #fff;
+}
+
 .social {
 	margin: 0 auto;
 	max-width: 960px;
@@ -329,6 +511,22 @@ ul {
 	.social img {
 		margin-right: 0.5em;
 	}
+
+.titleTop {
+	background: #f47321;
+	max-height: auto;
+	margin-top: 1.5em;
+	width: 100%;
+}
+
+	.titleTop h2 {
+		color: #fff;
+		float: left;
+		font-family: 'PlayfairDisplayRegular';
+		font-size: 1.5em;
+		line-height: 50px;
+		margin: 0;
+	} 
 
 .top-bar {
 	background: transparent;
@@ -393,6 +591,14 @@ ul {
 	.galeries .gal {
 		width: 75%;
 	}
+
+	.other .image, .other .text {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 327px) {
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -412,6 +618,10 @@ ul {
 				margin-top: 0; 	
 			}
 
+	.articleInto {
+		padding-right: 0;
+	}
+
 	.articles .pub {
 		margin-top: 1.5em;
 		width: 100%;
@@ -422,6 +632,14 @@ ul {
 			padding: 0.75em;
 			width: 50%;
 		}
+
+	.asideB .title span, .otherArt .title {
+		font-size: 1.5em;
+	}
+
+	.asideR {
+		padding-left: 0;
+	}
 
 	.edition-title h2 {
 		font-size: 2em;
@@ -444,9 +662,53 @@ ul {
 		text-align: center;
 		width: 100%;
 	}
+
+	.intro {
+		font-size: 1.5em;
+		padding: 0 0.5em;
+	}
+
+	.artText {
+		padding: 0 0.75em;
+	}
+
+	.other .image, .otherB img {
+		float: left;
+		width: 38%;
+	}
+
+	.other .text, .otherB .title {
+		float: right;
+		text-align: center;
+		width: 55%;
+	}
+
+		.other .text h4, .otherB .title h4 {
+			margin-top: 1em;			
+		}
+
+	li.otherB {
+		margin-bottom: 1.5em;
+		width: 100%;
+	}
+	li.otherB:last-child {
+		margin-bottom: 0;
+	}
+
+	.public a {
+		display: block;
+		float: left;
+		padding: 0 0.75em;
+		width: 50%;
+	}
 }
 
 @media only screen and (max-width: 320px) {
+
+	.asideB .title {
+		margin-top: 0;
+	}
+
 	.editions .edition {
 		width: 100%;
 	}
@@ -461,5 +723,9 @@ ul {
 
 	.galeries .pub img {
 		width: 100%;
+	}
+
+	.other .text h4, .otherB .title h4 {
+		margin-top: 0;
 	}
 }

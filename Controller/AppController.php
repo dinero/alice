@@ -20,7 +20,6 @@
  * @since         CakePHP(tm) v 0.2.9
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-
 App::uses('Controller', 'Controller');
 
 /**
@@ -34,6 +33,25 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-	public $components = array('DebugKit.Toolbar');
+	public $components = array(
+		'DebugKit.Toolbar',
+		'Session',
+		'Auth' => array(
+			'loginRedirect' => array(
+				'controller' => 'users',
+				'action' => 'home'
+			),
+			'authError' => 'Usted no tiene permiso para accesar a este sección',
+			'logoutRedirect' => array(
+				'controller' => 'users',
+				'action' => 'login'
+			)
+		)
+	);
+
+	public function beforeFilter() {
+		parent::beforeFilter();
+		//$this->set('user',$user);
+	}
 
 }

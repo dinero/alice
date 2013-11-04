@@ -7,6 +7,10 @@ App::uses('AppController', 'Controller');
  */
 class ArticlesController extends AppController {
 
+	public $helpers = array(
+		'Form'
+	);
+
 	public function index() {
 
 	}
@@ -16,6 +20,11 @@ class ArticlesController extends AppController {
 		$this->layout = 'into';
 
 	}
+
+	public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('index', 'view'); // Letting users register themselves
+    }
 
 
 }
