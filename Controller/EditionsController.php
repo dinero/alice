@@ -23,9 +23,21 @@ class EditionsController extends AppController {
 
 	}
 
+	public function view() {
+		
+		$this->layout = 'into';
+
+		$this->set(
+			array(
+				'title_for_section' => 'Edicion No 123'
+			)
+		);
+
+	}
+
 	public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('index', 'viewAll'); // Letting users register themselves
+        $this->Auth->allow('index', 'viewAll', 'view'); // Letting users register themselves
     }
 
 

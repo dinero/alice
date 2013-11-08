@@ -7,7 +7,9 @@
 			    		'/files/edition.jpg'
 			    	); ?>	
 					<div class="text">
-						<h3>Alice No 123: La belleza de Nicaragua</h3>
+						<div class="into">
+							<h3>Alice No 123: La belleza de Nicaragua</h3>
+						</div>
 					</div>
 				</div>
 			</a>
@@ -136,5 +138,10 @@
 				</div>
 			</a>
 		</div>
+	</div>
+	<div class="pubIntoH">
+		<?php echo $this->Html->image(
+    		'/files/anuncio2.jpg'
+    	); ?>
 	</div>
 </div>
