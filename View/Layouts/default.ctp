@@ -56,6 +56,8 @@
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
+		<div class="linea">
+		</div>
 			<?php echo $this->element('footer'); ?>
 		</div>
 		<aside class="logoPiggy">

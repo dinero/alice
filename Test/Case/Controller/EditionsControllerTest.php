@@ -13,6 +13,7 @@ class EditionsControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
+<<<<<<< HEAD
 		'app.edition',
 		'app.user',
 		'app.article',
@@ -62,4 +63,9 @@ class EditionsControllerTest extends ControllerTestCase {
 	public function testAdminDelete() {
 	}
 
+=======
+		'app.edition'
+	);
+
+>>>>>>> 2e438492b77e865776f03ae7f38de0dbc320d35d
 }

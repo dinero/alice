@@ -1,13 +1,16 @@
 <?php
 App::uses('AppController', 'Controller');
 
+
 App::uses('CakeTime', 'Utility');
+
 /**
  * Editions Controller
  *
  * @property Edition $Edition
  */
 class EditionsController extends AppController {
+
 
 	public $components = array('Funciones');
 
@@ -116,8 +119,42 @@ class EditionsController extends AppController {
 		$this->redirect(array('action' => 'index'));
 	}
 
-	public function beforeFilter() {
+	/*public function beforeFilter() {
 		parent::beforeFilter();
 		$this->layout = 'admin';
+	}*/
+
+	public function index()	{
+		
 	}
+
+	public function viewAll() {
+
+		$this->layout = 'into';
+
+		$this->set(
+			array(
+				'title_for_section' => 'Ediciones'
+			)
+		);
+
+	}
+
+	public function view() {
+		
+		$this->layout = 'into';
+
+		$this->set(
+			array(
+				'title_for_section' => 'Edicion No 123'
+			)
+		);
+
+	}
+
+	public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('index', 'viewAll', 'view'); // Letting users register themselves
+    }
+
 }
