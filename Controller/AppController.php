@@ -50,10 +50,8 @@ class AppController extends Controller {
 			'logoutRedirect' => array(
 				'controller' => 'users',
 				'action' => 'login'
-
 			),
 			//'authorize' => array('Controller') // Added this line
-			)
 		)
 	);
 
