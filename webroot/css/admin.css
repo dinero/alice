@@ -415,7 +415,10 @@ body {
 }
 
 .message {
+<<<<<<< HEAD
+=======
     color: #F00;
+>>>>>>> 2e438492b77e865776f03ae7f38de0dbc320d35d
     margin: 1em 0;
 }
 

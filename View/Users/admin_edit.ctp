@@ -4,9 +4,15 @@
 		<legend><?php echo __('Edit User'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
+
+		echo $this->Form->input('username',array('class'=>'form-control'));
+		echo $this->Form->input('password',array('class'=>'form-control'));
+		echo $this->Form->input('role',array('class'=>'form-control'));
+
 		echo $this->Form->input('username');
 		echo $this->Form->input('password');
 		echo $this->Form->input('role');
+
 	?>
 	</fieldset>
 <?php echo $this->Form->end(array('label'=>__('Guardar'),'class'=>'btn btn-success')); ?>

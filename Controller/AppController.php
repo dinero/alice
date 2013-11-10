@@ -37,6 +37,7 @@ class AppController extends Controller {
 		'Form'
 	);
 
+
 	public $components = array(
 		'DebugKit.Toolbar',
 		'Session',
@@ -49,12 +50,14 @@ class AppController extends Controller {
 			'logoutRedirect' => array(
 				'controller' => 'users',
 				'action' => 'login'
-			)
+			),
+			//'authorize' => array('Controller') // Added this line
 		)
 	);
 
 	public function beforeFilter() {
 		parent::beforeFilter();
+		$this->set('dataUser',$this->Session->read('Auth'));
 		//$this->set('user',$user);
 	}
 
