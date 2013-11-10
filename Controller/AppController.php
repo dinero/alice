@@ -45,13 +45,14 @@ class AppController extends Controller {
 			'logoutRedirect' => array(
 				'controller' => 'users',
 				'action' => 'login'
-			)
+			),
+			//'authorize' => array('Controller') // Added this line
 		)
 	);
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		//$this->set('user',$user);
+		$this->set('dataUser',$this->Session->read('Auth'));
 	}
 
 }
