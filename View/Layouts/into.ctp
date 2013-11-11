@@ -38,6 +38,7 @@
 		echo $this->Html->script('zurb/foundation.min.js');
 		echo $this->Html->script('jquery.mousewheel.js');
 		echo $this->Html->script('perfect-scrollbar.js');
+		echo $this->Html->script('jquery.mb.mediaEmbedder.js');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');

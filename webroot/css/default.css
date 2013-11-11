@@ -298,7 +298,7 @@ ul {
 	margin-bottom: 0.2em;
 }
 
-.editTop, .galeryCont {
+.editTop, .galeryCont, .videoCont {
 	background: #f1f1f1;
 	padding: 1.5em 0.75em;
 }
@@ -381,7 +381,7 @@ ul {
 	margin-top: 0 !important;
 }
 
-.EditionsBottom {
+.EditionsBottom, .galBottom {
 	background: #000;
 	padding: 1.5em 0.75em;
 }
@@ -389,6 +389,11 @@ ul {
 .article-title span {
 	font-size: 3em;
 	font-weight: bold;
+}
+
+.flex-video {
+	padding-left: 0.75em;
+	padding-right: 0.75em;
 }
 
 .galeries {
@@ -448,7 +453,7 @@ ul {
 			width: 100%;
 		}
 
-.galeryCont h1 {
+.galeryCont h1, .videoCont h1 {
 	color: #f47321;
 	font-family: 'PlayfairDisplayRegular';
 	font-size: 3em;
@@ -488,7 +493,7 @@ ul {
 			background-color: rgba(0, 0, 0, 0.6);
 		}
 
-.galeryBottom, .galeryBottom .otherB {
+.galeryBottom, .galeryBottom .otherB, .galBottom .otherB {
 	margin-top: 1.5em;
 }
 
@@ -502,19 +507,19 @@ ul {
 		margin: 0;
 	}
 
-	.galeryBottom .image {
+	.galeryBottom .image, .galBottom .image {
 		height: 255px;
 		position: relative;
 		overflow: hidden;
 		text-align: center;
 	}
 
-		.galeryBottom .image img {
+		.galeryBottom .image img, .galBottom .image img {
 			height: 100%;
 			width: auto;
 		}
 
-		.galeryBottom .otherB:hover .image img {
+		.galeryBottom .otherB:hover .image img, .galBottom .otherB:hover .image img {
 			-webkit-transform: scale(1.2);
 			-moz-transform: scale(1.2);
 			-ms-transform: scale(1.2);
@@ -522,7 +527,7 @@ ul {
 			transform: scale(1.2);
 		}
 
-		.galeryBottom .otherB .image img, .galeryBottom .otherB .image .text {
+		.galeryBottom .otherB .image img, .galeryBottom .otherB .image .text, .galBottom .otherB .image img, .galBottom .otherB .image .text {
 			-webkit-transition: all 0.5s ease;
 			-moz-transition: all 0.5s ease;
 			-ms-transition: all 0.5s ease;
@@ -530,7 +535,7 @@ ul {
 			transition: all 0.5s ease;
 		}
 
-		.galeryBottom .otherB .image .text {
+		.galeryBottom .otherB .image .text, .galBottom .otherB .image .text {
 			background: rgba(0,0,0,0.6);
 			opacity:0;
 			height: 100%;
@@ -543,16 +548,22 @@ ul {
 			width: 100%;
 		}
 
-		.galeryBottom .otherB:hover .image .text {
+		.galeryBottom .otherB:hover .image .text, .galBottom .otherB:hover .image .text {
 			opacity:1;
 		}
 
-		.galeryBottom .otherB .image .text h3 {
+		.galeryBottom .otherB .image .text h3, .galBottom .otherB .image .text h3 {
 			display: inline;
 			color: #fff;
 			font-family: 'PlayfairDisplayRegular';
 			font-size: 2.8em;
 		}
+
+.galImg {
+	border-bottom: 2px solid #fff;
+	padding: 0.75em 0;
+	width: 100%;
+}
 
 .intro {
 	font-family: 'PlayfairDisplayRegular';
@@ -676,6 +687,10 @@ li.otherB:last-child {}
 	li.otherB .title h4 {
 		margin-bottom: 0;
 	}
+
+.paddingV {
+	padding:1em 5em;
+}
 
 .ps-container .ps-scrollbar-x-rail {
 	display: none;
@@ -835,12 +850,59 @@ li.otherB:last-child {}
 	box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
 }
 
-.transition, .orbit-container .orbit-prev, .orbit-container .orbit-next, .orbit-container .orbit-prev > span, .orbit-container .orbit-next > span {
+.transition, .orbit-container .orbit-prev, .orbit-container .orbit-next, .orbit-container .orbit-prev > span, .orbit-container .orbit-next > span, .play {
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	-ms-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
+}
+
+.play {
+	zoom: 1;
+	filter: alpha(opacity=40);
+	opacity: 0.4;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+
+.play:hover {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+.video:nth-child(4n+1) {
+	clear: both;
+}
+
+.video .play img {
+	left: 50%;
+	margin-left: -32px;
+	margin-top: -32px;
+	position: absolute;
+	top: 50%;
+	width: 64px !important;
+}
+
+	.video .image {
+		position: relative;
+	}
+
+	.video h3 {
+		color: #f47321;
+		font-size: 1.5em;
+		font-weight: normal;
+		line-height: 1.2;
+	}
+
+.videoBottom h2 {
+	color: #f47321;
+	font-family: 'PlayfairDisplayRegular';
+	font-size: 2em;
+	line-height: 1;
+	padding-bottom: 0.5em;
+	margin: 0;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -852,11 +914,11 @@ li.otherB:last-child {}
 		height: 405px;
 	}
 
-	.galeryBottom .image {
+	.galeryBottom .image, .galBottom .image {
 		height: 200px;
 	}	
 
-	.galeryBottom .otherB .image .text h3 {
+	.galeryBottom .otherB .image .text h3, .galBottom .otherB .image .text h3 {
 		font-size: 2.5em;
 	}
 }
@@ -882,16 +944,20 @@ li.otherB:last-child {}
 		height: 340px;
 	}
 
-	.galeryBottom .image {
+	.galeryBottom .image, .galBottom .image {
 		height: 144px;
 	}
 
-	.galeryBottom .otherB .image .text h3 {
+	.galeryBottom .otherB .image .text h3, .galBottom .otherB .image .text h3 {
 		font-size: 1.5em;
 	}
 
 	.other .image, .other .text {
 		width: 100%;
+	}
+
+	.paddingV {
+		padding: 1em 0;
 	}
 }
 
@@ -981,7 +1047,7 @@ li.otherB:last-child {}
 		height: 240px;
 	}
 
-	.galeryBottom .image {
+	.galeryBottom .image, .galBottom .image {
 		height: 128px;
 	}
 
@@ -1022,6 +1088,14 @@ li.otherB:last-child {}
 		float: left;
 		padding: 0 0.75em;
 		width: 50%;
+	}
+
+	.video:nth-child(2n+1) {
+		clear: both;
+	}
+
+	.videoCont h1 {
+		font-size: 2em;
 	}
 }
 
@@ -1065,11 +1139,11 @@ li.otherB:last-child {}
 		height: 180px;
 	}
 
-	.galeryBottom .otherB {
+	.galeryBottom .otherB, .galBottom .otherB {
 		width: 100%;
 	}
 
-	.galeryBottom .image {
+	.galeryBottom .image, .galBottom .image {
 		height: 165px;
 	}
 
@@ -1083,5 +1157,9 @@ li.otherB:last-child {}
 
 	.searchForm .inputSearch {
 		width: 270px;
+	}
+
+	.video {
+		width: 100%;
 	}
 }

@@ -36,16 +36,16 @@ body {
 a:hover {
   cursor: pointer; }
 
-img,
+img/*,
 object,
-embed {
+embed*/ {
   max-width: 100%;
   height: auto; }
 
-object,
+/*object,
 embed {
   height: 100%; }
-
+*/
 img {
   -ms-interpolation-mode: bicubic; }
 
