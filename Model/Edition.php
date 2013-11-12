@@ -71,6 +71,21 @@ class Edition extends AppModel {
 	);
 
 /**
+ * hasOne associations
+ *
+ * @var array
+ */
+	public $hasOne = array(
+		'Image' => array(
+			'className' => 'Image',
+			'foreignKey' => 'seccion_id',
+			'conditions' => array(
+				'seccion' => 'Editions'
+			)
+		)
+	);
+
+/**
  * hasMany associations
  *
  * @var array

@@ -13,7 +13,9 @@
 		</a>
 	</div>
 	<div id="queue">
-		<div class="print_images"></div>
+		<div class="print_images">
+			
+		</div>
 	</div>
 	</fieldset>
 <?php echo $this->Form->end(array('label'=>__('Guardar'),'class'=>'btn btn-success')); ?>

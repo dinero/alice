@@ -3809,3 +3809,66 @@ Request URL: /alice/images/uploadifive-cancel.png
 Stack Trace:
 #0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-11-12 14:55:03 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-12 15:21:13 Error: [MissingControllerException] Controller class EditorsController could not be found.
+Exception Attributes: array (
+  'class' => 'EditorsController',
+  'plugin' => NULL,
+)
+Request URL: /alice/admin/editors/add
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-12 15:29:30 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-12 15:32:01 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-12 15:41:36 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-12 15:59:27 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-12 16:04:06 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

@@ -12,7 +12,7 @@
 		echo $this->Form->input('relevancia_id',array('class'=>'form-control'));
 	?>
 	<div class="head_upload">
-		<input id="file_upload" name="file_upload" type="file" multiple="false">
+		<input id="file_upload" name="file_upload" type="file" multiple="true">
 		<a class="upload_all btn btn-success" style="position: relative;" href="javascript:$('#file_upload').uploadifive('upload')" title="Subir Archivos">
 			<span class="glyphicon glyphicon-open"></span>
 		</a>
@@ -69,6 +69,7 @@
 	$seccion = base64_encode('Articles');
 	$url = $this->Html->url('/upload/Upload_File/?seccion='.$seccion);
 	$check = $this->Html->url('/upload/check_exists/?seccion='.$seccion);
+	$img = '';
 	?>
 	$(function() {
 
@@ -80,7 +81,7 @@
 								   'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
 			                     },
 			'queueID'          : 'queue',
-			'uploadScript'     : '<?php echo $url ?>',
+			'uploadScript'     : '<?php echo $url."&img=".$img."&multi=true" ?>',
 			'onUploadComplete' : function(file, data) { 
 				
 				$('.print_images').empty();

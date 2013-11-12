@@ -415,10 +415,7 @@ body {
 }
 
 .message {
-<<<<<<< HEAD
-=======
     color: #F00;
->>>>>>> 2e438492b77e865776f03ae7f38de0dbc320d35d
     margin: 1em 0;
 }
 
@@ -434,6 +431,7 @@ body {
 .pic_wrapper {
     background: #f6f6f6;
     border: solid 1px #CCC;
+    clear: none;
     float: left;
     height: 161px;
     margin: 1px;
