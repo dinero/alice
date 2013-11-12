@@ -12,7 +12,7 @@ App::uses('CakeTime', 'Utility');
 class EditionsController extends AppController {
 
 	public $components = array('Funciones');
-
+	//public $uses = array('Article', 'Edition');
 /**
  * admin_index method
  *

@@ -3809,6 +3809,9 @@ Request URL: /alice/images/uploadifive-cancel.png
 Stack Trace:
 #0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+<<<<<<< HEAD
+2013-11-12 16:00:39 Error: [MissingControllerException] Controller class ImagesController could not be found.
+=======
 2013-11-12 14:55:03 Error: [MissingControllerException] Controller class ImagesController could not be found.
 Exception Attributes: array (
   'class' => 'ImagesController',
@@ -3864,6 +3867,136 @@ Stack Trace:
 #0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2013-11-12 16:04:06 Error: [MissingControllerException] Controller class ImagesController could not be found.
+>>>>>>> 0e5e6096f5637763d122c0488a8cefa5847f485c
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-12 16:15:48 Error: Fatal Error (64): Cannot redeclare Edition::$hasOne in [C:\wamp\www\alice\Model\Edition.php, line 117]
+2013-11-12 16:15:48 Error: [FatalErrorException] Cannot redeclare Edition::$hasOne
+Request URL: /alice/admin/articles
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\wamp\www\ali...', 117)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\wamp\www\ali...', 117, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\wamp\www\ali...', 117, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-12 16:39:51 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-12 19:34:15 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-12 19:34:16 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\alice\Controller\UploadController.php, line 115]
+2013-11-12 19:34:16 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /alice/upload/check_exists/?seccion=QXJ0aWNsZXM%3D
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 115)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 115, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\ali...', 115, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-12 19:34:16 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\alice\Controller\UploadController.php, line 115]
+2013-11-12 19:34:16 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /alice/upload/check_exists/?seccion=QXJ0aWNsZXM%3D
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 115)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 115, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\ali...', 115, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-12 19:34:16 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\alice\Controller\UploadController.php, line 115]
+2013-11-12 19:34:16 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /alice/upload/Upload_File/?seccion=QXJ0aWNsZXM%3D&img=3&multi=true
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 115)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 115, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\ali...', 115, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-12 19:34:16 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\alice\Controller\UploadController.php, line 115]
+2013-11-12 19:34:16 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /alice/upload/Upload_File/?seccion=QXJ0aWNsZXM%3D&img=3&multi=true
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 115)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 115, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\ali...', 115, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-12 19:34:16 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\alice\Controller\UploadController.php, line 115]
+2013-11-12 19:34:16 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /alice/upload/check_exists/?seccion=QXJ0aWNsZXM%3D
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 115)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 115, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\ali...', 115, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-12 19:34:31 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\alice\Controller\UploadController.php, line 115]
+2013-11-12 19:34:31 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /alice/upload/check_exists/?seccion=QXJ0aWNsZXM%3D
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 115)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 115, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\ali...', 115, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-12 22:07:23 Error: [MissingActionException] Action GaleryController::admin_index() could not be found.
+Exception Attributes: array (
+  'controller' => 'GaleryController',
+  'action' => 'admin_index',
+)
+Request URL: /alice/admin/galery
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(GaleryController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-12 22:18:06 Error: [MissingViewException] View file "C:\wamp\www\alice\View\Videos\admin_index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\alice\\View\\Videos\\admin_index.ctp',
+)
+Request URL: /alice/admin/videos
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-11-12 22:55:16 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-12 23:01:50 Error: [MissingControllerException] Controller class ImagesController could not be found.
 Exception Attributes: array (
   'class' => 'ImagesController',
   'plugin' => NULL,
@@ -4340,3 +4473,14 @@ Stack Trace:
 #3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-11-12 23:50:54 Error: [MissingActionException] Action GaleryController::admin_index() could not be found.
+Exception Attributes: array (
+  'controller' => 'GaleryController',
+  'action' => 'admin_index',
+)
+Request URL: /alice/admin/galery
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(GaleryController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
