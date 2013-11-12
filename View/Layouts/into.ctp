@@ -36,6 +36,7 @@
 		echo $this->Html->script('zurb/vendor/custom.modernizr.js');
 		echo $this->Html->script('zurb/vendor/jquery.js');
 		echo $this->Html->script('zurb/foundation.min.js');
+		echo $this->Html->script('zurb/foundation.interchange.js');
 		echo $this->Html->script('jquery.mousewheel.js');
 		echo $this->Html->script('perfect-scrollbar.js');
 		echo $this->Html->script('jquery.mb.mediaEmbedder.js');

@@ -1,11 +1,12 @@
 <div id="slide">
-	<ul data-orbit data-options="bullets:false;timer_speed:4000;resume_on_mouseout: true;slide_number: false;">
+	<ul data-orbit data-options="variable_height:true;bullets:false;timer_speed:4000;resume_on_mouseout: true;slide_number: false;">
 	  	<li>		
 	    	<a href="">
 	    		<div class="image">
-			    	<?php echo $this->Html->image(
+	    			<img src="<?php echo $this->Html->url('/files/image.png') ?>" data-interchange="[<?php echo $this->Html->url('/files/image2.png') ?>, (only screen and (min-width: 1px))], [<?php echo $this->Html->url('/files/image.png') ?>, (only screen and (min-width: 769px))]">
+			    	<?php /*echo $this->Html->image(
 			    		'/files/image.png'
-			    	); ?>
+			    	);*/ ?>
 	    		</div>
 	    		<div class="edition-title">
 	    			<h2>Titulo del articulo</h2>
@@ -15,9 +16,10 @@
 	  	<li>		
 	    	<a href="">
 	    		<div class="image">
-			    	<?php echo $this->Html->image(
+	    			<img src="<?php echo $this->Html->url('/files/image.png') ?>" data-interchange="[<?php echo $this->Html->url('/files/image2.png') ?>, (only screen and (min-width: 1px))], [<?php echo $this->Html->url('/files/image.png') ?>, (only screen and (min-width: 769px))]">
+			    	<?php /*echo $this->Html->image(
 			    		'/files/image.png'
-			    	); ?>
+			    	);*/ ?>
 	    		</div>
 	    		<div class="edition-title">
 	    			<h2>Titulo del articulo</h2>

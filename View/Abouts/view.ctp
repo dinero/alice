@@ -1,0 +1,2 @@
+<!-- or your own queries -->
+<img data-interchange="[<?php echo $this->Html->url('/files/image2.png') ?>, (only screen and (min-width: 1px))], [<?php echo $this->Html->url('/files/image.png') ?>, (only screen and (min-width: 480px))]">
