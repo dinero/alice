@@ -111,10 +111,6 @@ class UploadController extends AppController
 
             } else {
 
-                $seccion_id = $this->Table->find('first',
-                    array('conditions' => array('user_id'=>))
-                );
-
                 $registro = $this->Images->find(
                     'first',
                     array(
