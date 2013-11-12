@@ -65,6 +65,7 @@ class EditorsController extends AppController {
 			throw new NotFoundException(__('Invalid editor'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
+			$this->request->data['Editor']['permalink'] = $this->Funciones->generatePermalink($this->request->data['Editor']['nombre']);
 			if ($this->Editor->save($this->request->data)) {
 				$this->Session->setFlash(__('The editor has been saved'));
 				$this->redirect(array('action' => 'index'));

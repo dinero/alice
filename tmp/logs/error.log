@@ -3964,3 +3964,26 @@ Stack Trace:
 #3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-11-12 22:07:23 Error: [MissingActionException] Action GaleryController::admin_index() could not be found.
+Exception Attributes: array (
+  'controller' => 'GaleryController',
+  'action' => 'admin_index',
+)
+Request URL: /alice/admin/galery
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(GaleryController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-12 22:18:06 Error: [MissingViewException] View file "C:\wamp\www\alice\View\Videos\admin_index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\alice\\View\\Videos\\admin_index.ctp',
+)
+Request URL: /alice/admin/videos
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
