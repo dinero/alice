@@ -8,12 +8,10 @@ App::uses('AppController', 'Controller');
 class GaleryController extends AppController {
 
 	public function index() {
-
+		$this->redirect('viewAll');
 	}
 
 	public function viewAll() {
-
-		$this->layout = 'into';
 
 		$this->set(
 			array(
@@ -23,9 +21,23 @@ class GaleryController extends AppController {
 
 	}
 
+	public function view() {
+
+		$this->set(
+			array(
+				'title_for_section' => 'Galerías'
+			)
+		);
+	}
+
 	public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('index', 'viewAll'); // Letting users register themselves
+        if ($this->params['admin'] == 1) {
+        	$this->layout = 'admin';
+        } else {
+        	$this->layout = 'into';
+        }
+        $this->Auth->allow('index', 'viewAll', 'view'); // Letting users register themselves
     }
 
 }

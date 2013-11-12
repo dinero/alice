@@ -2812,6 +2812,7 @@ Stack Trace:
 #3 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(EditionsController), Object(CakeRequest), Object(CakeResponse))
 #4 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+<<<<<<< HEAD
 2013-11-10 20:55:02 Error: [NotFoundException] Invalid edition
 Request URL: /alice/admin/editions/view
 Stack Trace:
@@ -2838,11 +2839,77 @@ Exception Attributes: array (
   'action' => 'search',
 )
 Request URL: /alice/articles/search
+=======
+2013-11-10 20:58:08 Error: [MissingActionException] Action EditionsController::edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'EditionsController',
+  'action' => 'edit',
+)
+Request URL: /alice/editions/edit
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(EditionsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-10 21:01:42 Error: [MissingActionException] Action GaleryController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'GaleryController',
+  'action' => 'view',
+)
+Request URL: /alice/galery/view
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(GaleryController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-10 21:08:46 Error: [MissingViewException] View file "C:\wamp\www\alice\View\Galery\view_a_ll.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\alice\\View\\Galery\\view_a_ll.ctp',
+)
+Request URL: /alice/galery/viewALl
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(GaleryController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-11-10 21:11:40 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /alice/users/login
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-10 21:13:05 Error: [MissingViewException] View file "C:\wamp\www\alice\View\Galery\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\alice\\View\\Galery\\view.ctp',
+)
+Request URL: /alice/galery/view
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(GaleryController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-11-10 21:29:38 Error: [MissingActionException] Action ArticlesController::viewAll() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArticlesController',
+  'action' => 'viewAll',
+)
+Request URL: /alice/articles/viewAll
+>>>>>>> 09d477b42da559643240300f15a2480d3e515a84
 Stack Trace:
 #0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
 #1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
 #2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+<<<<<<< HEAD
 2013-11-10 20:57:41 Error: [MissingActionException] Action ArticlesController::admin_index() could not be found.
 Exception Attributes: array (
   'controller' => 'ArticlesController',
@@ -3347,6 +3414,362 @@ Exception Attributes: array (
   'plugin' => NULL,
 )
 Request URL: /alice/images/uploadifive-cancel.png
+=======
+2013-11-10 22:20:14 Error: [MissingControllerException] Controller class VideosController could not be found.
+Exception Attributes: array (
+  'class' => 'VideosController',
+  'plugin' => NULL,
+)
+Request URL: /alice/videos/view
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-10 22:20:20 Error: [MissingControllerException] Controller class VideosController could not be found.
+Exception Attributes: array (
+  'class' => 'VideosController',
+  'plugin' => NULL,
+)
+Request URL: /alice/videos/viewAll
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-10 23:35:15 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-10 23:37:41 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-10 23:38:01 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-10 23:38:57 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-10 23:44:20 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-10 23:46:28 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-10 23:46:55 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-10 23:48:03 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-10 23:48:14 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 02:01:57 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 02:02:30 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 02:02:47 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 02:02:54 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 02:05:20 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 02:09:30 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 02:10:20 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 02:10:47 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 02:11:01 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 02:11:38 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 02:12:54 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 02:13:25 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 02:13:50 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 02:14:35 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 02:15:52 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 02:20:18 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 02:22:24 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 02:22:32 Error: [MissingActionException] Action VideosController::media() could not be found.
+Exception Attributes: array (
+  'controller' => 'VideosController',
+  'action' => 'media',
+)
+Request URL: /alice/videos/media/player.swf
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 02:28:18 Error: [MissingActionException] Action ArticlesController::viewAll() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArticlesController',
+  'action' => 'viewAll',
+)
+Request URL: /alice/articles/viewAll
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 16:22:54 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /alice/users/login
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-11 16:23:07 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /alice/users/login
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-12 04:53:08 Error: [MissingControllerException] Controller class Config.xmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Config.xmlController',
+  'plugin' => NULL,
+)
+Request URL: /alice/config.xml
+>>>>>>> 09d477b42da559643240300f15a2480d3e515a84
 Stack Trace:
 #0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
