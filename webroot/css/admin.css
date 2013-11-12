@@ -437,7 +437,7 @@ body {
     margin: 1px;
     overflow: hidden;
     position: relative;
-    width: 161px;
+    /*width: 161px;*/
 }
 
 .right_form {

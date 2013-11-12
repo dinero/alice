@@ -129,8 +129,9 @@ ul {
 }
 
 .art {
+	margin-bottom: 1.5em;
+	overflow: hidden;
 	width: 100%;
-	margin-bottom: 1.5em
 }
 
 .art:nth-child(6) {
@@ -172,9 +173,6 @@ ul {
 
 		.art .content .text {
 			font-size: 0.875em;
-		}
-
-		.art .content .text p {
 			color: #fff;
 			line-height: 1.4;
 		}
@@ -217,6 +215,11 @@ ul {
 			padding-right: 2em;
 		}
 
+.article-title span {
+	font-size: 3em;
+	font-weight: bold;
+}
+
 .asideR {
 	padding-left: 1.5em;
 	padding-right: 0; 
@@ -243,7 +246,7 @@ ul {
 			font-weight: bold;
 		}
 
-.authorShare, .title, .editShare {
+.authorShare, .intoEdit .title, .editShare {
 	background: #f6f6f6;
 	padding: 0 1em;
 }
@@ -386,11 +389,57 @@ ul {
 	padding: 1.5em 0.75em;
 }
 
-.article-title span {
-	font-size: 3em;
-	font-weight: bold;
+.error {
+	margin: 1.5em auto;
+	margin-top: 0;
+	width: 60%;
 }
+	.error h1 {
+		font-size: 2em;
+		font-weight: normal;
+	}
 
+	.marco-error {
+		background: #cacaca;
+		height: 260px;
+		padding: 1em;
+		width: 100%;
+	}
+	.print-error {
+		background: #fff;
+		height: 100%;
+		padding: 1em;
+		width: 100%;
+	}
+		.sad {
+			background: #ed008c;
+			float: left;
+			height: 195px;
+			line-height: 195px;
+			text-align: center;
+			width: 30%;
+		}
+
+			.sad span {
+				color: #fff;
+				font-size: 10em;
+				line-height: 160px;
+			}
+		.text-error {
+			padding: 1em;
+			color: #505050;
+			float: right;
+			width: 65%;
+		}
+			
+			.text-error span {
+		
+				font-size: 1.5em;
+			}
+			.text-error ul li {
+		
+				font-size: 1em;
+			}
 .flex-video {
 	padding-left: 0.75em;
 	padding-right: 0.75em;
@@ -417,7 +466,13 @@ ul {
 		.galeries .gal .image {
 			background: #fff;
 			padding: 0.25em;
+			text-align: center;
 		}
+
+			.galeries .gal .image img {
+				height: 110px;
+				width: auto;
+			}
 
 			.galeries .gal .image .text {
 				margin-top: 0.5em;
@@ -910,6 +965,10 @@ li.otherB:last-child {}
 		font-size: 2em;
 	}
 
+	.error {
+		width: 70%;
+	}
+
 	.galeryCont #slide .image {
 		height: 405px;
 	}
@@ -936,8 +995,16 @@ li.otherB:last-child {}
 		width: 33.3333%;
 	}
 
+	.error {
+		width: 90%;
+	}
+
 	.galeries .gal {
 		width: 75%;
+	}
+
+	.galeries .gal .image img {
+		height: 90px; 
 	}
 
 	.galeryCont #slide .image {
@@ -1025,12 +1092,37 @@ li.otherB:last-child {}
 		margin-bottom: 1.5em;
 	}
 
+	.error {
+		width: 100%;
+	}
+
+		.marco-error {
+			height: 230px;
+		}
+
+		.sad {
+			height: 160px;
+			line-height: 160px;
+		}
+
+		.sad span {
+			line-height: 140px;
+		}
+
+		.text-error {
+			padding: 0 1em;
+		}
+
 	.galeries {
 		padding-right: 0;
 	}
 
 		.galeries .gal {
 			width: 100%;
+		}
+
+		.galeries .gal .image img {
+			height: 115px;
 		}
 
 	.galeries .pub {
@@ -1123,12 +1215,20 @@ li.otherB:last-child {}
 		width: 100%;
 	}
 
+	.editTop .largeL, .editTop .largeR {
+		width: 100%;
+	}
+
 	.galeries .gal .columns {
 		width: 100%;
 	}
 
 	.galeries .gal .columns img {
 		width: 100%;
+	}
+
+	.galeries .gal .image img {
+		height: 150px;
 	}
 
 	.galeries .pub img {
@@ -1147,9 +1247,25 @@ li.otherB:last-child {}
 		height: 165px;
 	}
 
-	.editTop .largeL, .editTop .largeR {
-		width: 100%;
+	.marco-error {
+		height: 390px;
 	}
+
+		.sad {
+			display: block;
+			width: 100%;
+			height: 190px;
+			line-height: 190px;
+		}
+
+			.sad span {
+				line-height: 165px;
+			}
+
+		.text-error {
+			padding: 1em 0;
+			width: 100%;
+		}
 
 	.other .text h4, .otherB .title h4 {
 		margin-top: 0;

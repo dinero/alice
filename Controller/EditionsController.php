@@ -11,7 +11,6 @@ App::uses('CakeTime', 'Utility');
  */
 class EditionsController extends AppController {
 
-
 	public $components = array('Funciones');
 
 /**
@@ -21,6 +20,7 @@ class EditionsController extends AppController {
  */
 	public function admin_index() {
 		$this->Edition->recursive = 0;
+		$this->paginate = array('limit' => 10);
 		$this->set('editions', $this->paginate());
 	}
 
@@ -148,21 +148,108 @@ class EditionsController extends AppController {
 	}
 
 	public function view() {
-		
-		$this->layout = 'into';
 
-		$this->set(
-			array(
-				'title_for_section' => 'Edicion No 123'
-			)
-		);
+		$this->loadModel('Article');
+
+		if (!empty($this->passedArgs['title']) and isset($this->passedArgs['title'])) {
+
+			$permalink = explode('-', $this->passedArgs['title']);
+
+			$id = $permalink[0];
+
+			$edition = $this->Edition->find(
+				'first',
+				array(
+					'conditions' => array(
+						'Edition.id' => $id
+					)
+				)
+			);
+
+			if (!empty($edition)) {
+
+				$articlePrinc = $this->Article->find(
+					'first',
+					array(
+						'conditions' => array(
+							'Article.estado' => 1,
+							'Article.edition_id' => $id,
+							'Article.relevancia_id' => 1,
+						),
+						'order' => array(
+							'Article.created' => 'DESC',
+							'Article.id' => 'DESC'
+						)
+					)
+				);
+
+				if (!empty($articlePrinc)) {
+					$articlesSec = $this->Article->find(
+						'all',
+						array(
+							'conditions' => array(
+								'Article.estado' => 1,
+								'Article.edition_id' => $id,
+								'Article.id !=' => $articlePrinc['Article']['id'],
+							),
+							'order' => array(
+								'Article.created' => 'DESC',
+								'Article.id' => 'DESC'
+							)
+						)
+					);
+				}
+
+				$lastEditions = $this->Edition->find(
+					'all',
+					array(
+						'conditions' => array(
+							'Edition.id !=' => $edition['Edition']['id']
+						),
+						'order' => array(
+							'Edition.created' => 'DESC',
+							'Edition.id' => 'DESC'
+						),
+						'limit' => 4
+					)
+				);
+
+				$this->set(
+					array(
+						'title_for_layout' => @$edition['Edition']['nombre'],
+						'title_for_section' => @$edition['Edition']['nombre'],
+						'edition' => @$edition,
+						'articlePrinc' => @$articlePrinc,
+						'articlesSec' => @$articlesSec,
+						'lastEditions' => @$lastEditions
+					)
+				);
+				
+			} else {
+				$this->set(
+					array(
+						'title_for_layout' => 'Error 404',
+						'title_for_section' => 'Error 404'
+					)
+				);
+			}
+		} else {
+			$this->set(
+				array(
+					'title_for_layout' => 'Error 404',
+					'title_for_section' => 'Error 404'
+				)
+			);
+		}
 
 	}
 
 	public function beforeFilter() {
         parent::beforeFilter();
-        if ($this->params['admin'] == 1) {
+         if ($this->params['admin'] == 1) {
         	$this->layout = 'admin';
+        } else {
+        	$this->layout = 'into';
         }
         $this->Auth->allow('index', 'viewAll', 'view'); // Letting users register themselves
     }
