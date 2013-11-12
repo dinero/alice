@@ -3876,3 +3876,13 @@ Request URL: /alice/images/uploadifive-cancel.png
 Stack Trace:
 #0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-11-12 16:15:48 Error: Fatal Error (64): Cannot redeclare Edition::$hasOne in [C:\wamp\www\alice\Model\Edition.php, line 117]
+2013-11-12 16:15:48 Error: [FatalErrorException] Cannot redeclare Edition::$hasOne
+Request URL: /alice/admin/articles
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\wamp\www\ali...', 117)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\wamp\www\ali...', 117, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\wamp\www\ali...', 117, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
