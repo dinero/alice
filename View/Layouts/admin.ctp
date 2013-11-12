@@ -11,11 +11,12 @@
 		echo $this->Html->css('cake.generic');
 		echo $this->Html->css('bootstrap');
 		echo $this->Html->css('admin');
+		echo $this->Html->css('toggle-switch');
 		//echo $this->Html->css('demo_table_jui');
 		echo $this->Html->css('http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css');
 		//echo $this->Html->css('jquery.ui.modify');
 
-		//echo $this->Html->css('uploadifive.css');
+		echo $this->Html->css('uploadifive.css');
 
 		//echo $this->Html->css('chosen.css');
 
@@ -28,9 +29,9 @@
 
 		//echo $this->Html->script('jquery.dataTables.min');
 
-		//echo $this->Html->script('tinymce/tinymce.min.js');
+		echo $this->Html->script('tinymce/tinymce.min.js');
 
-		//echo $this->Html->script('jquery.uploadifive.min.js');
+		echo $this->Html->script('jquery.uploadifive.min.js');
 
 		//echo $this->Html->script('jquery-ui-timepicker-addon.js');
 

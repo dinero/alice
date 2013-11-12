@@ -70,6 +70,7 @@ class EditionsController extends AppController {
  * @return void
  */
 	public function admin_edit($id = null) {
+
 		if (!$this->Edition->exists($id)) {
 			throw new NotFoundException(__('Invalid edition'));
 		}
@@ -154,6 +155,9 @@ class EditionsController extends AppController {
 
 	public function beforeFilter() {
         parent::beforeFilter();
+        if ($this->params['admin'] == 1) {
+        	$this->layout = 'admin';
+        }
         $this->Auth->allow('index', 'viewAll', 'view'); // Letting users register themselves
     }
 
