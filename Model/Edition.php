@@ -91,6 +91,16 @@ class Edition extends AppModel {
 		)
 	);
 
+	public $hasOne = array(
+ 		'images' => array(
+	   		'className' => 'Images',
+	   		'foreignKey' => 'seccion_id',
+	   		'conditions' => array(
+	   			'seccion' => 'news' 
+	   		)
+	   	)
+ 	);
+
 	public function isOwnedBy($post, $user) {
 	    return $this->field('id', array('id' => $post, 'user_id' => $user)) === $post;
 	}
