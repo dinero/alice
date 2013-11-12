@@ -96,7 +96,7 @@ class Edition extends AppModel {
 	   		'className' => 'Images',
 	   		'foreignKey' => 'seccion_id',
 	   		'conditions' => array(
-	   			'seccion' => 'news' 
+	   			'seccion' => 'Editions' 
 	   		)
 	   	)
  	);
