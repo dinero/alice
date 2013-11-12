@@ -63,7 +63,7 @@ class UploadController extends AppController
 
     public function Upload_File()
     {
-
+        $this->autoRender = false;
         //echo $this->verifyToken;
 
         if (!empty($_FILES) && $_POST['token'] == $this->verifyToken) {
@@ -111,6 +111,10 @@ class UploadController extends AppController
 
             } else {
 
+                $seccion_id = $this->Table->find('first',
+                    array('conditions' => array('user_id'=>))
+                );
+
                 $registro = $this->Images->find(
                     'first',
                     array(
@@ -120,7 +124,6 @@ class UploadController extends AppController
                         )
                     )
                 );
-
 
                 if (empty($registro) or $registro == "" or $registro == FALSE or $this->multi == true) {
 
@@ -174,7 +177,7 @@ class UploadController extends AppController
                 echo "<script type='text/javascript'>$(document).ready(function(){
                     $('.drop').delete_img();  
                 })</script>";
-                exit();
+                //exit();
 
             } else {
 
@@ -202,7 +205,7 @@ class UploadController extends AppController
     public function delete_imagen($id = null)
     {
 
-
+        $this->autoRender = false;
         $reg = $this->Images->findById($id);
 
         $this->Images->id = $id;
@@ -220,7 +223,7 @@ class UploadController extends AppController
             }
 
         }
-        exit(1);
+        //exit(1);
 
     }
 
