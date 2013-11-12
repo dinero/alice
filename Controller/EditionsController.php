@@ -50,7 +50,13 @@ class EditionsController extends AppController {
 			$this->request->data['Edition']['permalink'] = $this->Funciones->generatePermalink($this->request->data['Edition']['nombre']);
 			$this->request->data['Edition']['created'] = CakeTime::format('Y-m-d 00:00:00', time());
 			$this->request->data['Edition']['user_id'] = $this->Auth->user('id');
-		
+			$this->Edition->id = @$this->Edition->find(
+				'first',
+				array(
+					'conditions'=>array('Edition.user_id'=>$this->Auth->user('id'),'nombre'=>''),
+					'fields' => 'Edition.id'
+				)
+			);
 			if ($this->Edition->save($this->request->data)) {
 				$this->Session->setFlash(__('La edición se guardo correctamente'));
 				$this->redirect(array('action' => 'index'));
