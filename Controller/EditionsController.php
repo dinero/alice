@@ -50,7 +50,13 @@ class EditionsController extends AppController {
 			$this->request->data['Edition']['permalink'] = $this->Funciones->generatePermalink($this->request->data['Edition']['nombre']);
 			$this->request->data['Edition']['created'] = CakeTime::format('Y-m-d 00:00:00', time());
 			$this->request->data['Edition']['user_id'] = $this->Auth->user('id');
-		
+			$this->Edition->id = @$this->Edition->find(
+				'first',
+				array(
+					'conditions'=>array('Edition.user_id'=>$this->Auth->user('id'),'nombre'=>''),
+					'fields' => 'Edition.id'
+				)
+			);
 			if ($this->Edition->save($this->request->data)) {
 				$this->Session->setFlash(__('La edición se guardo correctamente'));
 				$this->redirect(array('action' => 'index'));
@@ -70,6 +76,7 @@ class EditionsController extends AppController {
  * @return void
  */
 	public function admin_edit($id = null) {
+
 		if (!$this->Edition->exists($id)) {
 			throw new NotFoundException(__('Invalid edition'));
 		}
@@ -154,6 +161,9 @@ class EditionsController extends AppController {
 
 	public function beforeFilter() {
         parent::beforeFilter();
+        if ($this->params['admin'] == 1) {
+        	$this->layout = 'admin';
+        }
         $this->Auth->allow('index', 'viewAll', 'view'); // Letting users register themselves
     }
 

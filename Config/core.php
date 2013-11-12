@@ -344,3 +344,10 @@ Cache::config('_cake_model_', array(
 	'serialize' => ($engine === 'File'),
 	'duration' => $duration
 ));
+
+Configure::write('img_root', 'http://localhost:81/alice/files/');
+//Configure::write('img_root', 'http://nuevo.radionicaragua.com.ni/files/');
+
+Configure::write('absolute_root', $_SERVER['DOCUMENT_ROOT'].'alice/webroot/files/'); 
+//Configure::write('absolute_root', $_SERVER['DOCUMENT_ROOT'].'/app/webroot/files/'); 
+
