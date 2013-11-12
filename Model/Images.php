@@ -5,7 +5,7 @@
 */
 class Images extends AppModel {
 	
-	public $_name = 'images';
+	public $_name = 'Images';
 
 }
 

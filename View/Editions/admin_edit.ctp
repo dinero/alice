@@ -14,7 +14,18 @@
 		</a>
 	</div>
 	<div id="queue">
-		<div class="print_images"></div>
+		<div class="print_images">
+			<?php
+			if (isset($this->request->data['Image'])) {
+				$src = $this->request->data['Image']['seccion'].'/'.$this->request->data['Image']['id'].'.'.$this->request->data['Image']['extension'];
+				if (file_exists(Configure::read('absolute_root').$src)) {
+					echo $this->Html->image(
+						'/files/'.$src
+					);
+				}
+			}
+			?>
+		</div>
 	</div>
 	</fieldset>
 <?php echo $this->Form->end(array('label'=>__('Guardar'),'class'=>'btn btn-success')); ?>

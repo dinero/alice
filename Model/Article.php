@@ -178,4 +178,19 @@ class Article extends AppModel {
 			'order' => ''
 		)
 	);
+
+/**
+ * hasMany associations
+ *
+ * @var array
+ */
+	public $hasMany = array(
+		'Image' => array(
+			'className' => 'Image',
+			'foreignKey' => 'seccion_id',
+			'conditions' => array(
+				'seccion' => 'Articles'
+			)
+		)
+	);
 }

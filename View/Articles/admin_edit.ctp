@@ -13,13 +13,53 @@
 		echo $this->Form->input('relevancia_id',array('class'=>'form-control'));
 	?>
 	<div class="head_upload">
-		<input id="file_upload" name="file_upload" type="file" multiple="false">
+		<input id="file_upload" name="file_upload" type="file" multiple="true">
 		<a class="upload_all btn btn-success" style="position: relative;" href="javascript:$('#file_upload').uploadifive('upload')" title="Subir Archivos">
 			<span class="glyphicon glyphicon-open"></span>
 		</a>
 	</div>
 	<div id="queue">
-		<div class="print_images"></div>
+		<div class="print_images">
+			<?php
+			if (isset($this->request->data['Image'])) foreach($this->request->data['Image'] as $a) {
+
+
+				$src = $a['seccion'].'/'.$a['id'].'.'.$a['extension'];
+
+				if (file_exists(Configure::read('absolute_root').$src)) {
+
+					echo $this->Html->tag(
+						'div',
+						$this->Html->image(
+							'/files/'.$src  ,
+							array(
+								'class' => 'pic'
+							)
+						).
+						$this->Html->link(
+							$this->Html->image(
+								'admin/delete.png',
+								array(
+									'style' => 'position:absolute;right:10px;top:10px',
+									'class' => 'icon_control'
+								)
+							),
+							'/upload/delete_imagen/'.$a['id'],
+							array(
+								'class' => 'drop',
+								'escape' => false,
+								'data' => $a['id']
+							)	
+						),
+						array(
+							'class' => 'pic_wrapper',
+							'id' => $a['id']
+						)
+					);
+				}
+			}
+			?>
+		</div>
 	</div>
 	<script>	
 		$(function(){
@@ -83,7 +123,7 @@
 								   'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
 			                     },
 			'queueID'          : 'queue',
-			'uploadScript'     : '<?php echo $url."&img=".$img ?>',
+			'uploadScript'     : '<?php echo $url."&img=".$img."&multi=true" ?>',
 			'onUploadComplete' : function(file, data) { 
 				
 				$('.print_images').empty();
@@ -92,5 +132,7 @@
 
 			}
 		});
+
+		$('.drop').delete_img();
 	});
 </script>
