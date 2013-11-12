@@ -13,7 +13,7 @@ class EditionsController extends AppController {
 
 
 	public $components = array('Funciones');
-
+	//public $uses = array('Article', 'Edition');
 /**
  * admin_index method
  *
@@ -21,6 +21,7 @@ class EditionsController extends AppController {
  */
 	public function admin_index() {
 		$this->Edition->recursive = 0;
+		var_dump($this->paginate());
 		$this->set('editions', $this->paginate());
 	}
 

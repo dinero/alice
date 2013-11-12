@@ -11,15 +11,7 @@
 		echo $this->Form->input('categoria_id',array('class'=>'form-control'));
 		echo $this->Form->input('relevancia_id',array('class'=>'form-control'));
 	?>
-	<div class="head_upload">
-		<input id="file_upload" name="file_upload" type="file" multiple="true">
-		<a class="upload_all btn btn-success" style="position: relative;" href="javascript:$('#file_upload').uploadifive('upload')" title="Subir Archivos">
-			<span class="glyphicon glyphicon-open"></span>
-		</a>
-	</div>
-	<div id="queue">
-		<div class="print_images"></div>
-	</div>
+	
 	<script>	
 		$(function(){
 			tinymce.init({
@@ -62,33 +54,3 @@
 		<li><?php echo $this->Html->link(__('New Edition'), array('controller' => 'editions', 'action' => 'add'),array('class' => 'btn btn-success','escape'=>false)); ?> </li>
 	</ul>
 </div>
-
-<script type="text/javascript">
-	<?php 
-	$timestamp = time();
-	$seccion = base64_encode('Articles');
-	$url = $this->Html->url('/upload/Upload_File/?seccion='.$seccion);
-	$check = $this->Html->url('/upload/check_exists/?seccion='.$seccion);
-	$img = '';
-	?>
-	$(function() {
-
-		$('#file_upload').uploadifive({
-			'auto'             : false,
-			'checkScript'      : '<?php echo $check ?>',
-			'formData'         : {
-								   'timestamp' : '<?php echo $timestamp;?>',
-								   'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
-			                     },
-			'queueID'          : 'queue',
-			'uploadScript'     : '<?php echo $url."&img=".$img."&multi=true" ?>',
-			'onUploadComplete' : function(file, data) { 
-				
-				$('.print_images').empty();
-
-				$('.print_images').append(data);
-
-			}
-		});
-	});
-</script>

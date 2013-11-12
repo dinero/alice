@@ -415,7 +415,6 @@ body {
 }
 
 .message {
-    color: #F00;
     margin: 1em 0;
 }
 
@@ -437,7 +436,6 @@ body {
     margin: 1px;
     overflow: hidden;
     position: relative;
-    width: 161px;
 }
 
 .right_form {
