@@ -137,11 +137,60 @@ class EditionsController extends AppController {
 
 	public function viewAll() {
 
-		$this->layout = 'into';
+		$this->loadModel('Article');
+
+		$lastEdition = $this->Edition->find(
+			'first',
+			array(
+				'order' => array(
+					'Edition.created' => 'DESC',
+					'Edition.id' => 'DESC'
+				)
+			)
+		);
+
+		if (!empty($lastEdition)) {
+			
+			$articles = $this->Article->find(
+				'all',
+				array(
+					'conditions' => array(
+						'Article.edition_id' => $lastEdition['Edition']['id'],
+						'Article.estado' => 1
+					),
+					'order' => array(
+						'Article.relevancia_id' => 'ASC',
+						'Article.created' => 'DESC',
+						'Article.id' => 'DESC'
+					)
+				)
+			);
+
+			$this->paginate = array(
+				'order' => array(
+					'Edition.created' => 'DESC',
+					'Edition.id' => 'DESC'
+				),
+				'limit' => 8
+			);
+			
+			$editions = $this->paginate(
+				'Edition',
+				array(
+					'Edition.id !=' => $lastEdition['Edition']['id']
+				)
+			);
+
+		}
+
 
 		$this->set(
 			array(
-				'title_for_section' => 'Ediciones'
+				'title_for_layout' => 'Ediciones',
+				'title_for_section' => 'Ediciones',
+				'lastEdition' => @$lastEdition,
+				'articles' => @$articles,
+				'editions' => @$editions
 			)
 		);
 

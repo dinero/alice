@@ -114,23 +114,25 @@
 		</div>
 		<div class="EditionsBottom">
 			<h4 class="titleB">Ediciones</h4>
-			<?php foreach ($lastEditions as $lE): ?>
-				<div class="edit large-3 columns">
-					<a href="">
-						<div class="image">
-							<?php echo $this->Html->image(
-					    		'/files/'.$lE['Image']['seccion'].'/'.$lE['Image']['id'].'.'.$lE['Image']['extension'],
-					    		array(
-					    			'alt' => $lE['Edition']['nombre'],
-					    		)
-					    	); ?>
-							<div class="text">
-								<h3><?php echo $lE['Edition']['nombre']; ?></h3>
+			<div>
+				<?php foreach ($lastEditions as $lE): ?>
+					<div class="edit large-3 columns">
+						<a href="<?php echo $this->Html->url(array('controller'=>'Editions','action'=>'view','title'=>$lE['Edition']['id'].'-'.$lE['Edition']['permalink'])); ?>">
+							<div class="image">
+								<?php echo $this->Html->image(
+						    		'/files/'.$lE['Image']['seccion'].'/'.$lE['Image']['id'].'.'.$lE['Image']['extension'],
+						    		array(
+						    			'alt' => $lE['Edition']['nombre'],
+						    		)
+						    	); ?>
+								<div class="text">
+									<h3><?php echo $lE['Edition']['nombre']; ?></h3>
+								</div>
 							</div>
-						</div>
-					</a>
-				</div>
-			<?php endforeach ?>
+						</a>
+					</div>
+				<?php endforeach ?>
+			</div>
 			<div class="clear"></div>
 		</div>
 

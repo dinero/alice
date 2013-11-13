@@ -56,8 +56,7 @@
 										$widthSmall = $widthImg;
 									}
 								}
-				    			?>
-								<?php echo $this->Html->image(
+				    			echo $this->Html->image(
 						    		'/files/'.$I['seccion'].'/'.'thumbs/'.$srcSmall
 						    	); ?>
 							</div>

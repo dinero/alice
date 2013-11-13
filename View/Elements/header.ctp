@@ -10,14 +10,91 @@
 	  	<section class="top-bar-section">
 		    <!-- Left Nav Section -->
 	    	<ul class="left">
-	      		<li><a href="#">Inicio</a></li>
-	      		<li><a href="#">Mujeres Destacadas</a></li>
-	      		<li><a href="#">Cultura</a></li>
-	      		<li><a href="#">Relaciones Interpersonales</a></li>
-	      		<li><a href="#">Otros</a></li>
-	      		<li><a href="#">Galer&iacute;as</a></li>
-	      		<li><a href="#">Videos</a></li>
-	      		<li><a href="#">Autores</a></li>
+	      		<li>
+	      			<?php
+	      			echo $this->Html->link(
+	      				'Inicio', 
+	      				array(
+	      					'controller' => 'Home'
+	      				)
+	      			);
+	      			?>
+	      		</li>
+	      		<li>
+	      			<?php
+	      			echo $this->Html->link(
+	      				'Mujeres Destacadas', 
+	      				array(
+	      					'controller' => 'Articles',
+	      					'action' => 'viewAll'
+	      				)
+	      			);
+	      			?>
+	      		</li>
+	      		<li>
+	      			<?php
+	      			echo $this->Html->link(
+	      				'Cultura', 
+	      				array(
+	      					'controller' => 'Articles',
+	      					'action' => 'viewAll'
+	      				)
+	      			);
+	      			?>
+	      		</li>
+	      		<li>
+	      			<?php
+	      			echo $this->Html->link(
+	      				'Relaciones Interpersonales', 
+	      				array(
+	      					'controller' => 'Articles',
+	      					'action' => 'viewAll'
+	      				)
+	      			);
+	      			?>
+	      		</li>
+	      		<li>
+	      			<?php
+	      			echo $this->Html->link(
+	      				'Otros', 
+	      				array(
+	      					'controller' => 'Articles',
+	      					'action' => 'viewAll'
+	      				)
+	      			);
+	      			?>
+	      		</li>
+	      		<li>
+	      			<?php
+	      			echo $this->Html->link(
+	      				'Galerías', 
+	      				array(
+	      					'controller' => 'Galery',
+	      					'action' => 'viewAll'
+	      				)
+	      			);
+	      			?>
+	      		</li>
+	      		<li>
+	      			<?php
+	      			echo $this->Html->link(
+	      				'Videos', 
+	      				array(
+	      					'controller' => 'Videos',
+	      					'action' => 'viewAll'
+	      				)
+	      			);
+	      			?>
+	      		</li>
+	      		<li>
+	      			<?php
+	      			echo $this->Html->link(
+	      				'Autores', 
+	      				array(
+	      				)
+	      			);
+	      			?>
+	      		</li>
 	    	</ul>
 	  	</section>
 	</nav>

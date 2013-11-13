@@ -326,6 +326,10 @@ ul {
 	margin-top: 1.5em !important;
 }
 
+.edit:nth-child(4n+1) {
+	clear: both;
+}
+
 	.edit .image {
 		position: relative;
 		width: 100%;
@@ -747,6 +751,52 @@ li.otherB:last-child {}
 	padding:1em 5em;
 }
 
+.pagination {
+	float: right;
+}
+
+.pagination .next, .pagination .next a, .pagination .prev, .pagination .prev a {
+	background: transparent;
+	color: #f47321;
+	font-size: 24px;
+	line-height: 30px !important;
+}
+
+.pagination .rad, .pagination .rad a {
+	color: #505050;
+}
+
+.pagination .rad, .pagination .next, .pagination .prev {
+	margin: 0 0.25em;
+}
+
+.pagination .rad, .pagination .rad a, .pagination .next, .pagination .next a, .pagination .prev, .pagination .prev a {
+	font-weight: bold;
+	text-align: center;
+	display: block;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	float: left;
+	border-radius: 50%;
+}
+
+.pagination .current {
+	background: #f47321;
+	color: #fff;
+}
+
+.pagination span.disabled:hover {
+	background: transparent;
+}
+
+.pagination span:hover {
+	background: #f47321;
+}
+.pagination span:hover a {
+	color: #fff;
+}
+
 .ps-container .ps-scrollbar-x-rail {
 	display: none;
 }
@@ -995,6 +1045,14 @@ li.otherB:last-child {}
 		width: 33.3333%;
 	}
 
+	.edit:nth-child(4n+1) {
+		clear: none;
+	}
+
+	.edit:nth-child(3n+1) {
+		clear: both;
+	}
+
 	.error {
 		width: 90%;
 	}
@@ -1070,6 +1128,14 @@ li.otherB:last-child {}
 
 	.edit {
 		width: 50%;
+	}
+
+	.edit:nth-child(3n+1) {
+		clear: none;
+	}
+
+	.edit:nth-child(2n+1) {
+		clear: both;
 	}
 
 	.edit .image .text h3 {
