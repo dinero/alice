@@ -99,7 +99,7 @@ class EditorsController extends AppController {
 		$this->redirect(array('action' => 'index'));
 	}
 
-	 public function beforeFilter() {
+	public function beforeFilter() {
         parent::beforeFilter();
         if ($this->params['admin'] == 1) {
         	$this->layout = 'admin';
