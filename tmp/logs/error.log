@@ -3809,3 +3809,12 @@ Request URL: /alice/images/uploadifive-cancel.png
 Stack Trace:
 #0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-11-13 05:27:10 Error: [MissingControllerException] Controller class EditorsController could not be found.
+Exception Attributes: array (
+  'class' => 'EditorsController',
+  'plugin' => NULL,
+)
+Request URL: /alice/admin/editors
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
