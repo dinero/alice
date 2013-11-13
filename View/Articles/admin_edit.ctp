@@ -126,7 +126,7 @@
 			'uploadScript'     : '<?php echo $url."&img=".$img."&multi=true" ?>',
 			'onUploadComplete' : function(file, data) { 
 				
-				$('.print_images').empty();
+				//$('.print_images').empty();
 
 				$('.print_images').append(data);
 

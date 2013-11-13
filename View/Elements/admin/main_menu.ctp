@@ -6,6 +6,7 @@
 		<li><a href="<?php echo $this->Html->url('/admin/articles'); ?>">Articulos</a></li>
 		<li><a href="<?php echo $this->Html->url('/admin/galery'); ?>">Galerías</a></li>
 		<li><a href="<?php echo $this->Html->url('/admin/videos'); ?>">Videos</a></li>
+		<li><a href="<?php echo $this->Html->url('/admin/ads'); ?>">Publicidades</a></li>
 		<li><a href="<?php echo $this->Html->url('/admin/users'); ?>">Usuarios</a></li>
 	</ul>
 </nav>
