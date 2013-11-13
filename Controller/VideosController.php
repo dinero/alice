@@ -98,11 +98,108 @@ class VideosController extends AppController {
 
 	}
 
+	public function view($id = null) {
+
+		if ($id != null) {
+			$video = $this->Video->find(
+				'first',
+				array(
+					'conditions' => array(
+						'Video.id' => $id
+					)
+				)
+			);
+
+			echo '<h1>'.$video['Video']['titulo'].'</h1>
+            <div class="paddingV">
+                <div id="video" class="flex-video">
+                    [youtube='.$video['Video']['url'].']
+                </div>
+            </div>';
+
+			echo '<script type="text/javascript">
+                $(function(){
+                    $.mb_videoEmbedder.defaults.width=$("#video").width();
+                    $("#video").mb_embedMovies();
+                    $("#video").mb_embedAudio();
+                });
+            </script>';
+		}
+
+		exit(1);
+	}
+
 	public function viewAll() {
+
+		$this->paginate = array(
+			'order' => array(
+				'Video.id' => 'DESC'
+			),
+			'limit' => 8
+		);
+
+		/*if (isset($_GET['v'])) {
+
+			$video = $_GET['v'];
+
+			if (!empty($video) and $video != '') {
+
+				$videoP = $this->Video->find(
+					'first',
+					array(
+						'conditions' => array(
+							'Video.id' => $video
+						)
+					)
+				);
+
+				if (!empty($videoP)) {
+					
+					$allV = $this->paginate(
+						'Video',
+						array(
+							'Video.id !=' => $videoP['Video']['id']
+						)
+					);
+
+				}
+				
+			} else {
+
+				$this->redirect(array('controller'=>'Videos','action'=>'viewAll'));
+			
+			}
+
+		} else {*/
+
+			$videoP = $this->Video->find(
+				'first',
+				array(
+					'order' => array(
+						'Video.id' => 'DESC'
+					)
+				)
+			);
+
+			if (!empty($videoP)) {
+					
+				$allV = $this->paginate(
+					'Video',
+					array(
+						'Video.id !=' => $videoP['Video']['id']
+					)
+				);
+				
+			}
+			
+		//}
 
 		$this->set(
 			array(
-				'title_for_section' => 'Videos'
+				'title_for_section' => 'Videos',
+				'title_for-layout' => 'Videos',
+				'videoP' => @$videoP,
+				'allV' => @$allV
 			)
 		);
 	}
@@ -114,6 +211,6 @@ class VideosController extends AppController {
         } else {
         	$this->layout = 'into';
         }
-        $this->Auth->allow('index', 'viewAll'); // Letting users register themselves
+        $this->Auth->allow('index', 'viewAll', 'view'); // Letting users register themselves
     }
 }
