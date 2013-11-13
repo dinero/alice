@@ -208,6 +208,7 @@ class ArticlesController extends AppController {
         parent::beforeFilter();
         if ($this->params['admin'] == 1) {
         	$this->layout = 'admin';
+        	
         } else {
         	$this->layout = 'into';
         }

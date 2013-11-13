@@ -32,9 +32,9 @@
 		<td><?php echo h($article['Article']['created']); ?>&nbsp;</td>
 		
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $article['Article']['id']),array('class'=>'btn btn-info')); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $article['Article']['id']),array('class'=>'btn btn-info')); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $article['Article']['id']), array('class'=>'btn btn-danger'), __('Are you sure you want to delete # %s?', $article['Article']['id'])); ?>
+			<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $article['Article']['id']),array('class'=>'btn btn-info')); ?>
+			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $article['Article']['id']),array('class'=>'btn btn-info')); ?>
+			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $article['Article']['id']), array('class'=>'btn btn-danger'), __('Are you sure you want to delete # %s?', $article['Article']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -42,7 +42,7 @@
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+	'format' => __('Pagina {:page} de {:pages}, Mostrando {:current} registros de {:count} total, Iniciando registros en {:start}, Finalizando en {:end}')
 	));
 	?>	</p>
 	<div class="paging">
