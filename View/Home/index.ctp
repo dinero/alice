@@ -1,31 +1,32 @@
 <div id="slide">
 	<ul data-orbit data-options="variable_height:true;bullets:false;timer_speed:4000;resume_on_mouseout: true;slide_number: false;">
-	  	<li>		
-	    	<a href="">
-	    		<div class="image">
-	    			<img src="<?php echo $this->Html->url('/files/image.png') ?>" data-interchange="[<?php echo $this->Html->url('/files/image2.png') ?>, (only screen and (min-width: 1px))], [<?php echo $this->Html->url('/files/image.png') ?>, (only screen and (min-width: 769px))]">
-			    	<?php /*echo $this->Html->image(
-			    		'/files/image.png'
-			    	);*/ ?>
-	    		</div>
+		<?php foreach ($lastArticles as $lA): ?>
+		  	<li>		
+		    	<a href="<?php echo $this->Html->url(array('controller'=>'Articles','action'=>'view','title'=>$lA['Article']['id'].'-'.$lA['Article']['permalink'])); ?>">
+		    		<div class="image">
+		    			<?php
+						$widthLarge = 0;
+						foreach ($lA['Image'] as $I) {
+							$src = $I['seccion'].'/'.$I['id'].'.'.$I['extension'];
+							$this->Image->imagen(Configure::read('absolute_root').$src);
+							$widthImg = $this->Image->image_width;
+							if ($widthImg > $widthLarge) {
+								$srcSmall = @$srcLarge;
+								$srcLarge = $src;
+								$widthLarge = $widthImg;
+							} else {
+								$srcSmall = $src;
+							}
+						}
+		    			?>
+		    			<img src="<?php echo $this->Html->url('/files/'.$srcLarge); ?>" data-interchange="[<?php echo $this->Html->url('/files/'.$srcSmall); ?>, (only screen and (min-width: 1px))], [<?php echo $this->Html->url('/files/'.$srcLarge); ?>, (only screen and (min-width: 769px))]">
+		    		</div>
 	    		<div class="edition-title">
-	    			<h2>Titulo del articulo</h2>
+	    			<h2><?php echo $lA['Article']['titulo']; ?></h2>
 	    		</div>
 	    	</a>
 	  	</li>
-	  	<li>		
-	    	<a href="">
-	    		<div class="image">
-	    			<img src="<?php echo $this->Html->url('/files/image.png') ?>" data-interchange="[<?php echo $this->Html->url('/files/image2.png') ?>, (only screen and (min-width: 1px))], [<?php echo $this->Html->url('/files/image.png') ?>, (only screen and (min-width: 769px))]">
-			    	<?php /*echo $this->Html->image(
-			    		'/files/image.png'
-			    	);*/ ?>
-	    		</div>
-	    		<div class="edition-title">
-	    			<h2>Titulo del articulo</h2>
-	    		</div>
-	    	</a>
-	  	</li>
+		<?php endforeach ?>
 	</ul>
 </div>
 
@@ -48,108 +49,37 @@
 		    });
 	    </script>
 		<div class="arts">
-			<div class="art">
-				<a href="">
-					<div class="image">
-						<?php echo $this->Html->image(
-				    		'/files/image2.png'
-				    	); ?>
-					</div>
-					<div class="content">
-						<h2>Donec In Velit Vel Ipsum Auctor Pulvinar Vestibulum Iaculis</h2>
-						<span class="editor">Ulises Huete</span>
-						<div class="text">
-							<p>Praesent vestibulum molestielacus. Aenean non ummy hen dre rit uris. Phasellus porta. Fusce suscipit riusium ociravida rsu s nec, is natoque ibus et magnis dis parturient montesna scetur ridiculus.</p>
+			<?php foreach ($lastArticles as $lA): ?>
+				<div class="art">
+					<a href="<?php echo $this->Html->url(array('controller'=>'Articles','action'=>'view','title'=>$lA['Article']['id'].'-'.$lA['Article']['permalink'])); ?>">
+						<div class="image">
+							<?php
+							$widthSmall = 1280;
+							foreach ($lA['Image'] as $I) {
+								$src = $I['id'].'.'.$I['extension'];
+								$this->Image->imagen(Configure::read('absolute_root').$I['seccion'].'/'.$src);
+								$widthImg = $this->Image->image_width;
+								if ($widthImg < $widthSmall) {
+									$srcSmall = $src;
+									$widthSmall = $widthImg;
+								}
+							}
+			    			?>
+							<?php echo $this->Html->image(
+					    		'/files/'.$I['seccion'].'/'.'thumbs/'.$srcSmall
+					    	); ?>
 						</div>
-					</div>
-				</a>
-				<div class="clear"></div>
-			</div>
-			<div class="art">
-				<a href="">
-					<div class="image">
-						<?php echo $this->Html->image(
-				    		'/files/image2.png'
-				    	); ?>
-					</div>
-					<div class="content">
-						<h2>Donec In Velit Vel Ipsum Auctor Pulvinar Vestibulum Iaculis</h2>
-						<span class="editor">Ulises Huete</span>
-						<div class="text">
-							<p>Praesent vestibulum molestielacus. Aenean non ummy hen dre rit uris. Phasellus porta. Fusce suscipit riusium ociravida rsu s nec, is natoque ibus et magnis dis parturient montesna scetur ridiculus.</p>
+						<div class="content">
+							<h2><?php echo $lA['Article']['titulo']; ?></h2>
+							<span class="editor"><?php echo $lA['Editor']['nombre']; ?></span>
+							<div class="text">
+								<?php echo $this->Text->truncate($lA['Article']['intro'], 200); ?>
+							</div>
 						</div>
-					</div>
-				</a>
-				<div class="clear"></div>
-			</div>
-			<div class="art">
-				<a href="">
-					<div class="image">
-						<?php echo $this->Html->image(
-				    		'/files/image2.png'
-				    	); ?>
-					</div>
-					<div class="content">
-						<h2>Donec In Velit Vel Ipsum Auctor Pulvinar Vestibulum Iaculis</h2>
-						<span class="editor">Ulises Huete</span>
-						<div class="text">
-							<p>Praesent vestibulum molestielacus. Aenean non ummy hen dre rit uris. Phasellus porta. Fusce suscipit riusium ociravida rsu s nec, is natoque ibus et magnis dis parturient montesna scetur ridiculus.</p>
-						</div>
-					</div>
-				</a>
-				<div class="clear"></div>
-			</div>
-			<div class="art">
-				<a href="">
-					<div class="image">
-						<?php echo $this->Html->image(
-				    		'/files/image2.png'
-				    	); ?>
-					</div>
-					<div class="content">
-						<h2>Donec In Velit Vel Ipsum Auctor Pulvinar Vestibulum Iaculis</h2>
-						<span class="editor">Ulises Huete</span>
-						<div class="text">
-							<p>Praesent vestibulum molestielacus. Aenean non ummy hen dre rit uris. Phasellus porta. Fusce suscipit riusium ociravida rsu s nec, is natoque ibus et magnis dis parturient montesna scetur ridiculus.</p>
-						</div>
-					</div>
-				</a>
-				<div class="clear"></div>
-			</div>
-			<div class="art">
-				<a href="">
-					<div class="image">
-						<?php echo $this->Html->image(
-				    		'/files/image2.png'
-				    	); ?>
-					</div>
-					<div class="content">
-						<h2>Donec In Velit Vel Ipsum Auctor Pulvinar Vestibulum Iaculis</h2>
-						<span class="editor">Ulises Huete</span>
-						<div class="text">
-							<p>Praesent vestibulum molestielacus. Aenean non ummy hen dre rit uris. Phasellus porta. Fusce suscipit riusium ociravida rsu s nec, is natoque ibus et magnis dis parturient montesna scetur ridiculus.</p>
-						</div>
-					</div>
-				</a>
-				<div class="clear"></div>
-			</div>
-			<div class="art">
-				<a href="">
-					<div class="image">
-						<?php echo $this->Html->image(
-				    		'/files/image2.png'
-				    	); ?>
-					</div>
-					<div class="content">
-						<h2>Donec In Velit Vel Ipsum Auctor Pulvinar Vestibulum Iaculis</h2>
-						<span class="editor">Ulises Huete</span>
-						<div class="text">
-							<p>Praesent vestibulum molestielacus. Aenean non ummy hen dre rit uris. Phasellus porta. Fusce suscipit riusium ociravida rsu s nec, is natoque ibus et magnis dis parturient montesna scetur ridiculus.</p>
-						</div>
-					</div>
-				</a>
-				<div class="clear"></div>
-			</div>
+					</a>
+					<div class="clear"></div>
+				</div>
+			<?php endforeach ?>
 		</div>
 		<div class="pub">
 			<div class="image">
@@ -175,27 +105,21 @@
     	); ?>
 	</div>
 	<div class="editions row">
-		<div class="large-4 small-4 columns edition">
-			<a href="">
+		<?php foreach ($lastEditions as $lE): ?>
+			<div class="large-4 small-4 columns edition">
 				<?php echo $this->Html->image(
-		    		'/files/edition.jpg'
+		    		'/files/'.$lE['Image']['seccion'].'/'.$lE['Image']['id'].'.'.$lE['Image']['extension'],
+		    		array(
+		    			'alt' => $lE['Edition']['nombre'],
+		    			'url' => array(
+		    				'controller' => 'Editions',
+		    				'action' => 'view',
+		    				'title' => $lE['Edition']['id'].'-'.$lE['Edition']['permalink']
+		    			)
+		    		)
 		    	); ?>
-			</a>
-		</div>
-		<div class="large-4 small-4 columns edition">
-			<a href="">
-				<?php echo $this->Html->image(
-		    		'/files/edition.jpg'
-		    	); ?>
-			</a>
-		</div>
-		<div class="large-4 small-4 columns edition">
-			<a href="">
-				<?php echo $this->Html->image(
-		    		'/files/edition.jpg'
-		    	); ?>
-			</a>
-		</div>
+			</div>
+		<?php endforeach ?>
 	</div>
 	<div class="article-title">
 		<span>Galer&iacute;as</span>

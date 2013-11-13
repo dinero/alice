@@ -124,13 +124,83 @@ class ArticlesController extends AppController {
 
 	public function view() {
 
-		$this->layout = 'into';
+		if (!empty($this->passedArgs['title']) and isset($this->passedArgs['title'])) {
 
-		$this->set(
-			array(
-				'title_for_section' => 'Titulo del articulo'
-			)
-		);
+			$permalink = explode('-', $this->passedArgs['title']);
+
+			$id = $permalink[0];
+
+			$article = $this->Article->find(
+				'first',
+				array(
+					'conditions' => array(
+						'Article.id' => $id
+					)
+				)
+			);
+
+			if (!empty($article)) {
+				
+				$moreOfEdition = $this->Article->find(
+					'all',
+					array(
+						'conditions' => array(
+							'Article.estado' => 1,
+							'Article.edition_id' => $article['Article']['edition_id'],
+							'Article.id !=' => $article['Article']['id'],
+						),
+						'order' => array(
+							'Article.relevancia_id' => 'ASC',
+							'Article.created' => 'DESC',
+							'Article.id' => 'DESC'
+						)
+					)
+				);
+
+				$moreOfEditor = $this->Article->find(
+					'all',
+					array(
+						'conditions' => array(
+							'Article.estado' => 1,
+							'Article.editor_id' => $article['Article']['editor_id'],
+							'Article.edition_id !=' => $article['Article']['edition_id'],
+							'Article.id !=' => $article['Article']['id']
+						),
+						'order' => array(
+							'Article.relevancia_id' => 'ASC',
+							'Article.created' => 'DESC',
+							'Article.id' => 'DESC'
+						),
+						'limit' => 5
+					)
+				);
+
+				$this->set(
+					array(
+						'title_for_layout' => $article['Article']['titulo'],
+						'title_for_section' => $article['Article']['titulo'],
+						'article' => @$article,
+						'moreOfEdition' => @$moreOfEdition,
+						'moreOfEditor' => @$moreOfEditor
+					)
+				);
+
+			} else {
+				$this->set(
+					array(
+						'title_for_layout' => 'Error 404',
+						'title_for_section' => 'Error 404'
+					)
+				);
+			}
+		} else {
+			$this->set(
+				array(
+					'title_for_layout' => 'Error 404',
+					'title_for_section' => 'Error 404'
+				)
+			);
+		}
 
 	}
 
