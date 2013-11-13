@@ -1,2 +1,2 @@
-1384363884
+1384364905
 a:2:{s:4:"name";a:7:{s:32:"2b6494c3d6efa402d28b8847fdc5a17d";s:7:"`alice`";s:32:"9a267bb6c20a42cbbe501b1218b499fa";s:8:"`videos`";s:32:"ddb38f7a4417f48034b91b63dede3c70";s:12:"`Video`.`id`";s:32:"c79cbc7a6250b6509a454372c3597490";s:13:"`Video`.`url`";s:32:"33efc7003ab05092d821e7dadbabec68";s:16:"`Video`.`titulo`";s:32:"716759bceae2aa00fad5001f66131fe3";s:7:"`Video`";s:32:"47eb7bb09414c64f779510914712b6ee";s:7:"`count`";}s:6:"fields";a:2:{s:32:"199c168bedcaeb3eb7a7f43679c632d5";a:3:{i:0;s:12:"`Video`.`id`";i:1;s:13:"`Video`.`url`";i:2;s:16:"`Video`.`titulo`";}s:32:"6d1f17985efa4b9e2a5081c08df4c87b";a:1:{i:0;s:19:"COUNT(*) AS `count`";}}}
