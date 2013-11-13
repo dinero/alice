@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 1384320438
+=======
+1384297675
+>>>>>>> d654a3a24d682d56bad22cb526e432f6235191b2
 a:4:{s:2:"id";a:5:{s:4:"type";s:7:"integer";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:11;s:3:"key";s:7:"primary";}s:6:"nombre";a:6:{s:4:"type";s:6:"string";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:50;s:7:"collate";s:15:"utf8_general_ci";s:7:"charset";s:4:"utf8";}s:9:"permalink";a:6:{s:4:"type";s:6:"string";s:4:"null";b:0;s:7:"default";N;s:6:"length";i:50;s:7:"collate";s:15:"utf8_general_ci";s:7:"charset";s:4:"utf8";}s:7:"user_id";a:4:{s:4:"type";s:7:"integer";s:4:"null";b:1;s:7:"default";N;s:6:"length";i:11;}}
