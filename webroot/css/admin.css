@@ -309,47 +309,31 @@ body {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     border: solid 1px #CCC;
-    display: inline-block;
-    /*margin: 3px 0;*/
-    margin: 1.5em;
+    display: block;
+    float: left;
+    min-height: 128px;
+    margin: 0 1em 1em 0;
     padding: 0.5em;
     text-align: center;
     text-decoration: none;
-    vertical-align: top;
-    width: 90%;
-    min-height: 128px;
-}
-
-.icon_dock:hover {
-    background: #09f;
-    -webkit-transition: all .25s ease;
-    -moz-transition: all .25s ease;
-    -ms-transition: all .25s ease;
-    -o-transition: all .25s ease;
-    transition: all .25s ease;
-    text-decoration: none;
+    width: 200px;
 }
 
 .icon_dock img {
-    opacity: 0.5;
-}
-
-.icon_dock:hover img {
     -webkit-transition: all .25s ease;
     -moz-transition: all .25s ease;
     -ms-transition: all .25s ease;
     -o-transition: all .25s ease;
     transition: all .25s ease;
-    opacity: 1;
+    margin-bottom: 5px;
 }
 
-.icon_dock span {
-    background: #CCC;
+.icon_dock span.title_icon_dock {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    color: #FFF;
+    color: #666;
     display: block;
     text-align: center;
     text-decoration: none;
