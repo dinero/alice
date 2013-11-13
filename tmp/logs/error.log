@@ -4775,3 +4775,129 @@ Stack Trace:
 #0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 >>>>>>> f90084c31b979b8d6fc66225dd418ff4ad716f87
+2013-11-13 14:28:59 Error: [MissingTableException] Table ads for model Ad was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'ads',
+  'class' => 'Ad',
+  'ds' => 'default',
+)
+Request URL: /alice/admin/ads
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(3243): Model->setSource('ads')
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Component\PaginatorComponent.php(197): Model->find('all', Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate(NULL, Array, Array)
+#4 C:\wamp\www\alice\Controller\AdsController.php(17): Controller->paginate()
+#5 [internal function]: AdsController->admin_index()
+#6 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(AdsController), Array)
+#7 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(AdsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-11-13 17:00:45 Error: [MissingActionException] Action UsersController::album() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'album',
+)
+Request URL: /alice/users/album/1
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-13 17:00:52 Error: [MissingActionException] Action UsersController::album() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'album',
+)
+Request URL: /alice/users/album/1
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-13 17:09:21 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /alice/img/admin/picture_folder.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-13 17:10:05 Error: Fatal Error (1): Unsupported operand types in [C:\wamp\www\cakephp2.3.6\lib\Cake\View\Helper\HtmlHelper.php, line 787]
+2013-11-13 17:10:05 Error: [FatalErrorException] Unsupported operand types
+Request URL: /alice/admin/albumes
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\wamp\www\cak...', 787)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\wamp\www\cak...', 787, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\wamp\www\cak...', 787, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-13 17:32:46 Error: Fatal Error (1): Call to a member function generatePermalink() on a non-object in [C:\wamp\www\alice\Controller\AlbumesController.php, line 43]
+2013-11-13 17:32:46 Error: [FatalErrorException] Call to a member function generatePermalink() on a non-object
+Request URL: /alice/admin/albumes/add
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\ali...', 43)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\ali...', 43, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\ali...', 43, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-13 17:33:01 Error: Fatal Error (1): Class 'CakeTime' not found in [C:\wamp\www\alice\Controller\AlbumesController.php, line 46]
+2013-11-13 17:33:01 Error: [FatalErrorException] Class 'CakeTime' not found
+Request URL: /alice/admin/albumes/add
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'CakeTime...', 'C:\wamp\www\ali...', 46)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'CakeTime...', 'C:\wamp\www\ali...', 46, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Class 'CakeTime...', 'C:\wamp\www\ali...', 46, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-13 17:41:55 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\alice\View\Albumes\admin_edit.ctp, line 18]
+2013-11-13 17:41:55 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /alice/admin/albumes/edit/1
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 18)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 18, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\ali...', 18, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-13 17:49:26 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-13 19:40:47 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-13 19:41:31 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-13 19:41:43 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
