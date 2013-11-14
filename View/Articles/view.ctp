@@ -37,6 +37,7 @@
 			<article class="artText">
 				<?php echo $article['Article']['contenido']; ?>
 			</article>
+			<div class="fb-comments" data-href="<?php echo $this->Html->url(array('controller'=>'Articles','action'=>'view','title'=>$article['Article']['id'].'-'.$article['Article']['permalink'])); ?>" data-numposts="5" data-width="935"></div>
 		</section>
 		<aside class="asideR large-3 columns">
 			<div class="otherArt">

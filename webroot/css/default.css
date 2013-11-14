@@ -444,6 +444,11 @@ ul {
 		
 				font-size: 1em;
 			}
+
+.fb-comments {
+	margin-top: 1em;
+}
+
 .flex-video {
 	padding-left: 0.75em;
 	padding-right: 0.75em;

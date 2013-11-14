@@ -21,6 +21,7 @@
 			    	);	
 
 				} ?>
+				<div class="fb-comments" data-href="<?php echo $this->Html->url(array('controller'=>'Galery','action'=>'view','title'=>$galery['Albume']['id'].'-'.$galery['Albume']['permalink'])); ?>" data-numposts="5" data-width="1232"></div>
 			</div>
 			<div class="clear"></div>
 		</div>
