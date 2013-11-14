@@ -69,24 +69,19 @@
 				<div class="clear"></div>
 			</div>
 			<div class="public">
-				<?php echo $this->Html->image(
-				'/files/pub1.jpg',
-				array(
-					'alt' => 'Publicidad 1',
-					'url' => array(
-						'controller' => 'home'
-					)	
-				)
-			); ?>
-			<?php echo $this->Html->image(
-				'/files/pub2.jpg',
-				array(
-					'alt' => 'Publicidad 2',
-					'url' => array(
-						'controller' => 'home'
-					)	
-				)
-			); ?>
+
+				<?php if ($pubArtV): ?>
+					<?php foreach ($pubArtV as $pAV): ?>
+						<?php echo $this->Html->image(
+				    		'/files/'.$pAV['Image']['seccion'].'/'.$pAV['Image']['id'].'.'.$pAV['Image']['extension'],
+				    		array(
+				    			'alt' => $pAV['Ad']['nombre'],
+				    			'url' => $pAV['Ad']['link']
+				    		)
+				    	); ?>
+					<?php endforeach ?>
+				<?php endif ?>
+
 			</div>
 		</aside>
 		<div class="clear"></div>
@@ -131,10 +126,18 @@
 
 	<?php endif ?>
 	
-	<div class="pubIntoH">
-		<?php echo $this->Html->image(
-    		'/files/anuncio2.jpg'
-    	); ?>
-	</div>
+	<?php if (!empty($pubArtH['Image'])): ?>
+
+		<div class="pubIntoH">
+			<?php echo $this->Html->image(
+	    		'/files/'.$pubArtH['Image']['seccion'].'/'.$pubArtH['Image']['id'].'.'.$pubArtH['Image']['extension'],
+	    		array(
+	    			'alt' => $pubArtH['Ad']['nombre'],
+	    			'url' => $pubArtH['Ad']['link']
+	    		)
+	    	); ?>
+		</div>
+		
+	<?php endif ?>
 
 </div>

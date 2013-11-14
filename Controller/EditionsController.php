@@ -138,6 +138,7 @@ class EditionsController extends AppController {
 	public function viewAll() {
 
 		$this->loadModel('Article');
+		$this->loadModel('Ad');
 
 		$lastEdition = $this->Edition->find(
 			'first',
@@ -183,6 +184,19 @@ class EditionsController extends AppController {
 
 		}
 
+		$pubEdiH = $this->Ad->find(
+			'first',
+			array(
+				'conditions' => array(
+					'Ad.orientacion' => 'horizontal',
+					'Ad.bloque' => 'ediciones'
+				),
+				'order' => array(
+					'Ad.id' => 'DESC'
+				)
+			)
+		);
+
 
 		$this->set(
 			array(
@@ -190,7 +204,8 @@ class EditionsController extends AppController {
 				'title_for_section' => 'Ediciones',
 				'lastEdition' => @$lastEdition,
 				'articles' => @$articles,
-				'editions' => @$editions
+				'editions' => @$editions,
+				'pubEdiH' => @$pubEdiH
 			)
 		);
 
@@ -199,6 +214,7 @@ class EditionsController extends AppController {
 	public function view() {
 
 		$this->loadModel('Article');
+		$this->loadModel('Ad');
 
 		if (!empty($this->passedArgs['title']) and isset($this->passedArgs['title'])) {
 
@@ -263,6 +279,33 @@ class EditionsController extends AppController {
 					)
 				);
 
+				$pubEdiH = $this->Ad->find(
+					'first',
+					array(
+						'conditions' => array(
+							'Ad.orientacion' => 'horizontal',
+							'Ad.bloque' => 'ediciones'
+						),
+						'order' => array(
+							'Ad.id' => 'DESC'
+						)
+					)
+				);
+
+				$pubArtV = $this->Ad->find(
+					'all',
+					array(
+						'conditions' => array(
+							'Ad.orientacion' => 'vertical',
+							'Ad.bloque' => 'articulos'
+						),
+						'order' => array(
+							'Ad.id' => 'DESC'
+						),
+						'limit' => 2
+					)
+				);
+
 				$this->set(
 					array(
 						'title_for_layout' => @$edition['Edition']['nombre'],
@@ -270,7 +313,9 @@ class EditionsController extends AppController {
 						'edition' => @$edition,
 						'articlePrinc' => @$articlePrinc,
 						'articlesSec' => @$articlesSec,
-						'lastEditions' => @$lastEditions
+						'lastEditions' => @$lastEditions,
+						'pubEdiH' => @$pubEdiH,
+						'pubArtV' => @$pubArtV
 					)
 				);
 				

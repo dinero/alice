@@ -124,6 +124,8 @@ class ArticlesController extends AppController {
 
 	public function view() {
 
+		$this->loadModel('Ad');
+
 		if (!empty($this->passedArgs['title']) and isset($this->passedArgs['title'])) {
 
 			$permalink = explode('-', $this->passedArgs['title']);
@@ -175,13 +177,42 @@ class ArticlesController extends AppController {
 					)
 				);
 
+				$pubArtH = $this->Ad->find(
+					'first',
+					array(
+						'conditions' => array(
+							'Ad.orientacion' => 'horizontal',
+							'Ad.bloque' => 'articulos'
+						),
+						'order' => array(
+							'Ad.id' => 'DESC'
+						)
+					)
+				);
+
+				$pubArtV = $this->Ad->find(
+					'all',
+					array(
+						'conditions' => array(
+							'Ad.orientacion' => 'vertical',
+							'Ad.bloque' => 'articulos'
+						),
+						'order' => array(
+							'Ad.id' => 'DESC'
+						),
+						'limit' => 2
+					)
+				);
+
 				$this->set(
 					array(
 						'title_for_layout' => $article['Article']['titulo'],
 						'title_for_section' => $article['Article']['titulo'],
 						'article' => @$article,
 						'moreOfEdition' => @$moreOfEdition,
-						'moreOfEditor' => @$moreOfEditor
+						'moreOfEditor' => @$moreOfEditor,
+						'pubArtH' => @$pubArtH,
+						'pubArtV' => @$pubArtV
 					)
 				);
 

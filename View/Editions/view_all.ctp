@@ -85,9 +85,19 @@
 		    ?>
 		</section>
 	</div>
-	<div class="pubIntoH">
-		<?php echo $this->Html->image(
-    		'/files/anuncio2.jpg'
-    	); ?>
-	</div>
+	
+	<?php if (!empty($pubEdiH['Image'])): ?>
+
+		<div class="pubIntoH">
+			<?php echo $this->Html->image(
+	    		'/files/'.$pubEdiH['Image']['seccion'].'/'.$pubEdiH['Image']['id'].'.'.$pubEdiH['Image']['extension'],
+	    		array(
+	    			'alt' => $pubEdiH['Ad']['nombre'],
+	    			'url' => $pubEdiH['Ad']['link']
+	    		)
+	    	); ?>
+		</div>
+		
+	<?php endif ?>
+	
 </div>

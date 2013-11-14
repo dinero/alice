@@ -31,11 +31,21 @@
 </div>
 
 <div id="container-body">
-	<div class="pub-horizontal">
-		<?php echo $this->Html->image(
-    		'/files/anuncio1.jpg'
-    	); ?>
-	</div>
+	
+	<?php if (!empty($pubArtH['Image'])): ?>
+
+		<div class="pub-horizontal">
+			<?php echo $this->Html->image(
+	    		'/files/'.$pubArtH['Image']['seccion'].'/'.$pubArtH['Image']['id'].'.'.$pubArtH['Image']['extension'],
+	    		array(
+	    			'alt' => $pubArtH['Ad']['nombre'],
+	    			'url' => $pubArtH['Ad']['link']
+	    		)
+	    	); ?>
+		</div>
+		
+	<?php endif ?>
+
 	<div class="article-title">
 		<span>Articulos</span>
 	</div>
@@ -82,28 +92,37 @@
 			<?php endforeach ?>
 		</div>
 		<div class="pub">
-			<div class="image">
-				<a href="">
+			<?php if (!empty($pubArtV)): ?>
+				<?php foreach ($pubArtV as $pAV): ?>
+					
+				<div class="image">
 					<?php echo $this->Html->image(
-			    		'/files/pub1.jpg'
+			    		'/files/'.$pAV['Image']['seccion'].'/'.$pAV['Image']['id'].'.'.$pAV['Image']['extension'],
+			    		array(
+			    			'alt' => $pAV['Ad']['nombre'],
+			    			'url' => $pAV['Ad']['link']
+			    		)
 			    	); ?>
-				</a>
-			</div>
-			<div class="image">
-				<a href="">
-					<?php echo $this->Html->image(
-			    		'/files/pub2.jpg'
-			    	); ?>
-				</a>
-			</div>
+				</div>
+
+				<?php endforeach ?>
+			<?php endif ?>
 		</div>
 		<div class="clear"></div>
 	</div>
-	<div class="pub-horizontal">
-		<?php echo $this->Html->image(
-    		'/files/anuncio2.jpg'
-    	); ?>
-	</div>
+	<?php if (!empty($pubEdiH['Image'])): ?>
+
+		<div class="pub-horizontal">
+			<?php echo $this->Html->image(
+	    		'/files/'.$pubEdiH['Image']['seccion'].'/'.$pubEdiH['Image']['id'].'.'.$pubEdiH['Image']['extension'],
+	    		array(
+	    			'alt' => $pubEdiH['Ad']['nombre'],
+	    			'url' => $pubEdiH['Ad']['link']
+	    		)
+	    	); ?>
+		</div>
+		
+	<?php endif ?>
 	<div class="editions row">
 		<?php foreach ($lastEditions as $lE): ?>
 			<div class="large-4 small-4 columns edition">
@@ -121,96 +140,96 @@
 			</div>
 		<?php endforeach ?>
 	</div>
-	<div class="article-title">
-		<span>Galer&iacute;as</span>
-	</div>
-	<div class="galeries">
-		<div class="gal row">
-			<div class="large-4 small-6 columns">
-				<div class="image">
-					<?php echo $this->Html->image(
-			    		'/files/galery.png'
-			    	); ?>
-					<div class="text">
-						<h4>Titulo de la Galeria</h4>
-						<a href="">Continuar</a>
-					</div>
-					<div class="clear"></div>
-				</div>
-			</div>
-			<div class="large-4 small-6 columns">
-				<div class="image">
-					<?php echo $this->Html->image(
-			    		'/files/galery.png'
-			    	); ?>
-					<div class="text">
-						<h4>Titulo de la Galeria</h4>
-						<a href="">Continuar</a>
-					</div>
-					<div class="clear"></div>
-				</div>
-			</div>
-			<div class="large-4 small-6 columns">
-				<div class="image">
-					<?php echo $this->Html->image(
-			    		'/files/galery.png'
-			    	); ?>
-					<div class="text">
-						<h4>Titulo de la Galeria</h4>
-						<a href="">Continuar</a>
-					</div>
-					<div class="clear"></div>
-				</div>
-			</div>
-			<div class="large-4 small-6 columns">
-				<div class="image">
-					<?php echo $this->Html->image(
-			    		'/files/galery.png'
-			    	); ?>
-					<div class="text">
-						<h4>Titulo de la Galeria</h4>
-						<a href="">Continuar</a>
-					</div>
-					<div class="clear"></div>
-				</div>
-			</div>
-			<div class="large-4 small-6 columns">
-				<div class="image">
-					<?php echo $this->Html->image(
-			    		'/files/galery.png'
-			    	); ?>
-					<div class="text">
-						<h4>Titulo de la Galeria</h4>
-						<a href="">Continuar</a>
-					</div>
-					<div class="clear"></div>
-				</div>
-			</div>
-			<div class="large-4 small-6 columns">
-				<div class="image">
-					<?php echo $this->Html->image(
-			    		'/files/galery.png'
-			    	); ?>
-					<div class="text">
-						<h4>Titulo de la Galeria</h4>
-						<a href="">Continuar</a>
-					</div>
-					<div class="clear"></div>
-				</div>
-			</div>
+
+	<?php if (isset($albumes) and !empty($albumes)): ?>
+		
+		<div class="article-title">
+			<span>Galer&iacute;as</span>
 		</div>
-		<div class="pub">
-			<a href="">
-				<?php echo $this->Html->image(
-		    		'/files/pub3.jpg'
-		    	); ?>
-			</a>
+		<div class="galeries">
+			<div class="gal row">
+
+				<?php foreach ($albumes as $alb): ?>
+
+					<?php if (isset($alb['Image'][0]) and $alb['Image'][0] != ''): ?>
+						
+						<div class="large-4 small-6 columns">
+							<div class="image">
+								<?php echo $this->Html->image(
+						    		'/files/'.$alb['Image'][0]['seccion'].'/thumbs/'.$alb['Image'][0]['id'].'.'.$alb['Image'][0]['extension']
+						    	); ?>
+								<div class="text">
+									<h4><?php echo $alb['Albume']['nombre']; ?></h4>
+									<a href="<?php echo $this->Html->url(array('controller'=>'Galery','action'=>'view','title'=>$alb['Albume']['id'].'-'.$alb['Albume']['permalink'])); ?>">Continuar</a>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+
+					<?php endif ?>
+					
+				<?php endforeach ?>
+
+			</div>
+
+			<?php if (!empty($pubAlbV['Image'])): ?>
+
+				<div class="pub">
+					<?php echo $this->Html->image(
+			    		'/files/'.$pubAlbV['Image']['seccion'].'/'.$pubAlbV['Image']['id'].'.'.$pubAlbV['Image']['extension'],
+			    		array(
+			    			'alt' => $pubAlbV['Ad']['nombre'],
+			    			'url' => $pubAlbV['Ad']['link']
+			    		)
+			    	); ?>
+					
+				</div>
+				
+			<?php endif ?>
+			<div class="clear"></div>
 		</div>
-		<div class="clear"></div>
+
+	<?php endif ?>
+
+	<?php if (!empty($pubAlbH['Image'])): ?>
+
+		<div class="pub-horizontal">
+			<?php echo $this->Html->image(
+	    		'/files/'.$pubAlbH['Image']['seccion'].'/'.$pubAlbH['Image']['id'].'.'.$pubAlbH['Image']['extension'],
+	    		array(
+	    			'alt' => $pubAlbH['Ad']['nombre'],
+	    			'url' => $pubAlbH['Ad']['link']
+	    		)
+	    	); ?>
+		</div>
+		
+	<?php endif ?>
+
+	<div class="pubHome">
+
+
+		<?php if (!empty($pubHome)): ?>
+
+			<?php foreach ($pubHome as $pH): ?>
+
+				<?php if (!empty($pH['Image'])): ?>
+
+					<div class="pubFixed">
+						<?php echo $this->Html->image(
+				    		'/files/'.$pH['Image']['seccion'].'/'.$pH['Image']['id'].'.'.$pH['Image']['extension'],
+				    		array(
+				    			'alt' => $pH['Ad']['nombre'],
+				    			'url' => $pH['Ad']['link']
+				    		)
+				    	); ?>
+					</div>
+					
+				<?php endif ?>
+				
+			<?php endforeach ?>
+			
+		<?php endif ?>
+		
 	</div>
-	<div class="pub-horizontal">
-		<?php echo $this->Html->image(
-    		'/files/anuncio3.jpg'
-    	); ?>
-	</div>
+
 </div>
