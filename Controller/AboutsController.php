@@ -101,9 +101,34 @@ class AboutsController extends AppController {
 
 	public function view() {
 
+		if (!empty($this->passedArgs['title']) and isset($this->passedArgs['title'])) {
+
+			$permalink = $this->passedArgs['title'];
+
+			$about = $this->About->find(
+				'first',
+				array(
+					'conditions' => array(
+						'About.permalink' => $permalink
+					)
+				)
+			);
+
+			if (!empty($about)) {
+				$title_for_layout = $about['About']['titulo'];
+				$title_for_section = $about['About']['titulo'];
+			} else {
+				$title_for_layout = 'Error 404';
+				$title_for_section = 'Error 404';
+			}
+
+		}
+
 		$this->set(
 			array(
-				'title_for_section' => 'Acerca de Alice'
+				'title_for_section' => @$title_for_section,
+				'title_for_layout' => @$title_for_layout,
+				'about' => @$about
 			)
 		);
 

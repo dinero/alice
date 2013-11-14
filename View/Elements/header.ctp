@@ -91,6 +91,9 @@
 	      			echo $this->Html->link(
 	      				'Autores', 
 	      				array(
+	      					'controller' => 'Abouts',
+							'action' => 'view',
+							'title' => 'autores'
 	      				)
 	      			);
 	      			?>

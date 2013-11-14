@@ -60,17 +60,6 @@
 		<li>
 			<?php
 			echo $this->Html->link(
-				'autores',
-				array(
-					'controller' => '',
-					'action' => ''
-				)
-			);
-			?>
-		</li>
-		<li>
-			<?php
-			echo $this->Html->link(
 				'Mujeres Destacadas',
 				array(
 					'controller' => 'Articles',
@@ -120,10 +109,11 @@
 		<li>
 			<?php
 			echo $this->Html->link(
-				'Misión',
+				'Sobre Nosotros',
 				array(
-					'controller' => '',
-					'action' => ''
+					'controller' => 'Abouts',
+					'action' => 'view',
+					'title' => 'sobre-nosotros'
 				)
 			);
 			?>
@@ -131,10 +121,11 @@
 		<li>
 			<?php
 			echo $this->Html->link(
-				'Visión',
+				'Autores',
 				array(
-					'controller' => '',
-					'action' => ''
+					'controller' => 'Abouts',
+					'action' => 'view',
+					'title' => 'autores'
 				)
 			);
 			?>
@@ -142,10 +133,11 @@
 		<li>
 			<?php
 			echo $this->Html->link(
-				'Valores',
+				'Terminos de Uso',
 				array(
-					'controller' => '',
-					'action' => ''
+					'controller' => 'Abouts',
+					'action' => 'view',
+					'title' => 'terminos-de-uso'
 				)
 			);
 			?>
