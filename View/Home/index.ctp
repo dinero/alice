@@ -50,74 +50,79 @@
 		
 	<?php endif ?>
 
-	<div class="article-title">
-		<span>Articulos</span>
-	</div>
-	<div class="articles">
-		<script type="text/javascript">
-		    $(document).ready(function ($) {
-		        $('.arts').perfectScrollbar({
-		          	wheelSpeed: 20,
-		          	wheelPropagation: false
-		        });
-		    });
-	    </script>
-		<div class="arts">
-			<?php if (is_array($lastArticles)): ?>
-				
-				<?php foreach ($lastArticles as $lA): ?>
-					<div class="art">
-						<a href="<?php echo $this->Html->url(array('controller'=>'Articles','action'=>'view','title'=>$lA['Article']['id'].'-'.$lA['Article']['permalink'])); ?>">
-							<div class="image">
-								<?php
-								$widthSmall = 1280;
-								foreach ($lA['Image'] as $I) {
-									$src = $I['id'].'.'.$I['extension'];
-									$this->Image->imagen(Configure::read('absolute_root').$I['seccion'].'/'.$src);
-									$widthImg = $this->Image->image_width;
-									if ($widthImg < $widthSmall) {
-										$srcSmall = $src;
-										$widthSmall = $widthImg;
-									}
-								}
-				    			?>
-								<?php echo $this->Html->image(
-						    		'/files/'.$I['seccion'].'/'.'thumbs/'.$srcSmall
-						    	); ?>
-							</div>
-							<div class="content">
-								<h2><?php echo $lA['Article']['titulo']; ?></h2>
-								<span class="editor"><?php echo $lA['Editor']['nombre']; ?></span>
-								<div class="text">
-									<?php echo $this->Text->truncate($lA['Article']['intro'], 200); ?>
-								</div>
-							</div>
-						</a>
-						<div class="clear"></div>
-					</div>
-				<?php endforeach ?>
+	<?php if (!empty($lastArticles)): ?>
 
-			<?php endif ?>
+		<div class="article-title">
+			<span>Articulos</span>
 		</div>
-		<div class="pub">
-			<?php if (!empty($pubArtV)): ?>
-				<?php foreach ($pubArtV as $pAV): ?>
+		<div class="articles">
+			<script type="text/javascript">
+			    $(document).ready(function ($) {
+			        $('.arts').perfectScrollbar({
+			          	wheelSpeed: 20,
+			          	wheelPropagation: false
+			        });
+			    });
+		    </script>
+			<div class="arts">
+				<?php if (is_array($lastArticles)): ?>
 					
-				<div class="image">
-					<?php echo $this->Html->image(
-			    		'/files/'.$pAV['Image']['seccion'].'/'.$pAV['Image']['id'].'.'.$pAV['Image']['extension'],
-			    		array(
-			    			'alt' => $pAV['Ad']['nombre'],
-			    			'url' => $pAV['Ad']['link']
-			    		)
-			    	); ?>
-				</div>
+					<?php foreach ($lastArticles as $lA): ?>
+						<div class="art">
+							<a href="<?php echo $this->Html->url(array('controller'=>'Articles','action'=>'view','title'=>$lA['Article']['id'].'-'.$lA['Article']['permalink'])); ?>">
+								<div class="image">
+									<?php
+									$widthSmall = 1280;
+									foreach ($lA['Image'] as $I) {
+										$src = $I['id'].'.'.$I['extension'];
+										$this->Image->imagen(Configure::read('absolute_root').$I['seccion'].'/'.$src);
+										$widthImg = $this->Image->image_width;
+										if ($widthImg < $widthSmall) {
+											$srcSmall = $src;
+											$widthSmall = $widthImg;
+										}
+									}
+					    			?>
+									<?php echo $this->Html->image(
+							    		'/files/'.$I['seccion'].'/'.'thumbs/'.$srcSmall
+							    	); ?>
+								</div>
+								<div class="content">
+									<h2><?php echo $lA['Article']['titulo']; ?></h2>
+									<span class="editor"><?php echo $lA['Editor']['nombre']; ?></span>
+									<div class="text">
+										<?php echo $this->Text->truncate($lA['Article']['intro'], 200); ?>
+									</div>
+								</div>
+							</a>
+							<div class="clear"></div>
+						</div>
+					<?php endforeach ?>
 
-				<?php endforeach ?>
-			<?php endif ?>
+				<?php endif ?>
+			</div>
+			<div class="pub">
+				<?php if (!empty($pubArtV)): ?>
+					<?php foreach ($pubArtV as $pAV): ?>
+						
+					<div class="image">
+						<?php echo $this->Html->image(
+				    		'/files/'.$pAV['Image']['seccion'].'/'.$pAV['Image']['id'].'.'.$pAV['Image']['extension'],
+				    		array(
+				    			'alt' => $pAV['Ad']['nombre'],
+				    			'url' => $pAV['Ad']['link']
+				    		)
+				    	); ?>
+					</div>
+
+					<?php endforeach ?>
+				<?php endif ?>
+			</div>
+			<div class="clear"></div>
 		</div>
-		<div class="clear"></div>
-	</div>
+		
+	<?php endif ?>
+	
 	<?php if (!empty($pubEdiH['Image'])): ?>
 
 		<div class="pub-horizontal">
