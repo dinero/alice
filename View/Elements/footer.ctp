@@ -29,8 +29,8 @@
 			echo $this->Html->link(
 				'Ediciones Anteriores',
 				array(
-					'controller' => '',
-					'action' => ''
+					'controller' => 'Editions',
+					'action' => 'viewAll'
 				)
 			);
 			?>
@@ -40,8 +40,8 @@
 			echo $this->Html->link(
 				'Galerías de Fotos',
 				array(
-					'controller' => '',
-					'action' => ''
+					'controller' => 'Galery',
+					'action' => 'viewAll'
 				)
 			);
 			?>
@@ -51,8 +51,8 @@
 			echo $this->Html->link(
 				'Videos',
 				array(
-					'controller' => '',
-					'action' => ''
+					'controller' => 'Videos',
+					'action' => 'viewAll'
 				)
 			);
 			?>
@@ -60,7 +60,7 @@
 		<li>
 			<?php
 			echo $this->Html->link(
-				'Redactores',
+				'autores',
 				array(
 					'controller' => '',
 					'action' => ''

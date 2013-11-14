@@ -6,7 +6,7 @@ App::uses('AppController', 'Controller');
 */
 class HomeController extends AppController {
 
-	public $uses = array('Edition', 'Article');
+	public $uses = array('Edition', 'Article', 'Ad', 'Albume');
 
 	public $components = array('Funciones', 'Image');
 	
@@ -51,13 +51,109 @@ class HomeController extends AppController {
 					'limit' => 3
 				)
 			);
+
 		}
 
+		$pubArtH = $this->Ad->find(
+			'first',
+			array(
+				'conditions' => array(
+					'Ad.orientacion' => 'horizontal',
+					'Ad.bloque' => 'articulos'
+				),
+				'order' => array(
+					'Ad.id' => 'DESC'
+				)
+			)
+		);
+
+		$pubArtV = $this->Ad->find(
+			'all',
+			array(
+				'conditions' => array(
+					'Ad.orientacion' => 'vertical',
+					'Ad.bloque' => 'articulos'
+				),
+				'order' => array(
+					'Ad.id' => 'DESC'
+				),
+				'limit' => 2
+			)
+		);
+
+		$pubEdiH = $this->Ad->find(
+			'first',
+			array(
+				'conditions' => array(
+					'Ad.orientacion' => 'horizontal',
+					'Ad.bloque' => 'ediciones'
+				),
+				'order' => array(
+					'Ad.id' => 'DESC'
+				)
+			)
+		);
+
+		$Albumes = $this->Albume->find(
+			'all',
+			array(
+				'order' => array(
+					'Albume.fecha_publicacion' => 'DESC',
+					'Albume.id' => 'DESC'
+				),
+				'limit' => 6
+			)
+		);
+
+		$pubAlbH = $this->Ad->find(
+			'first',
+			array(
+				'conditions' => array(
+					'Ad.orientacion' => 'horizontal',
+					'Ad.bloque' => 'galerias'
+				),
+				'order' => array(
+					'Ad.id' => 'DESC'
+				)
+			)
+		);
+
+		$pubAlbV = $this->Ad->find(
+			'first',
+			array(
+				'conditions' => array(
+					'Ad.orientacion' => 'vertical',
+					'Ad.bloque' => 'galerias'
+				),
+				'order' => array(
+					'Ad.id' => 'DESC'
+				)
+			)
+		);
+
+		$pubHome = $this->Ad->find(
+			'all',
+			array(
+				'conditions' => array(
+					'Ad.bloque' => 'portada'
+				),
+				'order' => array(
+					'Ad.id' => 'DESC'
+				)
+			)
+		);
 
 		$this->set(
 			array(
 				'lastArticles' => @$lastArticles,
-				'lastEditions' => @$lastEditions
+				'lastEditions' => @$lastEditions,
+				'albumes' => @$Albumes,
+				'pubArtH' => @$pubArtH,
+				'pubArtV' => @$pubArtV,
+				'pubEdiH' => @$pubEdiH,
+				'pubAlbH' => @$pubAlbH,
+				'pubAlbV' => @$pubAlbV,
+				'pubHome' => @$pubHome
 			)
 		);
 

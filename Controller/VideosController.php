@@ -138,61 +138,25 @@ class VideosController extends AppController {
 			'limit' => 8
 		);
 
-		/*if (isset($_GET['v'])) {
+		$videoP = $this->Video->find(
+			'first',
+			array(
+				'order' => array(
+					'Video.id' => 'DESC'
+				)
+			)
+		);
 
-			$video = $_GET['v'];
-
-			if (!empty($video) and $video != '') {
-
-				$videoP = $this->Video->find(
-					'first',
-					array(
-						'conditions' => array(
-							'Video.id' => $video
-						)
-					)
-				);
-
-				if (!empty($videoP)) {
-					
-					$allV = $this->paginate(
-						'Video',
-						array(
-							'Video.id !=' => $videoP['Video']['id']
-						)
-					);
-
-				}
+		if (!empty($videoP)) {
 				
-			} else {
-
-				$this->redirect(array('controller'=>'Videos','action'=>'viewAll'));
-			
-			}
-
-		} else {*/
-
-			$videoP = $this->Video->find(
-				'first',
+			$allV = $this->paginate(
+				'Video',
 				array(
-					'order' => array(
-						'Video.id' => 'DESC'
-					)
+					'Video.id !=' => $videoP['Video']['id']
 				)
 			);
-
-			if (!empty($videoP)) {
-					
-				$allV = $this->paginate(
-					'Video',
-					array(
-						'Video.id !=' => $videoP['Video']['id']
-					)
-				);
-				
-			}
 			
-		//}
+		}
 
 		$this->set(
 			array(

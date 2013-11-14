@@ -380,7 +380,7 @@ ul {
 			font-size: 2.8em;
 		}
 
-.editR .public img:first-child {
+.editR .public a:first-child img {
 	margin-top: 0;
 }
 
@@ -827,6 +827,31 @@ li.otherB:last-child {}
 
 .public img {
 	margin-top: 1.5em;
+}
+
+.pubHome {
+	width: 100%;
+}
+
+.pubHome .pubFixed {
+	width: 150px;
+}
+
+	.pubHome .pubFixed img {
+		width: 100%;
+	}
+
+.pubHome, .pubHome .pubFixed {
+	position: absolute;
+	top:0;
+}
+
+.pubHome .pubFixed:first-child {
+	left: -166px;
+}
+
+.pubHome .pubFixed:last-child {
+	right: -166px;
 }
 
 .searchForm {

@@ -73,6 +73,11 @@
         </div>
         <div class="clear"></div>
     </div>
+    <div class="pubIntoH">
+        <?php echo $this->Html->image(
+            '/files/anuncio2.jpg'
+        ); ?>
+    </div>
 </div>
 
 <script type="text/javascript">
