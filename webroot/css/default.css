@@ -134,8 +134,8 @@ ul {
 	width: 100%;
 }
 
-.art:nth-child(6) {
-	margin-bottom: 0;
+.allArt {
+	margin-top: 0 !important;
 }
 
 	.art .image {

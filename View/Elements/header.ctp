@@ -26,7 +26,7 @@
 	      				'Mujeres Destacadas', 
 	      				array(
 	      					'controller' => 'Articles',
-	      					'action' => 'viewAll'
+	      					'action' => 'viewAll?categoria=mujeres-destacadas'
 	      				)
 	      			);
 	      			?>
@@ -37,7 +37,7 @@
 	      				'Cultura', 
 	      				array(
 	      					'controller' => 'Articles',
-	      					'action' => 'viewAll'
+	      					'action' => 'viewAll?categoria=cultura'
 	      				)
 	      			);
 	      			?>
@@ -48,7 +48,7 @@
 	      				'Relaciones Interpersonales', 
 	      				array(
 	      					'controller' => 'Articles',
-	      					'action' => 'viewAll'
+	      					'action' => 'viewAll?categoria=relaciones-interpersonales'
 	      				)
 	      			);
 	      			?>
@@ -59,7 +59,7 @@
 	      				'Otros', 
 	      				array(
 	      					'controller' => 'Articles',
-	      					'action' => 'viewAll'
+	      					'action' => 'viewAll?categoria=otros'
 	      				)
 	      			);
 	      			?>

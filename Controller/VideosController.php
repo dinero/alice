@@ -131,6 +131,8 @@ class VideosController extends AppController {
 
 	public function viewAll() {
 
+		$this->loadModel('Ad');
+
 		$this->paginate = array(
 			'order' => array(
 				'Video.id' => 'DESC'
@@ -158,12 +160,26 @@ class VideosController extends AppController {
 			
 		}
 
+		$pubVidH = $this->Ad->find(
+			'first',
+			array(
+				'conditions' => array(
+					'Ad.orientacion' => 'horizontal',
+					'Ad.bloque' => 'galerias'
+				),
+				'order' => array(
+					'Ad.id' => 'DESC'
+				)
+			)
+		);
+
 		$this->set(
 			array(
 				'title_for_section' => 'Videos',
 				'title_for-layout' => 'Videos',
 				'videoP' => @$videoP,
-				'allV' => @$allV
+				'allV' => @$allV,
+				'pubVidH' => @$pubVidH
 			)
 		);
 	}

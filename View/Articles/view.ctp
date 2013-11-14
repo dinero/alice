@@ -4,13 +4,13 @@
 		
 		<section class="articleInto large-9 columns">
 			<div class="share">
-				<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="false"></div>
+				<div class="fb-like" data-href="<?php echo $this->Html->url(array('controller'=>'Articles','action'=>'view','title'=>$article['Article']['id'].'-'.$article['Article']['permalink'])); ?>" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="false"></div>
 				<div class="twitter">
-					<a href="https://twitter.com/share" class="twitter-share-button" data-via="twitterapi" data-lang="en">Tweet</a>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
 				</div>
 			</div>
 			<div class="artAuthor">
-				<span><?php echo $article['Editor']['nombre']; ?></span>
+				<span>Por: <?php echo $article['Editor']['nombre']; ?></span>
 			</div>
 			<div class="clear"></div>
 			<div class="imageInto">
@@ -119,25 +119,25 @@
 			</div>
 			<div class="clear"></div>
 		</aside>
+	
+		<?php if (!empty($pubArtH['Image'])): ?>
+
+			<div class="pubIntoH">
+				<?php echo $this->Html->image(
+		    		'/files/'.$pubArtH['Image']['seccion'].'/'.$pubArtH['Image']['id'].'.'.$pubArtH['Image']['extension'],
+		    		array(
+		    			'alt' => $pubArtH['Ad']['nombre'],
+		    			'url' => $pubArtH['Ad']['link']
+		    		)
+		    	); ?>
+			</div>
+			
+		<?php endif ?>
 
 	<?php else: ?>
 
 		<?php echo $this->Element('error_404'); ?>
 
-	<?php endif ?>
-	
-	<?php if (!empty($pubArtH['Image'])): ?>
-
-		<div class="pubIntoH">
-			<?php echo $this->Html->image(
-	    		'/files/'.$pubArtH['Image']['seccion'].'/'.$pubArtH['Image']['id'].'.'.$pubArtH['Image']['extension'],
-	    		array(
-	    			'alt' => $pubArtH['Ad']['nombre'],
-	    			'url' => $pubArtH['Ad']['link']
-	    		)
-	    	); ?>
-		</div>
-		
 	<?php endif ?>
 
 </div>

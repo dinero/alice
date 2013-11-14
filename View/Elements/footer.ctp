@@ -73,8 +73,8 @@
 			echo $this->Html->link(
 				'Mujeres Destacadas',
 				array(
-					'controller' => '',
-					'action' => ''
+					'controller' => 'Articles',
+					'action' => 'viewAll?categoria=mujeres-destacadas'
 				)
 			);
 			?>
@@ -84,8 +84,8 @@
 			echo $this->Html->link(
 				'Cultura',
 				array(
-					'controller' => '',
-					'action' => ''
+					'controller' => 'Articles',
+					'action' => 'viewAll?categoria=cultura'
 				)
 			);
 			?>
@@ -95,8 +95,8 @@
 			echo $this->Html->link(
 				'Relaciones Interpersonales',
 				array(
-					'controller' => '',
-					'action' => ''
+					'controller' => 'Articles',
+					'action' => 'viewAll?categoria=relaciones-interpersonales'
 				)
 			);
 			?>
@@ -106,8 +106,8 @@
 			echo $this->Html->link(
 				'Otros',
 				array(
-					'controller' => '',
-					'action' => ''
+					'controller' => 'Articles',
+					'action' => 'viewAll?categoria=otros'
 				)
 			);
 			?>

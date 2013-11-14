@@ -14,9 +14,9 @@
 					    		)
 					    	); ?>
 					    	<div class="editShare">
-							<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="false"></div>
+							<div class="fb-like" data-href="<?php echo $this->Html->url(array('controller'=>'Editions','action'=>'view','title'=>$edition['Edition']['id'].'-'.$edition['Edition']['permalink'])); ?>" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="false"></div>
 							<div class="twitter">
-								<a href="https://twitter.com/share" class="twitter-share-button" data-via="twitterapi" data-lang="en">Tweet</a>
+								<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
 							</div>
 							<div class="clear"></div>
 						</div>

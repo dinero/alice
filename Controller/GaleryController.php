@@ -26,20 +26,24 @@ class GaleryController extends AppController {
 			)
 		);
 
-		$this->paginate = array(
-			'order' => array(
-				'Albume.fecha_publicacion' => 'DESC',
-				'Albume.id' => 'DESC'
-			),
-			'limit' => 6
-		);
-		
-		$galeries = $this->paginate(
-			'Albume',
-			array(
-				'Albume.id !=' => $galeryP['Albume']['id']
-			)
-		);
+		if (!empty($galeryP)) {
+
+			$this->paginate = array(
+				'order' => array(
+					'Albume.fecha_publicacion' => 'DESC',
+					'Albume.id' => 'DESC'
+				),
+				'limit' => 6
+			);
+			
+			$galeries = $this->paginate(
+				'Albume',
+				array(
+					'Albume.id !=' => $galeryP['Albume']['id']
+				)
+			);
+
+		}
 
 		$pubAlbH = $this->Ad->find(
 			'first',

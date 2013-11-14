@@ -122,6 +122,141 @@ class ArticlesController extends AppController {
 		$this->redirect(array('action' => 'index'));
 	}
 
+	public function viewAll() {
+
+		$this->loadModel('Categoria');
+		$this->loadModel('Ad');
+
+		$title_for_layout = 'Articulos';
+		$title_for_section = 'Articulos';
+
+    	$this->paginate = array(
+			'order' => array(
+				'Article.relevancia_id' => 'ASC',
+				'Article.created' => 'DESC',
+				'Article.id' => 'DESC'
+			),
+			'limit' => 6
+		);
+
+        if (isset($_GET['categoria'])) {
+
+            $categoria = $_GET['categoria'];
+
+            if (!empty($categoria) and $categoria != '') {
+
+                $this->Categoria->unbindModel(
+                    array('hasMany' => array('Article', 'News'))
+                );
+
+                $cat = $this->Categoria->find(
+                    'first',
+                    array(
+                        'conditions' => array(
+                            'permalink' => $categoria
+                        )
+                    )
+                );
+
+                if (!empty($cat) and $cat != '') {
+
+                    $articles = $this->paginate(
+                        'Article',
+                        array(
+                            'Article.categoria_id' => $cat['Categoria']['id']
+                        )
+                    );
+
+                    $title_for_layout = ucfirst($cat['Categoria']['nombre']);
+                    $title_for_section = ucfirst($cat['Categoria']['nombre']);
+
+                } else {
+
+                    $title_for_layout = 'Articulos';
+                    $title_for_section = 'Articulos';
+
+                }
+
+            }
+
+        } elseif (isset($_GET['keyword'])) {
+
+            $permalink = $this->Funciones->generatePermalink($_GET['keyword']);
+
+            $pclave = $_GET['keyword'];
+
+            /*$this->paginate = array(
+				'fields' => array(
+					'Article.*',
+	                'Categoria.*',
+	                'Relevancia.*',
+	                'Image.*',
+	                'MATCH(titulo,intro) AGAINST ("' . $pclave . '") AS Relevancia'
+				),
+				'order' => array(
+					'Relevancia'
+				),
+				'limit' => 6
+			);*/
+
+            $articles = $this->paginate(
+                'Article',
+                array(
+                    'CONCAT(titulo, intro) LIKE "%'.$pclave.'%"'
+                )
+            );
+
+            $title_for_layout = 'Resultados de la Búsqueda';
+            $title_for_section = 'Resultados de la Búsqueda';
+
+        } else {
+
+            $articles = $this->paginate(
+                'Article'
+            );
+
+        }
+
+        $pubArtV = $this->Ad->find(
+			'all',
+			array(
+				'conditions' => array(
+					'Ad.orientacion' => 'vertical',
+					'Ad.bloque' => 'articulos'
+				),
+				'order' => array(
+					'Ad.id' => 'DESC'
+				),
+				'limit' => 2
+			)
+		);
+
+		$pubArtH = $this->Ad->find(
+			'first',
+			array(
+				'conditions' => array(
+					'Ad.orientacion' => 'horizontal',
+					'Ad.bloque' => 'articulos'
+				),
+				'order' => array(
+					'Ad.id' => 'DESC'
+				)
+			)
+		);
+
+        $this->set(
+            array(
+                'articles' => @$articles,
+                'title_for_layout' => @$title_for_layout,
+                'title_for_section' => @$title_for_section,
+                'pubArtV' => @$pubArtV,
+                'pubArtH' => @$pubArtH,
+                'categoria' => @$categoria
+            )
+        );
+
+	}
+
 	public function view() {
 
 		$this->loadModel('Ad');

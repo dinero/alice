@@ -66,12 +66,12 @@
 		<div class="titleTop">
 			<div class="row">
 				<?php
-				echo $this->Form->create(
+				/*echo $this->Form->create(
 					false,
 					array(
 						'url' => array(
-							'controller' => 'articles', 
-							'action' => 'search'
+							'controller' => 'Articles', 
+							'action' => 'viewAll'
 						),
 						'inputDefaults' => array(
 							'label' => false,
@@ -88,8 +88,12 @@
 						'placeholder' => 'Buscar Artículo'
 					)
 				);
-				echo $this->Form->end();
+				echo $this->Form->end();*/
 				?>
+				<form method="GET" action="<?php echo $this->Html->url(array('controller'=>'Articles','action'=>'viewAll')); ?>" class="searchForm">
+					<?php echo $this->Form->submit('search.png'); ?>
+					<input type="text" id="keyword" placeholder="Buscar Articulo..." name="keyword" class="inputSearch"/>
+				</form>
 				<h2><?php echo $title_for_section; ?></h2>
 				<div class="clear"></div>
 			</div>

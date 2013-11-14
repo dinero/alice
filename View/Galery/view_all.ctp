@@ -56,15 +56,15 @@
 
 				<section class="pagination clear">
 					<?php
-					echo $this->paginator->prev('«', null, null, array('class' => 'disabled prev'));
-				    echo $this->paginator->numbers(
+					echo $this->Paginator->prev('«', null, null, array('class' => 'disabled prev'));
+				    echo $this->Paginator->numbers(
 				    	array(
 				    		'separator'=>'',
 				    		'tag'=>'span',
 				    		'class'=>'numbers rad'
 				    	)
 				    ); 
-				    echo $this->paginator->next('»', null, null, array('class' => 'disabled next'));
+				    echo $this->Paginator->next('»', null, null, array('class' => 'disabled next'));
 				    ?>
 				</section>
 				

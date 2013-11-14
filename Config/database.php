@@ -6,7 +6,7 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'alice',
-		'password' => 'alice',
+		'password' => 'Ht3vQfGsSP2Ykdvw',
 		'database' => 'alice',
 		'encoding' => 'utf8'
 	);
