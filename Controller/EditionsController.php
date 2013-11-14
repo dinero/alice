@@ -20,7 +20,7 @@ class EditionsController extends AppController {
  */
 	public function admin_index() {
 		$this->Edition->recursive = 0;
-		$this->paginate = array('limit' => 10);
+		$this->paginate = array('order' => array('Edition.id' => 'DESC'),'conditions'=>array('Edition.user_id'=>$this->Auth->user('id'),'nombre !='=>''));
 		$this->set('editions', $this->paginate());
 	}
 
@@ -63,6 +63,13 @@ class EditionsController extends AppController {
 			} else {
 				$this->Session->setFlash(__('La edición no pudo ser guardada, Favor Intente de Nuevo'));
 			}
+		} else {
+			$this->Edition->deleteAll(
+	    		array(
+	    			'nombre' => '',
+					'user_id' => $this->Auth->user('id')
+	    		)
+	    	);
 		}
 		$users = $this->Edition->User->find('list');
 		$this->set(compact('users'));
@@ -119,6 +126,13 @@ class EditionsController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Edition->delete()) {
+			$this->loadModel('Image');
+			$this->Image->deleteAll(
+	    		array(
+	    			'seccion' => 'Editions',
+					'seccion_id' => $id
+	    		)
+	    	);
 			$this->Session->setFlash(__('Edition deleted'));
 			$this->redirect(array('action' => 'index'));
 		}

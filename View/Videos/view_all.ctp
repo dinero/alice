@@ -1,4 +1,3 @@
-
 <?php //$v = @$_GET['v']; ?>
 
 <div id="contentBody" class="row">
@@ -80,6 +79,7 @@
             </div>
             
         <?php endif ?>
+
         <div class="clear"></div>
     </div>
     

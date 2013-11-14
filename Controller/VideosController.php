@@ -14,6 +14,7 @@ class VideosController extends AppController {
  */
 	public function admin_index() {
 		$this->Video->recursive = 0;
+		$this->paginate = array('order' => array('Video.id' => 'DESC'));
 		$this->set('videos', $this->paginate());
 	}
 
@@ -130,6 +131,7 @@ class VideosController extends AppController {
 	}
 
 	public function viewAll() {
+		$this->Video->recursive = 0;
 
 		$this->loadModel('Ad');
 
@@ -139,6 +141,8 @@ class VideosController extends AppController {
 			),
 			'limit' => 8
 		);
+
+		$allV = array();
 
 		$videoP = $this->Video->find(
 			'first',
@@ -194,3 +198,4 @@ class VideosController extends AppController {
         $this->Auth->allow('index', 'viewAll', 'view'); // Letting users register themselves
     }
 }
+;

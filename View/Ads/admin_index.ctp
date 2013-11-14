@@ -21,9 +21,8 @@
 			<?php echo $this->Html->link($ad['User']['username'], array('controller' => 'users', 'action' => 'view', $ad['User']['id'])); ?>
 		</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $ad['Ad']['id']),array('class'=>'btn btn-info')); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $ad['Ad']['id']),array('class'=>'btn btn-info')); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $ad['Ad']['id']), array('class'=>'btn btn-danger'), __('Are you sure you want to delete # %s?', $ad['Ad']['id'])); ?>
+			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $ad['Ad']['id']),array('class'=>'btn btn-info')); ?>
+			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $ad['Ad']['id']), array('class'=>'btn btn-danger'), __('¿Estas seguro que deseas borrar este registro?', $ad['Ad']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -31,7 +30,7 @@
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+	'format' => __('Pagina {:page} de {:pages}, Mostrando {:current} registros de {:count} total, Iniciando registros en {:start}, Finalizando en {:end}')
 	));
 	?>	</p>
 	<div class="paging">
@@ -43,8 +42,8 @@
 	</div>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Acciones'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Ad'), array('action' => 'add'), array('class'=>'btn btn-success')); ?></li>
+		<li><?php echo $this->Html->link(__('Agregar Publicidad'), array('action' => 'add'), array('class'=>'btn btn-success')); ?></li>
 	</ul>
 </div>
