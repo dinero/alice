@@ -32,7 +32,6 @@
 		<td><?php echo h($article['Article']['created']); ?>&nbsp;</td>
 		
 		<td class="actions">
-			<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $article['Article']['id']),array('class'=>'btn btn-info')); ?>
 			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $article['Article']['id']),array('class'=>'btn btn-info')); ?>
 			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $article['Article']['id']), array('class'=>'btn btn-danger'), __('Are you sure you want to delete # %s?', $article['Article']['id'])); ?>
 		</td>

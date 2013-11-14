@@ -54,20 +54,22 @@
             <div class="clear" style="height:1.5em;"></div>
 
             <section class="pagination clear">
+                
                 <?php
                 /*if ($v != '') {
                     $options['url'] = array_merge($this->passedArgs, array('?'=> 'v='.$v)); 
                     $this->paginator->options($options);              
                 }*/
-                echo $this->paginator->prev('«', null, null, array('class' => 'disabled prev'));
-                echo $this->paginator->numbers(
+
+                echo $this->Paginator->prev('«', null, null, array('class' => 'disabled prev'));
+                echo $this->Paginator->numbers(
                     array(
                         'separator'=>'',
                         'tag'=>'span',
                         'class'=>'numbers rad'
                     )
                 ); 
-                echo $this->paginator->next('»', null, null, array('class' => 'disabled next'));
+                echo $this->Paginator->next('»', null, null, array('class' => 'disabled next'));
                 ?>
             </section>
         </div>

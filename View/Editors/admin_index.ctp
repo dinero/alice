@@ -11,9 +11,8 @@
 		<td><?php echo h($editor['Editor']['id']); ?>&nbsp;</td>
 		<td><?php echo h($editor['Editor']['nombre']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $editor['Editor']['id']), array('class'=>'btn btn-info')); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $editor['Editor']['id']), array('class'=>'btn btn-info')); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $editor['Editor']['id']), array('class'=>'btn btn-danger'), __('Are you sure you want to delete # %s?', $editor['Editor']['id'])); ?>
+			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $editor['Editor']['id']), array('class'=>'btn btn-info')); ?>
+			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $editor['Editor']['id']), array('class'=>'btn btn-danger'), __('Are you sure you want to delete # %s?', $editor['Editor']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

@@ -18,7 +18,7 @@ class ArticlesController extends AppController {
  */
 	public function admin_index() {
 		$this->Article->recursive = 0;
-		$this->paginate = array('limit' => 10);
+		$this->paginate = array('order' => array('Article.id' => 'DESC'),'conditions'=>array('Article.user_id'=>$this->Auth->user('id'),'titulo !='=>''));
 		$this->set('articles', $this->paginate());
 	}
 
@@ -61,6 +61,13 @@ class ArticlesController extends AppController {
 			} else {
 				$this->Session->setFlash(__('The article could not be saved. Please, try again.'));
 			}
+		} else {
+			$this->Article->deleteAll(
+	    		array(
+	    			'titulo' => '',
+					'Article.user_id' => $this->Auth->user('id')
+	    		)
+	    	);
 		}
 		$editors = $this->Article->Editor->find('list');
 		$editions = $this->Article->Edition->find('list');
@@ -115,6 +122,13 @@ class ArticlesController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Article->delete()) {
+			$this->loadModel('Image');
+			$this->Image->deleteAll(
+	    		array(
+	    			'seccion' => 'Articles',
+					'seccion_id' => $id
+	    		)
+	    	);
 			$this->Session->setFlash(__('Article deleted'));
 			$this->redirect(array('action' => 'index'));
 		}

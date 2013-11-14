@@ -1,5 +1,5 @@
 <div class="editions index">
-	<h2><?php echo __('Editions'); ?></h2>
+	<h2><?php echo __('Ediciones'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
@@ -15,9 +15,8 @@
 			<?php echo $this->Html->link($edition['User']['username'], array('controller' => 'users', 'action' => 'view', $edition['User']['id'])); ?>
 		</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $edition['Edition']['id']),array('class'=>'btn btn-info')); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $edition['Edition']['id']),array('class'=>'btn btn-info')); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $edition['Edition']['id']), array('class'=>'btn btn-danger'), __('Are you sure you want to delete # %s?', $edition['Edition']['id'])); ?>
+			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $edition['Edition']['id']),array('class'=>'btn btn-info')); ?>
+			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $edition['Edition']['id']), array('class'=>'btn btn-danger'), __('Are you sure you want to delete # %s?', $edition['Edition']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

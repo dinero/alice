@@ -14,6 +14,7 @@ class AdsController extends AppController {
  */
 	public function admin_index() {
 		$this->Ad->recursive = 0;
+		$this->paginate = array('order'=>array('Ad.id' => 'DESC'),'conditions'=>array('Ad.user_id'=>$this->Auth->user('id'),'nombre !='=>''));
 		$this->set('ads', $this->paginate());
 	}
 
@@ -38,6 +39,7 @@ class AdsController extends AppController {
  * @return void
  */
 	public function admin_add() {
+		
 		if ($this->request->is('post')) {
 			$this->Ad->create();
 			$this->request->data['Ad']['user_id'] = $this->Auth->user('id');
@@ -54,6 +56,13 @@ class AdsController extends AppController {
 			} else {
 				$this->Session->setFlash(__('The ad could not be saved. Please, try again.'));
 			}
+		} else {
+			$this->Ad->deleteAll(
+	    		array(
+	    			'nombre' => '',
+					'user_id' => $this->Auth->user('id')
+	    		)
+	    	);
 		}
 		$users = $this->Ad->User->find('list');
 		$this->set(compact('users'));
@@ -99,6 +108,13 @@ class AdsController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Ad->delete()) {
+			$this->loadModel('Image');
+			$this->Image->deleteAll(
+	    		array(
+	    			'seccion' => 'Ads',
+					'seccion_id' => $id
+	    		)
+	    	);
 			$this->Session->setFlash(__('Ad deleted'));
 			$this->redirect(array('action' => 'index'));
 		}

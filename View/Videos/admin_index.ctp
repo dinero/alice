@@ -13,9 +13,8 @@
 		<td><?php echo h($video['Video']['url']); ?>&nbsp;</td>
 		<td><?php echo h($video['Video']['titulo']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $video['Video']['id']), array('class'=>'btn btn-info')); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $video['Video']['id']), array('class'=>'btn btn-info')); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $video['Video']['id']), array('class'=>'btn btn-danger'), __('Are you sure you want to delete # %s?', $video['Video']['id'])); ?>
+			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $video['Video']['id']), array('class'=>'btn btn-info')); ?>
+			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $video['Video']['id']), array('class'=>'btn btn-danger'), __('Are you sure you want to delete # %s?', $video['Video']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -37,6 +36,6 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Video'), array('action' => 'add'), array('class' => 'btn btn-success','escape'=>false)); ?></li>
+		<li><?php echo $this->Html->link(__('Agregar Video'), array('action' => 'add'), array('class' => 'btn btn-success','escape'=>false)); ?></li>
 	</ul>
 </div>
