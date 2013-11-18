@@ -14,6 +14,7 @@ class UsersController extends AppController {
  */
 	public function admin_index() {
 		$this->User->recursive = 0;
+		$this->paginate = array('order' => array('User.id' => 'DESC'));
 		$this->set('users', $this->paginate());
 	}
 

@@ -25,6 +25,9 @@
 	<title>
 		<?php echo $title_for_layout; ?>
 	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0">
+	<meta property="fb:admins" content="1708398893">
+	<meta property="fb:app_id" content="595006310565831">
 	<?php
 		echo $this->Html->meta('icon');
 
@@ -39,6 +42,7 @@
 		echo $this->Html->script('jquery.mousewheel.js');
 		echo $this->Html->script('perfect-scrollbar.js');
 		echo $this->Html->script('jquery.mb.mediaEmbedder.js');
+		echo $this->Html->script('common.js');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -65,12 +69,12 @@
 		<div class="titleTop">
 			<div class="row">
 				<?php
-				echo $this->Form->create(
+				/*echo $this->Form->create(
 					false,
 					array(
 						'url' => array(
-							'controller' => 'articles', 
-							'action' => 'search'
+							'controller' => 'Articles', 
+							'action' => 'viewAll'
 						),
 						'inputDefaults' => array(
 							'label' => false,
@@ -87,8 +91,12 @@
 						'placeholder' => 'Buscar Artículo'
 					)
 				);
-				echo $this->Form->end();
+				echo $this->Form->end();*/
 				?>
+				<form method="GET" action="<?php echo $this->Html->url(array('controller'=>'Articles','action'=>'viewAll')); ?>" class="searchForm">
+					<?php echo $this->Form->submit('search.png'); ?>
+					<input type="text" id="keyword" placeholder="Buscar Articulo..." name="keyword" class="inputSearch"/>
+				</form>
 				<h2><?php echo $title_for_section; ?></h2>
 				<div class="clear"></div>
 			</div>

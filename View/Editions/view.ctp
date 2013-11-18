@@ -14,9 +14,9 @@
 					    		)
 					    	); ?>
 					    	<div class="editShare">
-							<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="false"></div>
+							<div class="fb-like" data-href="<?php echo $this->Html->url(array('controller'=>'Editions','action'=>'view','title'=>$edition['Edition']['id'].'-'.$edition['Edition']['permalink'])); ?>" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="false"></div>
 							<div class="twitter">
-								<a href="https://twitter.com/share" class="twitter-share-button" data-via="twitterapi" data-lang="en">Tweet</a>
+								<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
 							</div>
 							<div class="clear"></div>
 						</div>
@@ -90,24 +90,19 @@
 			</div>
 			<div class="editR large-3 columns">
 				<div class="public">
-					<?php echo $this->Html->image(
-					'/files/pub1.jpg',
-					array(
-						'alt' => 'Publicidad 1',
-						'url' => array(
-							'controller' => 'home'
-						)	
-					)
-				); ?>
-				<?php echo $this->Html->image(
-					'/files/pub2.jpg',
-					array(
-						'alt' => 'Publicidad 2',
-						'url' => array(
-							'controller' => 'home'
-						)	
-					)
-				); ?>
+
+					<?php if ($pubArtV): ?>
+						<?php foreach ($pubArtV as $pAV): ?>
+							<?php echo $this->Html->image(
+					    		'/files/'.$pAV['Image']['seccion'].'/'.$pAV['Image']['id'].'.'.$pAV['Image']['extension'],
+					    		array(
+					    			'alt' => $pAV['Ad']['nombre'],
+					    			'url' => $pAV['Ad']['link']
+					    		)
+					    	); ?>
+						<?php endforeach ?>
+					<?php endif ?>
+					
 				</div>
 			</div>
 			<div class="clear"></div>
@@ -142,9 +137,19 @@
 
 	<?php endif ?>
 
-	<div class="pubIntoH">
-		<?php echo $this->Html->image(
-    		'/files/anuncio2.jpg'
-    	); ?>
+	<?php if (!empty($pubEdiH['Image'])): ?>
+
+		<div class="pubIntoH">
+			<?php echo $this->Html->image(
+	    		'/files/'.$pubEdiH['Image']['seccion'].'/'.$pubEdiH['Image']['id'].'.'.$pubEdiH['Image']['extension'],
+	    		array(
+	    			'alt' => $pubEdiH['Ad']['nombre'],
+	    			'url' => $pubEdiH['Ad']['link']
+	    		)
+	    	); ?>
+		</div>
+		
+	<?php endif ?>
+
 	</div>
 </div>

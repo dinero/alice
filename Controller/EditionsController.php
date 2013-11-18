@@ -20,7 +20,7 @@ class EditionsController extends AppController {
  */
 	public function admin_index() {
 		$this->Edition->recursive = 0;
-		$this->paginate = array('limit' => 10);
+		$this->paginate = array('order' => array('Edition.id' => 'DESC'),'conditions'=>array('Edition.user_id'=>$this->Auth->user('id'),'nombre !='=>''));
 		$this->set('editions', $this->paginate());
 	}
 
@@ -63,6 +63,13 @@ class EditionsController extends AppController {
 			} else {
 				$this->Session->setFlash(__('La edición no pudo ser guardada, Favor Intente de Nuevo'));
 			}
+		} else {
+			$this->Edition->deleteAll(
+	    		array(
+	    			'nombre' => '',
+					'user_id' => $this->Auth->user('id')
+	    		)
+	    	);
 		}
 		$users = $this->Edition->User->find('list');
 		$this->set(compact('users'));
@@ -119,6 +126,13 @@ class EditionsController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Edition->delete()) {
+			$this->loadModel('Image');
+			$this->Image->deleteAll(
+	    		array(
+	    			'seccion' => 'Editions',
+					'seccion_id' => $id
+	    		)
+	    	);
 			$this->Session->setFlash(__('Edition deleted'));
 			$this->redirect(array('action' => 'index'));
 		}
@@ -138,6 +152,7 @@ class EditionsController extends AppController {
 	public function viewAll() {
 
 		$this->loadModel('Article');
+		$this->loadModel('Ad');
 
 		$lastEdition = $this->Edition->find(
 			'first',
@@ -183,6 +198,19 @@ class EditionsController extends AppController {
 
 		}
 
+		$pubEdiH = $this->Ad->find(
+			'first',
+			array(
+				'conditions' => array(
+					'Ad.orientacion' => 'horizontal',
+					'Ad.bloque' => 'ediciones'
+				),
+				'order' => array(
+					'Ad.id' => 'DESC'
+				)
+			)
+		);
+
 
 		$this->set(
 			array(
@@ -190,7 +218,8 @@ class EditionsController extends AppController {
 				'title_for_section' => 'Ediciones',
 				'lastEdition' => @$lastEdition,
 				'articles' => @$articles,
-				'editions' => @$editions
+				'editions' => @$editions,
+				'pubEdiH' => @$pubEdiH
 			)
 		);
 
@@ -199,6 +228,7 @@ class EditionsController extends AppController {
 	public function view() {
 
 		$this->loadModel('Article');
+		$this->loadModel('Ad');
 
 		if (!empty($this->passedArgs['title']) and isset($this->passedArgs['title'])) {
 
@@ -263,6 +293,33 @@ class EditionsController extends AppController {
 					)
 				);
 
+				$pubEdiH = $this->Ad->find(
+					'first',
+					array(
+						'conditions' => array(
+							'Ad.orientacion' => 'horizontal',
+							'Ad.bloque' => 'ediciones'
+						),
+						'order' => array(
+							'Ad.id' => 'DESC'
+						)
+					)
+				);
+
+				$pubArtV = $this->Ad->find(
+					'all',
+					array(
+						'conditions' => array(
+							'Ad.orientacion' => 'vertical',
+							'Ad.bloque' => 'articulos'
+						),
+						'order' => array(
+							'Ad.id' => 'DESC'
+						),
+						'limit' => 2
+					)
+				);
+
 				$this->set(
 					array(
 						'title_for_layout' => @$edition['Edition']['nombre'],
@@ -270,7 +327,9 @@ class EditionsController extends AppController {
 						'edition' => @$edition,
 						'articlePrinc' => @$articlePrinc,
 						'articlesSec' => @$articlesSec,
-						'lastEditions' => @$lastEditions
+						'lastEditions' => @$lastEditions,
+						'pubEdiH' => @$pubEdiH,
+						'pubArtV' => @$pubArtV
 					)
 				);
 				

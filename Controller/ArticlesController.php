@@ -18,7 +18,7 @@ class ArticlesController extends AppController {
  */
 	public function admin_index() {
 		$this->Article->recursive = 0;
-		$this->paginate = array('limit' => 10);
+		$this->paginate = array('order' => array('Article.id' => 'DESC'),'conditions'=>array('Article.user_id'=>$this->Auth->user('id'),'titulo !='=>''));
 		$this->set('articles', $this->paginate());
 	}
 
@@ -61,6 +61,13 @@ class ArticlesController extends AppController {
 			} else {
 				$this->Session->setFlash(__('The article could not be saved. Please, try again.'));
 			}
+		} else {
+			$this->Article->deleteAll(
+	    		array(
+	    			'titulo' => '',
+					'Article.user_id' => $this->Auth->user('id')
+	    		)
+	    	);
 		}
 		$editors = $this->Article->Editor->find('list');
 		$editions = $this->Article->Edition->find('list');
@@ -115,6 +122,13 @@ class ArticlesController extends AppController {
 		}
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Article->delete()) {
+			$this->loadModel('Image');
+			$this->Image->deleteAll(
+	    		array(
+	    			'seccion' => 'Articles',
+					'seccion_id' => $id
+	    		)
+	    	);
 			$this->Session->setFlash(__('Article deleted'));
 			$this->redirect(array('action' => 'index'));
 		}
@@ -122,7 +136,144 @@ class ArticlesController extends AppController {
 		$this->redirect(array('action' => 'index'));
 	}
 
+	public function viewAll() {
+
+		$this->loadModel('Categoria');
+		$this->loadModel('Ad');
+
+		$title_for_layout = 'Articulos';
+		$title_for_section = 'Articulos';
+
+    	$this->paginate = array(
+			'order' => array(
+				'Article.relevancia_id' => 'ASC',
+				'Article.created' => 'DESC',
+				'Article.id' => 'DESC'
+			),
+			'limit' => 6
+		);
+
+        if (isset($_GET['categoria'])) {
+
+            $categoria = $_GET['categoria'];
+
+            if (!empty($categoria) and $categoria != '') {
+
+                $this->Categoria->unbindModel(
+                    array('hasMany' => array('Article', 'News'))
+                );
+
+                $cat = $this->Categoria->find(
+                    'first',
+                    array(
+                        'conditions' => array(
+                            'permalink' => $categoria
+                        )
+                    )
+                );
+
+                if (!empty($cat) and $cat != '') {
+
+                    $articles = $this->paginate(
+                        'Article',
+                        array(
+                            'Article.categoria_id' => $cat['Categoria']['id']
+                        )
+                    );
+
+                    $title_for_layout = ucfirst($cat['Categoria']['nombre']);
+                    $title_for_section = ucfirst($cat['Categoria']['nombre']);
+
+                } else {
+
+                    $title_for_layout = 'Articulos';
+                    $title_for_section = 'Articulos';
+
+                }
+
+            }
+
+        } elseif (isset($_GET['keyword'])) {
+
+            $permalink = $this->Funciones->generatePermalink($_GET['keyword']);
+
+            $pclave = $_GET['keyword'];
+
+            /*$this->paginate = array(
+				'fields' => array(
+					'Article.*',
+	                'Categoria.*',
+	                'Relevancia.*',
+	                'Image.*',
+	                'MATCH(titulo,intro) AGAINST ("' . $pclave . '") AS Relevancia'
+				),
+				'order' => array(
+					'Relevancia'
+				),
+				'limit' => 6
+			);*/
+
+            $articles = $this->paginate(
+                'Article',
+                array(
+                    'CONCAT(titulo, intro) LIKE "%'.$pclave.'%"'
+                )
+            );
+
+            $title_for_layout = 'Resultados de la Búsqueda';
+            $title_for_section = 'Resultados de la Búsqueda';
+
+        } else {
+
+            $articles = $this->paginate(
+                'Article'
+            );
+
+        }
+
+        $pubArtV = $this->Ad->find(
+			'all',
+			array(
+				'conditions' => array(
+					'Ad.orientacion' => 'vertical',
+					'Ad.bloque' => 'articulos'
+				),
+				'order' => array(
+					'Ad.id' => 'DESC'
+				),
+				'limit' => 2
+			)
+		);
+
+		$pubArtH = $this->Ad->find(
+			'first',
+			array(
+				'conditions' => array(
+					'Ad.orientacion' => 'horizontal',
+					'Ad.bloque' => 'articulos'
+				),
+				'order' => array(
+					'Ad.id' => 'DESC'
+				)
+			)
+		);
+
+        $this->set(
+            array(
+                'articles' => @$articles,
+                'title_for_layout' => @$title_for_layout,
+                'title_for_section' => @$title_for_section,
+                'pubArtV' => @$pubArtV,
+                'pubArtH' => @$pubArtH,
+                'categoria' => @$categoria
+            )
+        );
+
+	}
+
 	public function view() {
+
+		$this->loadModel('Ad');
 
 		if (!empty($this->passedArgs['title']) and isset($this->passedArgs['title'])) {
 
@@ -175,13 +326,42 @@ class ArticlesController extends AppController {
 					)
 				);
 
+				$pubArtH = $this->Ad->find(
+					'first',
+					array(
+						'conditions' => array(
+							'Ad.orientacion' => 'horizontal',
+							'Ad.bloque' => 'articulos'
+						),
+						'order' => array(
+							'Ad.id' => 'DESC'
+						)
+					)
+				);
+
+				$pubArtV = $this->Ad->find(
+					'all',
+					array(
+						'conditions' => array(
+							'Ad.orientacion' => 'vertical',
+							'Ad.bloque' => 'articulos'
+						),
+						'order' => array(
+							'Ad.id' => 'DESC'
+						),
+						'limit' => 2
+					)
+				);
+
 				$this->set(
 					array(
 						'title_for_layout' => $article['Article']['titulo'],
 						'title_for_section' => $article['Article']['titulo'],
 						'article' => @$article,
 						'moreOfEdition' => @$moreOfEdition,
-						'moreOfEditor' => @$moreOfEditor
+						'moreOfEditor' => @$moreOfEditor,
+						'pubArtH' => @$pubArtH,
+						'pubArtV' => @$pubArtV
 					)
 				);
 

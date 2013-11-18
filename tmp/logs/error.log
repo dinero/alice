@@ -467,7 +467,6 @@ Stack Trace:
 #1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
 #2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-<<<<<<< HEAD
 2013-11-03 18:03:14 Error: [MissingControllerException] Controller class UsersController could not be found.
 Exception Attributes: array (
   'class' => 'UsersController',
@@ -544,7 +543,6 @@ Stack Trace:
 #2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 2013-11-03 18:08:40 Error: [MissingActionException] Action UsersController::login() could not be found.
-=======
 2013-11-03 18:16:44 Error: [MissingActionException] Action HomeController::config.xml() could not be found.
 Exception Attributes: array (
   'controller' => 'HomeController',
@@ -568,7 +566,6 @@ Stack Trace:
 #2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 2013-11-03 20:22:45 Error: [MissingActionException] Action UsersController::login() could not be found.
->>>>>>> 2e438492b77e865776f03ae7f38de0dbc320d35d
 Exception Attributes: array (
   'controller' => 'UsersController',
   'action' => 'login',
@@ -4775,6 +4772,29 @@ Stack Trace:
 #0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 >>>>>>> f90084c31b979b8d6fc66225dd418ff4ad716f87
+<<<<<<< HEAD
+2013-11-13 16:03:36 Error: [MissingControllerException] Controller class VideoController could not be found.
+Exception Attributes: array (
+  'class' => 'VideoController',
+  'plugin' => NULL,
+)
+Request URL: /alice/Video/viewAll
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-13 16:46:47 Error: [MissingViewException] View file "C:\wamp\www\alice\View\Videos\admin_view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\alice\\View\\Videos\\admin_view.ctp',
+)
+Request URL: /alice/admin/videos/view/4
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+=======
 2013-11-13 14:28:59 Error: [MissingTableException] Table ads for model Ad was not found in datasource default.
 Exception Attributes: array (
   'table' => 'ads',
@@ -4898,6 +4918,947 @@ Exception Attributes: array (
   'plugin' => NULL,
 )
 Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+>>>>>>> 73c998432dd03d54fa4239aba49ce589467a6afe
+2013-11-13 20:30:30 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-13 20:33:13 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-13 20:34:07 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-13 20:34:56 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-13 20:35:39 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-13 20:37:03 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-13 20:37:41 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-13 20:38:20 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-13 20:38:52 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-13 20:44:52 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-13 20:45:52 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-13 20:51:48 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/Ads/68.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-13 21:05:20 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\alice\View\Home\index.ctp, line 38]
+2013-11-13 21:05:20 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /alice/home
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 38)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 38, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\ali...', 38, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-13 21:36:32 Error: Fatal Error (4): syntax error, unexpected '$pubArtH' (T_VARIABLE) in [C:\wamp\www\alice\Controller\HomeController.php, line 59]
+2013-11-13 21:36:32 Error: [FatalErrorException] syntax error, unexpected '$pubArtH' (T_VARIABLE)
+Request URL: /alice/home
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 59)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 59, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\ali...', 59, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-13 21:44:30 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-13 22:24:36 Error: [MissingActionException] Action HomeController::config.xml() could not be found.
+Exception Attributes: array (
+  'controller' => 'HomeController',
+  'action' => 'config.xml',
+)
+Request URL: /alice/home/config.xml
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-13 22:24:48 Error: [MissingActionException] Action HomeController::config.xml() could not be found.
+Exception Attributes: array (
+  'controller' => 'HomeController',
+  'action' => 'config.xml',
+)
+Request URL: /alice/home/config.xml
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-11-13 22:32:33 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\alice\Controller\ArticlesController.php, line 178]
+2013-11-13 22:32:33 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /alice/Articles/view/title:13-donec-in-velit-vel-ipsum-auctor-pulvinar-vestibulum-iaculis
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\ali...', 178)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\ali...', 178, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\ali...', 178, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-13 22:43:05 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\alice\Controller\EditionsController.php, line 266]
+2013-11-13 22:43:05 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /alice/Editions/view/title:10
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\ali...', 266)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\ali...', 266, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\ali...', 266, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-13 22:43:17 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\alice\Controller\EditionsController.php, line 266]
+2013-11-13 22:43:17 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /alice/Editions/view/title:10
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\ali...', 266)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\ali...', 266, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\ali...', 266, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-13 22:43:30 Error: Fatal Error (1): Cannot access empty property in [C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php, line 433]
+2013-11-13 22:43:30 Error: [FatalErrorException] Cannot access empty property
+Request URL: /alice/Editions/view/title:10
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Cannot access e...', 'C:\wamp\www\cak...', 433)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot access e...', 'C:\wamp\www\cak...', 433, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Cannot access e...', 'C:\wamp\www\cak...', 433, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-13 22:52:00 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\alice\Controller\EditionsController.php, line 186]
+2013-11-13 22:52:00 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /alice/Editions/viewAll
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\ali...', 186)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\ali...', 186, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\ali...', 186, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-13 23:51:16 Error: [MissingActionException] Action ArticlesController::viewAll() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArticlesController',
+  'action' => 'viewAll',
+)
+Request URL: /alice/Articles/viewAll
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+<<<<<<< HEAD
+2013-11-14 03:48:03 Error: [MissingHelperException] Helper class paginateHelper could not be found.
+Exception Attributes: array (
+  'class' => 'paginateHelper',
+  'plugin' => false,
+)
+Request URL: /alice/Videos/viewAll
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('paginate')
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\View\View.php(835): HelperCollection->__isset('paginate')
+#2 C:\wamp\www\alice\View\Videos\view_all.ctp(70): View->__get('paginate')
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\View\View.php(947): include('C:\wamp\www\ali...')
+#4 C:\wamp\www\cakephp2.3.6\lib\Cake\View\View.php(909): View->_evaluate('C:\wamp\www\ali...', Array)
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\View\View.php(471): View->_render('C:\wamp\www\ali...')
+#6 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#7 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#8 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-11-14 04:14:10 Error: Fatal Error (4): syntax error, unexpected '@', expecting ')' in [C:\wamp\www\alice\Controller\VideosController.php, line 182]
+2013-11-14 04:14:10 Error: [FatalErrorException] syntax error, unexpected '@', expecting ')'
+Request URL: /alice/Videos/viewAll
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 182)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 182, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\ali...', 182, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-14 04:57:42 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\wamp\www\alice\View\Videos\view_all.ctp, line 76]
+2013-11-14 04:57:42 Error: [FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /alice/Videos/viewAll
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 76)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 76, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\ali...', 76, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-14 05:14:48 Error: [MissingViewException] View file "C:\wamp\www\alice\View\Articles\view_all.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\alice\\View\\Articles\\view_all.ctp',
+)
+Request URL: /alice/Articles/viewAll
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-11-14 05:24:12 Error: [MissingModelException] News
+Request URL: /alice/Articles/viewAll
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate('News', Array, Array)
+#1 C:\wamp\www\alice\Controller\ArticlesController.php(176): Controller->paginate('News')
+#2 [internal function]: ArticlesController->viewAll()
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ArticlesController), Array)
+#4 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#6 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2013-11-14 05:26:07 Error: [MissingModelException] News
+Request URL: /alice/Articles/viewAll
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate('News', Array, Array)
+#1 C:\wamp\www\alice\Controller\ArticlesController.php(185): Controller->paginate('News')
+#2 [internal function]: ArticlesController->viewAll()
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ArticlesController), Array)
+#4 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#6 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2013-11-14 05:45:04 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\alice\Controller\ArticlesController.php, line 189]
+2013-11-14 05:45:04 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /alice/Articles/viewAll
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\ali...', 189)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\ali...', 189, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\ali...', 189, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-14 06:33:39 Error: [PDOException] SQLSTATE[HY000]: General error: 1191 Can't find FULLTEXT index matching the column list
+Request URL: /alice/Articles/viewAll?x=-1541&y=-273&keyword=Donec
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Article...', Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Article...', Array, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Article...', false)
+#4 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Article), Array)
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Component\PaginatorComponent.php(197): Model->find('all', Array)
+#6 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate('Article', Array, Array)
+#7 C:\wamp\www\alice\Controller\ArticlesController.php(205): Controller->paginate('Article', Array)
+#8 [internal function]: ArticlesController->viewAll()
+#9 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ArticlesController), Array)
+#10 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-11-14 06:41:24 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'Image'
+Request URL: /alice/Articles/viewAll?x=-1541&y=-273&keyword=Donec
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Article...', Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Article...', Array, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Article...', false)
+#4 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Article), Array)
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Component\PaginatorComponent.php(197): Model->find('all', Array)
+#6 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate('Article', Array, Array)
+#7 C:\wamp\www\alice\Controller\ArticlesController.php(206): Controller->paginate('Article', Array)
+#8 [internal function]: ArticlesController->viewAll()
+#9 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ArticlesController), Array)
+#10 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-11-14 06:41:36 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'Images'
+Request URL: /alice/Articles/viewAll?x=-1541&y=-273&keyword=Donec
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Article...', Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Article...', Array, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Article...', false)
+#4 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Article), Array)
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Component\PaginatorComponent.php(197): Model->find('all', Array)
+#6 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate('Article', Array, Array)
+#7 C:\wamp\www\alice\Controller\ArticlesController.php(206): Controller->paginate('Article', Array)
+#8 [internal function]: ArticlesController->viewAll()
+#9 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ArticlesController), Array)
+#10 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-11-14 06:42:49 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'Images'
+Request URL: /alice/Articles/viewAll?x=-1541&y=-273&keyword=Donec
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Article...', Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Article...', Array, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Article...', false)
+#4 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Article), Array)
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Component\PaginatorComponent.php(197): Model->find('all', Array)
+#6 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate('Article', Array, Array)
+#7 C:\wamp\www\alice\Controller\ArticlesController.php(206): Controller->paginate('Article', Array)
+#8 [internal function]: ArticlesController->viewAll()
+#9 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ArticlesController), Array)
+#10 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-11-14 06:43:18 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'Image'
+Request URL: /alice/Articles/viewAll?x=-1541&y=-273&keyword=Donec
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Article...', Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Article...', Array, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Article...', false)
+#4 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Article), Array)
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Component\PaginatorComponent.php(197): Model->find('all', Array)
+#6 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate('Article', Array, Array)
+#7 C:\wamp\www\alice\Controller\ArticlesController.php(206): Controller->paginate('Article', Array)
+#8 [internal function]: ArticlesController->viewAll()
+#9 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ArticlesController), Array)
+#10 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-11-14 06:43:54 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'Image'
+Request URL: /alice/Articles/viewAll?x=-1541&y=-273&keyword=Donec
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Article...', Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Article...', Array, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Article...', false)
+#4 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Article), Array)
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Component\PaginatorComponent.php(197): Model->find('all', Array)
+#6 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate('Article', Array, Array)
+#7 C:\wamp\www\alice\Controller\ArticlesController.php(207): Controller->paginate('Article', Array)
+#8 [internal function]: ArticlesController->viewAll()
+#9 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ArticlesController), Array)
+#10 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-11-14 06:51:39 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'Image'
+Request URL: /alice/Articles/viewAll?x=29&y=24&keyword=donec
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Article...', Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Article...', Array, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Article...', false)
+#4 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Article), Array)
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Component\PaginatorComponent.php(197): Model->find('all', Array)
+#6 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate('Article', Array, Array)
+#7 C:\wamp\www\alice\Controller\ArticlesController.php(207): Controller->paginate('Article', Array)
+#8 [internal function]: ArticlesController->viewAll()
+#9 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ArticlesController), Array)
+#10 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-11-14 06:53:09 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%"donec"%   ORDER BY `Article`.`relevancia_id` ASC, `Article`.`created` DESC, `A' at line 1
+Request URL: /alice/Articles/viewAll?x=29&y=24&keyword=donec
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Article...', Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Article...', Array, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Article...', false)
+#4 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Article), Array)
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Component\PaginatorComponent.php(197): Model->find('all', Array)
+#6 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate('Article', Array, Array)
+#7 C:\wamp\www\alice\Controller\ArticlesController.php(207): Controller->paginate('Article', Array)
+#8 [internal function]: ArticlesController->viewAll()
+#9 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ArticlesController), Array)
+#10 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-11-14 06:53:52 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%"donec"%   ORDER BY `Article`.`relevancia_id` ASC, `Article`.`created` DESC, `A' at line 1
+Request URL: /alice/Articles/viewAll?x=29&y=24&keyword=donec
+=======
+2013-11-14 04:47:20 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/editions/18.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 04:47:20 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/editions/17.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 04:47:20 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/24.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 04:47:20 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/22.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 04:47:20 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/23.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 04:47:21 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/21.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 04:47:21 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/19.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 04:47:21 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/20.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 05:31:02 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'alice\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /alice/videos/viewAll
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(3243): Model->setSource('videos')
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#6 C:\wamp\www\alice\Controller\VideosController.php(150): Model->find('first', Array)
+#7 [internal function]: VideosController->viewAll()
+#8 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(VideosController), Array)
+#9 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-11-14 05:31:08 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'alice\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /alice/videos/viewAll
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(3243): Model->setSource('videos')
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#6 C:\wamp\www\alice\Controller\VideosController.php(150): Model->find('first', Array)
+#7 [internal function]: VideosController->viewAll()
+#8 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(VideosController), Array)
+#9 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-11-14 06:01:38 Error: Fatal Error (4): syntax error, unexpected ''Ad.id'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) in [C:\wamp\www\alice\Controller\AdsController.php, line 17]
+2013-11-14 06:01:38 Error: [FatalErrorException] syntax error, unexpected ''Ad.id'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING)
+Request URL: /alice/admin/ads
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 17)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 17, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\ali...', 17, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-14 06:02:29 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 06:07:38 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [C:\wamp\www\alice\Controller\AdsController.php, line 45]
+2013-11-14 06:07:38 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /alice/admin/ads/add
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 45)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 45, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\ali...', 45, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-14 06:07:58 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/Ads/43.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 06:18:24 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 06:19:01 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 06:20:58 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 06:21:51 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 06:26:33 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 06:33:30 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\alice\Controller\EditionsController.php, line 23]
+2013-11-14 06:33:30 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /alice/admin/editions
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 23)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 23, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\ali...', 23, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-14 06:33:48 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\alice\Controller\EditionsController.php, line 23]
+2013-11-14 06:33:48 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /alice/admin/editions
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 23)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\ali...', 23, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\ali...', 23, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-14 06:40:03 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'user_id' in where clause is ambiguous
+Request URL: /alice/admin/articles/add
+>>>>>>> 4dbfa51eb215c1da392e095839164ee747aad661
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Article...', Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Article...', Array, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Article...', false)
+#4 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Article), Array)
+<<<<<<< HEAD
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Component\PaginatorComponent.php(197): Model->find('all', Array)
+#6 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate('Article', Array, Array)
+#7 C:\wamp\www\alice\Controller\ArticlesController.php(207): Controller->paginate('Article', Array)
+#8 [internal function]: ArticlesController->viewAll()
+#9 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ArticlesController), Array)
+#10 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+=======
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2537): Model->find('all', Array)
+#6 C:\wamp\www\alice\Controller\ArticlesController.php(70): Model->deleteAll(Array)
+#7 [internal function]: ArticlesController->admin_add()
+#8 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ArticlesController), Array)
+#9 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+>>>>>>> 4dbfa51eb215c1da392e095839164ee747aad661
+2013-11-14 14:09:33 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/editions/18.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:09:33 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/23.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:09:33 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/editions/17.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:09:33 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/24.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:09:33 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/22.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:09:33 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/21.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:09:34 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/20.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:09:34 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/19.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:09:44 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/editions/18.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:09:44 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/23.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:09:44 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/editions/17.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:09:44 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/21.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:09:44 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/24.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:09:44 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/22.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:09:44 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/20.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:09:45 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/19.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:10:43 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:10:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/24.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:10:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/21.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:10:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/editions/17.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:10:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/22.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:10:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/editions/18.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:10:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/23.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:10:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/20.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 14:10:53 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/albumes/thumbs/19.jpg
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 15:30:56 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 15:45:36 Error: [MissingControllerException] Controller class Config.xmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Config.xmlController',
+  'plugin' => NULL,
+)
+Request URL: /alice/config.xml
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-14 15:46:39 Error: [MissingControllerException] Controller class Config.xmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Config.xmlController',
+  'plugin' => NULL,
+)
+Request URL: /alice/config.xml
 Stack Trace:
 #0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}

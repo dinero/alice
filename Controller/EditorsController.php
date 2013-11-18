@@ -16,6 +16,7 @@ class EditorsController extends AppController {
  */
 	public function admin_index() {
 		$this->Editor->recursive = 0;
+		$this->paginate = array('order' => array('Editor.id' => 'DESC'));
 		$this->set('editors', $this->paginate());
 	}
 

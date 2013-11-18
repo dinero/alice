@@ -21,7 +21,6 @@
 			<?php echo $this->Html->link($ad['User']['username'], array('controller' => 'users', 'action' => 'view', $ad['User']['id'])); ?>
 		</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $ad['Ad']['id']),array('class'=>'btn btn-info')); ?>
 			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $ad['Ad']['id']),array('class'=>'btn btn-info')); ?>
 			<?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $ad['Ad']['id']), array('class'=>'btn btn-danger'), __('¿Estas seguro que deseas borrar este registro?', $ad['Ad']['id'])); ?>
 		</td>

@@ -29,8 +29,8 @@
 			echo $this->Html->link(
 				'Ediciones Anteriores',
 				array(
-					'controller' => '',
-					'action' => ''
+					'controller' => 'Editions',
+					'action' => 'viewAll'
 				)
 			);
 			?>
@@ -40,8 +40,8 @@
 			echo $this->Html->link(
 				'Galerías de Fotos',
 				array(
-					'controller' => '',
-					'action' => ''
+					'controller' => 'Galery',
+					'action' => 'viewAll'
 				)
 			);
 			?>
@@ -51,19 +51,8 @@
 			echo $this->Html->link(
 				'Videos',
 				array(
-					'controller' => '',
-					'action' => ''
-				)
-			);
-			?>
-		</li>
-		<li>
-			<?php
-			echo $this->Html->link(
-				'Redactores',
-				array(
-					'controller' => '',
-					'action' => ''
+					'controller' => 'Videos',
+					'action' => 'viewAll'
 				)
 			);
 			?>
@@ -73,8 +62,8 @@
 			echo $this->Html->link(
 				'Mujeres Destacadas',
 				array(
-					'controller' => '',
-					'action' => ''
+					'controller' => 'Articles',
+					'action' => 'viewAll?categoria=mujeres-destacadas'
 				)
 			);
 			?>
@@ -84,8 +73,8 @@
 			echo $this->Html->link(
 				'Cultura',
 				array(
-					'controller' => '',
-					'action' => ''
+					'controller' => 'Articles',
+					'action' => 'viewAll?categoria=cultura'
 				)
 			);
 			?>
@@ -95,8 +84,8 @@
 			echo $this->Html->link(
 				'Relaciones Interpersonales',
 				array(
-					'controller' => '',
-					'action' => ''
+					'controller' => 'Articles',
+					'action' => 'viewAll?categoria=relaciones-interpersonales'
 				)
 			);
 			?>
@@ -106,8 +95,8 @@
 			echo $this->Html->link(
 				'Otros',
 				array(
-					'controller' => '',
-					'action' => ''
+					'controller' => 'Articles',
+					'action' => 'viewAll?categoria=otros'
 				)
 			);
 			?>
@@ -120,10 +109,11 @@
 		<li>
 			<?php
 			echo $this->Html->link(
-				'Misión',
+				'Sobre Nosotros',
 				array(
-					'controller' => '',
-					'action' => ''
+					'controller' => 'Abouts',
+					'action' => 'view',
+					'title' => 'sobre-nosotros'
 				)
 			);
 			?>
@@ -131,10 +121,11 @@
 		<li>
 			<?php
 			echo $this->Html->link(
-				'Visión',
+				'Autores',
 				array(
-					'controller' => '',
-					'action' => ''
+					'controller' => 'Abouts',
+					'action' => 'view',
+					'title' => 'autores'
 				)
 			);
 			?>
@@ -142,10 +133,11 @@
 		<li>
 			<?php
 			echo $this->Html->link(
-				'Valores',
+				'Terminos de Uso',
 				array(
-					'controller' => '',
-					'action' => ''
+					'controller' => 'Abouts',
+					'action' => 'view',
+					'title' => 'terminos-de-uso'
 				)
 			);
 			?>
