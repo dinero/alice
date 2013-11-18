@@ -27,7 +27,7 @@
 									    	);
 									    } else {
 						    				echo $this->Html->image(
-									    		'/files/defaultSmall.png'
+									    		'/files/defaultSmall.jpg'
 									    	);
 						    			} ?>
 									</div>

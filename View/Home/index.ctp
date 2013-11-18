@@ -58,7 +58,7 @@
 	<?php if (!empty($lastArticles)): ?>
 
 		<div class="article-title">
-			<span>Articulos</span>
+			<span>Art&iacute;culos</span>
 		</div>
 		<div class="articles">
 			<script type="text/javascript">
@@ -81,7 +81,7 @@
 										$widthSmall = 1280;
 										foreach ($lA['Image'] as $I) {
 											$src = $I['id'].'.'.$I['extension'];
-											$this->Image->imagen(Configure::read('absolute_root').'Articles/'.$src);
+											$this->Image->imagen(Configure::read('absolute_root').'articles/'.$src);
 											$widthImg = $this->Image->image_width;
 											if ($widthImg < $widthSmall) {
 												$srcSmall = $src;
@@ -90,7 +90,7 @@
 										}
 
 										echo $this->Html->image(
-								    		'/files/Articles/'.'thumbs/'.$srcSmall
+								    		'/files/articles/'.'thumbs/'.$srcSmall
 								    	);
 
 									} else {
@@ -156,7 +156,7 @@
 			<?php foreach ($lastEditions as $lE): ?>
 				<div class="large-4 small-4 columns edition">
 					<?php echo $this->Html->image(
-			    		'/files/'.$lE['Image']['seccion'].'/'.$lE['Image']['id'].'.'.$lE['Image']['extension'],
+			    		'/files/'.$lE['Image']['seccion'].'/thumbs/'.$lE['Image']['id'].'.'.$lE['Image']['extension'],
 			    		array(
 			    			'alt' => $lE['Edition']['nombre'],
 			    			'url' => array(

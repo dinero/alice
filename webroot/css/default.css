@@ -624,6 +624,14 @@ ul {
 			font-size: 2.8em;
 		}
 
+	.galeryBottom .pub {
+		margin-top: 1.5em;
+	}
+
+		.galeryBottom .pub img {
+			width: 100%;
+		}
+
 .galImg {
 	border-bottom: 2px solid #fff;
 	padding: 0.75em 0;
@@ -1238,6 +1246,15 @@ li.otherB:last-child {}
 
 	.galeryBottom .image, .galBottom .image {
 		height: 128px;
+	}
+
+	.galeryBottom .pub {
+		margin-top: 1.5em;
+		text-align: center;
+	}
+
+	.galeryBottom .pub img {
+		width: auto;
 	}
 
 	.intro {

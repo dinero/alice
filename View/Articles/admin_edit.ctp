@@ -108,7 +108,7 @@
 <script type="text/javascript">
 	<?php 
 	$timestamp = time();
-	$seccion = base64_encode('Articles');
+	$seccion = base64_encode('articles');
 	$url = $this->Html->url('/upload/Upload_File/?seccion='.$seccion);
 	$check = $this->Html->url('/upload/check_exists/?seccion='.$seccion);
 	$img = @$this->request->data['Article']['id'];

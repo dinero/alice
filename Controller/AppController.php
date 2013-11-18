@@ -46,7 +46,7 @@ class AppController extends Controller {
 				'controller' => 'users',
 				'action' => 'home'
 			),
-			'authError' => 'Usted no tiene permiso para accesar a este sección',
+			'authError' => 'Usted no tiene permiso para accesar a ésta sección',
 			'logoutRedirect' => array(
 				'controller' => 'users',
 				'action' => 'login'
