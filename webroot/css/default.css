@@ -558,6 +558,14 @@ ul {
 			background-color: rgba(0, 0, 0, 0.6);
 		}
 
+	.galeryCont .textG {
+		float: left;
+		font-size: 1.25em;
+		padding: 1em 0;
+		text-align: justify;
+		width: 100%;
+	}
+
 .galeryBottom, .galeryBottom .otherB, .galBottom .otherB {
 	margin-top: 1.5em;
 }
