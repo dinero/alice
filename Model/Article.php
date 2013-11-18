@@ -176,6 +176,13 @@ class Article extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
+		),
+		'Albume' => array(
+			'className' => 'Albume',
+			'foreignKey' => 'albume_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 	);
 

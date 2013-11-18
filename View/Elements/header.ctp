@@ -125,7 +125,7 @@
 			array(
 				'alt' => 'Logo Alice Revista',
 				'url' => array(
-					'controller' => 'home'
+					'controller' => 'Home'
 				)	
 			)
 		); ?>

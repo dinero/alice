@@ -9,10 +9,20 @@
 		echo $this->Form->input('editor_id',array('class'=>'form-control'));
 		echo $this->Form->input('edition_id',array('class'=>'form-control'));
 		echo $this->Form->input('categoria_id',array('class'=>'form-control'));
+		echo $this->Form->input('albume_id',array('class'=>'form-control','div'=>array('style'=>'display:none')));
 		echo $this->Form->input('relevancia_id',array('class'=>'form-control'));
 	?>
 	
 	<script>	
+		$(function() {
+			$("#ArticleCategoriaId").change(function(){
+				if($("#ArticleCategoriaId").val() != 5)
+					$("#ArticleAlbumeId").parent().hide("slow");
+				else 
+					$("#ArticleAlbumeId").parent().show("slow");
+			});
+		});
+
 		$(function(){
 			tinymce.init({
 		      relative_urls: false,

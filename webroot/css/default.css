@@ -78,6 +78,7 @@ ul {
 	}
 
 #logo {
+	padding: 0 1em;
 	text-align: center;
 }
 
@@ -621,6 +622,14 @@ ul {
 			color: #fff;
 			font-family: 'PlayfairDisplayRegular';
 			font-size: 2.8em;
+		}
+
+	.galeryBottom .pub {
+		margin-top: 1.5em;
+	}
+
+		.galeryBottom .pub img {
+			width: 100%;
 		}
 
 .galImg {
@@ -1237,6 +1246,15 @@ li.otherB:last-child {}
 
 	.galeryBottom .image, .galBottom .image {
 		height: 128px;
+	}
+
+	.galeryBottom .pub {
+		margin-top: 1.5em;
+		text-align: center;
+	}
+
+	.galeryBottom .pub img {
+		width: auto;
 	}
 
 	.intro {

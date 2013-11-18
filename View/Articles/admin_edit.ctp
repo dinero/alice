@@ -59,9 +59,18 @@
 		echo $this->Form->input('editor_id',array('class'=>'form-control'));
 		echo $this->Form->input('edition_id',array('class'=>'form-control'));
 		echo $this->Form->input('categoria_id',array('class'=>'form-control'));
+		echo $this->Form->input('albume_id',array('class'=>'form-control','div'=>array('style'=>@$this->request->data['Article']['categoria_id']!=5?'display:none':'')));
 		echo $this->Form->input('relevancia_id',array('class'=>'form-control'));
 	?>
 	<script>	
+		$(function() {
+			$("#ArticleCategoriaId").change(function(){
+				if($("#ArticleCategoriaId").val() != 5)
+					$("#ArticleAlbumeId").parent().hide("slow");
+				else 
+					$("#ArticleAlbumeId").parent().show("slow");
+			});
+		});
 		$(function(){
 			tinymce.init({
 		      relative_urls: false,
@@ -108,7 +117,7 @@
 <script type="text/javascript">
 	<?php 
 	$timestamp = time();
-	$seccion = base64_encode('Articles');
+	$seccion = base64_encode('articles');
 	$url = $this->Html->url('/upload/Upload_File/?seccion='.$seccion);
 	$check = $this->Html->url('/upload/check_exists/?seccion='.$seccion);
 	$img = @$this->request->data['Article']['id'];
