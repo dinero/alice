@@ -4,7 +4,7 @@
 			
 			<?php foreach ($lastArticles as $lA): ?>
 			  	<li>		
-			    	<a href="<?php echo $this->Html->url(array('controller'=>'Articles','action'=>'view','title'=>$lA['Article']['id'].'-'.$lA['Article']['permalink'])); ?>">
+			    	<a href="<?php echo ($lA['Article']['albume_id']==0)?$this->Html->url(array('controller'=>'Articles','action'=>'view','title'=>$lA['Article']['id'].'-'.$lA['Article']['permalink'])):$this->Html->url(array('controller'=>'Galery','action'=>'view','title'=>$lA['Albume']['id'].'-'.$lA['Albume']['permalink'])); ?>">
 			    		<div class="image">
 			    			<?php
 			    			if (!empty($lA['Image'])) {
@@ -74,7 +74,7 @@
 					
 					<?php foreach ($lastArticles as $lA): ?>
 						<div class="art">
-							<a href="<?php echo $this->Html->url(array('controller'=>'Articles','action'=>'view','title'=>$lA['Article']['id'].'-'.$lA['Article']['permalink'])); ?>">
+							<a href="<?php echo ($lA['Article']['albume_id']==0)?$this->Html->url(array('controller'=>'Articles','action'=>'view','title'=>$lA['Article']['id'].'-'.$lA['Article']['permalink'])):$this->Html->url(array('controller'=>'Galery','action'=>'view','title'=>$lA['Albume']['id'].'-'.$lA['Albume']['permalink'])); ?>">
 								<div class="image">
 									<?php
 									if (!empty($lA['Image'])) {
@@ -264,3 +264,9 @@
 	</div>
 
 </div>
+<?php 
+
+var_dump($lastArticles);
+
+/*
+$lA['Article']['id']==0:url normal?url de la galeria*/
