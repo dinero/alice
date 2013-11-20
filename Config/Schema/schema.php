@@ -39,6 +39,7 @@ class AliceSchema extends CakeSchema {
 		'permalink' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 100, 'collate' => 'latin1_swedish_ci', 'charset' => 'latin1'),
 		'fecha_publicacion' => array('type' => 'timestamp', 'null' => false, 'default' => 'CURRENT_TIMESTAMP'),
 		'fotografo_id' => array('type' => 'integer', 'null' => false, 'default' => null),
+		'photographer_id' => array('type' => 'integer', 'null' => false, 'default' => null),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
@@ -59,6 +60,7 @@ class AliceSchema extends CakeSchema {
 		'created' => array('type' => 'timestamp', 'null' => false, 'default' => 'CURRENT_TIMESTAMP'),
 		'albume_id' => array('type' => 'integer', 'null' => false, 'default' => null),
 		'user_id' => array('type' => 'integer', 'null' => false, 'default' => null),
+		'photographer_id' => array('type' => 'integer', 'null' => false, 'default' => null),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1),
 			'titulo' => array('column' => array('titulo', 'intro'), 'type' => 'fulltext')
@@ -100,25 +102,33 @@ class AliceSchema extends CakeSchema {
 	);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	public $photographers = array(
+=======
+	public $images = array(
+>>>>>>> 8d7a2ab01fed7864de85d68c7e1d9cb1089d31d0
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'key' => 'primary'),
-		'nombre' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 150, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
-		'permalink' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 150, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
-		'created' => array('type' => 'timestamp', 'null' => false, 'default' => 'CURRENT_TIMESTAMP'),
-		'user_id' => array('type' => 'integer', 'null' => false, 'default' => null),
+		'seccion' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50, 'collate' => 'latin1_swedish_ci', 'charset' => 'latin1'),
+		'seccion_id' => array('type' => 'integer', 'null' => false, 'default' => null),
+		'extension' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 5, 'collate' => 'latin1_swedish_ci', 'charset' => 'latin1'),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
 		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'MyISAM')
 	);
 
+<<<<<<< HEAD
 >>>>>>> 7787c89e2e13300225a70207cb0cf616107c7f80
 	public $images = array(
+=======
+	public $photographers = array(
+>>>>>>> 8d7a2ab01fed7864de85d68c7e1d9cb1089d31d0
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'key' => 'primary'),
-		'seccion' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50, 'collate' => 'latin1_swedish_ci', 'charset' => 'latin1'),
-		'seccion_id' => array('type' => 'integer', 'null' => false, 'default' => null),
-		'extension' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 5, 'collate' => 'latin1_swedish_ci', 'charset' => 'latin1'),
+		'nombre' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 150, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'permalink' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 150, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'created' => array('type' => 'timestamp', 'null' => false, 'default' => 'CURRENT_TIMESTAMP'),
+		'user_id' => array('type' => 'integer', 'null' => false, 'default' => null),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),

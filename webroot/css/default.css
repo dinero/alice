@@ -151,7 +151,7 @@ ul {
 
 	.art .content {
 		float: right;
-		height: 115px;
+		/*height: 115px;*/
 		width: 77%;
 	}
 
@@ -168,13 +168,25 @@ ul {
 			background: url('../img/editor.png') no-repeat center left;
 			color: #f47321;
 			display: block;
+			float: left;
 			margin-bottom: 0.5em;
 			padding-left: 1.5em;
 		}
 
+		.art .content .photo {
+			background: url('../img/camera.png') no-repeat center left;
+			color: #f47321;
+			display: block;
+			float: left;
+			margin-bottom: 0.5em;
+			margin-left: 1.5em;
+			padding-left: 1.5em;	
+		}
+
 		.art .content .text {
-			font-size: 0.875em;
+			clear: both;
 			color: #fff;
+			font-size: 0.875em;
 			line-height: 1.4;
 		}
 
@@ -828,6 +840,10 @@ li.otherB:last-child {}
 	color: #fff;
 }
 
+.photo {
+	font-size: 1.125em;
+}
+
 .ps-container .ps-scrollbar-x-rail {
 	display: none;
 }
@@ -1172,6 +1188,10 @@ li.otherB:last-child {}
 			.art .content h2 {
 				margin-top: 0; 	
 			}
+
+		.art .content .photo {
+			margin-left: 0;
+		}
 
 	.articleInto {
 		padding-right: 0;

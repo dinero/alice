@@ -140,7 +140,7 @@ class GaleryController extends AppController {
 		$this->set(
 			array(
 				'title_for_section' => 'Galerías',
-				'title_for_layout' => 'Galerías',
+				'title_for_layout' => $galery['Albume']['nombre'],
 				'galery' => @$galery,
 				'otherG' => @$otherG,
 				'pubAlbH' => @$pubAlbH

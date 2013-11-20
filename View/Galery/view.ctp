@@ -14,6 +14,9 @@
 						<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
 					</div>
 				</div>
+				<div class="artAuthor">
+					<span>Por: <?php echo $galery['Photographer']['nombre']; ?></span>
+				</div>
 				<?php foreach ($galery['Image'] as $Img) {
 
 					if (file_exists(Configure::read('absolute_root').$Img['seccion'].'/'.$Img['id'].'.'.$Img['extension'])) {

@@ -1,5 +1,5 @@
 <div id="slide">
-	<ul data-orbit data-options="variable_height:true;bullets:false;timer_speed:4000;resume_on_mouseout: true;slide_number: false;">
+	<ul data-orbit data-options="variable_height:true;bullets:false;timer_speed:6000;resume_on_mouseout: true;slide_number: false;">
 		<?php if (is_array($lastArticles)): ?>
 			
 			<?php foreach ($lastArticles as $lA): ?>
@@ -103,6 +103,7 @@
 								<div class="content">
 									<h2><?php echo $lA['Article']['titulo']; ?></h2>
 									<span class="editor"><?php echo $lA['Editor']['nombre']; ?></span>
+									<span class="photo"><?php echo $lA['Photographer']['nombre']; ?></span>
 									<div class="text">
 										<?php echo $this->Text->truncate($lA['Article']['intro'], 200); ?>
 									</div>

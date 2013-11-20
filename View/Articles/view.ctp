@@ -34,6 +34,9 @@
 					?>
 					<img src="<?php echo $this->Html->url('/files/'.$srcLarge); ?>" data-interchange="[<?php echo $this->Html->url('/files/'.$srcSmall); ?>, (only screen and (min-width: 1px))], [<?php echo $this->Html->url('/files/'.$srcLarge); ?>, (only screen and (min-width: 769px))]">
 				</div>
+				<?php if (!empty($article['Photographer']['nombre'])): ?>
+					<span class="photo">Fotografo: <?php echo $article['Photographer']['nombre']; ?></span>
+				<?php endif ?>
 			<?php endif ?>
 			<div class="intro">
 				<?php echo $article['Article']['intro']; ?>
