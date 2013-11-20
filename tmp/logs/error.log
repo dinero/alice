@@ -229,3 +229,25 @@ Request URL: /alice/images/uploadifive-cancel.png
 Stack Trace:
 #0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-11-20 16:27:01 Error: Fatal Error (1): Call to a member function generatePermalink() on a non-object in [C:\wamp\www\alice\Controller\PhotographersController.php, line 43]
+2013-11-20 16:27:01 Error: [FatalErrorException] Call to a member function generatePermalink() on a non-object
+Request URL: /alice/admin/photographers/add
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\ali...', 43)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\ali...', 43, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\ali...', 43, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-20 16:27:27 Error: [MissingViewException] View file "C:\wamp\www\alice\View\Photographers\admin_edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\alice\\View\\Photographers\\admin_edit.ctp',
+)
+Request URL: /alice/admin/photographers/edit/1
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PhotographersController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
