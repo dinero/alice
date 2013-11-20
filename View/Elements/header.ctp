@@ -23,6 +23,17 @@
 	      		<li>
 	      			<?php
 	      			echo $this->Html->link(
+	      				'Editorial', 
+	      				array(
+	      					'controller' => 'Articles',
+	      					'action' => 'viewAll?categoria=editorial'
+	      				)
+	      			);
+	      			?>
+	      		</li>
+	      		<li>
+	      			<?php
+	      			echo $this->Html->link(
 	      				'Mujeres Destacadas', 
 	      				array(
 	      					'controller' => 'Articles',

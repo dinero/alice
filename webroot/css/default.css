@@ -677,6 +677,7 @@ ul {
 
 .orbit-container h2 {
 	color: #000;
+	min-height: 112px;
 }
 
 .orbit-container .orbit-prev, .orbit-container .orbit-next {
@@ -934,8 +935,22 @@ li.otherB:last-child {}
 	text-align: right;
 }
 
-	.social img {
-		margin-right: 0.5em;
+	.social img, .socialF img {
+		margin-left: 1em;
+		-webkit-transition: all .25s ease;
+		-moz-transition: all .25s ease;
+		-ms-transition: all .25s ease;
+		transition: all .25s ease;
+	}
+
+	.socialF a {
+		margin-right: 0 !important;
+	}
+
+	.social img:hover, .socialF img:hover {
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
 	}
 
 .titleTop {
@@ -966,7 +981,7 @@ li.otherB:last-child {}
 .top-bar {
 	background: transparent;
 	margin: 0 auto;
-	max-width: 1120px;
+	max-width: 1220px;
 }
 
 .top-bar-section ul {

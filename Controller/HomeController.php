@@ -29,7 +29,8 @@ class HomeController extends AppController {
 				array(
 					'conditions' => array(
 						'Article.edition_id' => @$lastEdition['Edition']['id'],
-						'Article.estado' => 1
+						'Article.estado' => 1,
+						'Article.categoria_id !=' => 6 
 					),
 					'order' => array(
 						'Article.relevancia_id' => 'ASC',

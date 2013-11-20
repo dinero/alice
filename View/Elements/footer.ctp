@@ -1,20 +1,20 @@
 <div class="large-3 columns">
 	<span class="title-footer">S&iacute;guenos</span>
 	<ul class="">
-  		<li>
+  		<li class="socialF">
   			<?php echo $this->Html->image(
   				'facebook.png',
   				array(
   					'alt' => 'Facebook',
-            'width' => '30px',
-  					'url' => 'http://facebook.com'
+            		'style' => 'width:30px;',
+  					'url' => 'https://www.facebook.com/pages/Revista-Alice/170806799626737'
   				)
       		); ?>
   			<?php echo $this->Html->image(
   				'twitter.png',
   				array(
   					'alt' => 'Twitter',
-            'width' => '30px',
+            		'style' => 'width:30px;',
   					'url' => 'http://twitter.com'
   				)
   			); ?>
@@ -53,6 +53,17 @@
 				array(
 					'controller' => 'Videos',
 					'action' => 'viewAll'
+				)
+			);
+			?>
+		</li>
+		<li>
+			<?php
+			echo $this->Html->link(
+				'Editorial',
+				array(
+					'controller' => 'Articles',
+					'action' => 'viewAll?categoria=editorial'
 				)
 			);
 			?>
