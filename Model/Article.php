@@ -149,6 +149,13 @@ class Article extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
+		'Photographer' => array(
+			'className' => 'Photographer',
+			'foreignKey' => 'photographer_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
 		'Edition' => array(
 			'className' => 'Edition',
 			'foreignKey' => 'edition_id',

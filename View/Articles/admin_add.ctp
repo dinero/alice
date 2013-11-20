@@ -7,6 +7,7 @@
 		echo $this->Form->input('intro',array('class'=>'form-control'));
 		echo $this->Form->input('contenido',array('class'=>'form-control wysiwyg'));
 		echo $this->Form->input('editor_id',array('class'=>'form-control'));
+		echo $this->Form->input('photographer_id',array('class'=>'form-control'));
 		echo $this->Form->input('edition_id',array('class'=>'form-control'));
 		echo $this->Form->input('categoria_id',array('class'=>'form-control'));
 		echo $this->Form->input('albume_id',array('class'=>'form-control','div'=>array('style'=>'display:none')));
