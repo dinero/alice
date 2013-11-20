@@ -264,9 +264,3 @@
 	</div>
 
 </div>
-<?php 
-
-var_dump($lastArticles);
-
-/*
-$lA['Article']['id']==0:url normal?url de la galeria*/

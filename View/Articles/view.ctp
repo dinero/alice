@@ -3,6 +3,7 @@
 	<?php if (isset($article) and !empty($article) and $article != ''): ?>
 		
 		<section class="articleInto large-9 columns">
+			<h1><?php echo $article['Article']['titulo']; ?></h1>
 			<div class="share">
 				<div class="fb-like" data-href="<?php echo $this->Html->url(array('controller'=>'Articles','action'=>'view','title'=>$article['Article']['id'].'-'.$article['Article']['permalink']),true); ?>" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="false"></div>
 				<div class="twitter">

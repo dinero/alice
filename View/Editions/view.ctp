@@ -27,7 +27,7 @@
 							<h1><?php echo $edition['Edition']['nombre']; ?></h1>
 							<div class="clear"></div>
 						</div>
-						<a href="<?php echo $this->Html->url(array('controller'=>'Articles','action'=>'view','title'=>$articlePrinc['Article']['id'].'-'.$articlePrinc['Article']['permalink'])); ?>">
+						<a href="<?php echo ($articlePrinc['Article']['albume_id']==0)?$this->Html->url(array('controller'=>'Articles','action'=>'view','title'=>$articlePrinc['Article']['id'].'-'.$articlePrinc['Article']['permalink'])):$this->Html->url(array('controller'=>'Galery','action'=>'view','title'=>$articlePrinc['Albume']['id'].'-'.$articlePrinc['Albume']['permalink'])); ?>">
 							<div class="image">
 								<?php
 								$widthLarge = 0;
@@ -56,7 +56,7 @@
 					<div class="artsInto columns">
 						<?php foreach ($articlesSec as $aS): ?>
 							<div class="art">
-								<a href="<?php echo $this->Html->url(array('controller'=>'Articles','action'=>'view','title'=>$aS['Article']['id'].'-'.$aS['Article']['permalink'])); ?>">
+								<a href="<?php echo ($aS['Article']['albume_id']==0)?$this->Html->url(array('controller'=>'Articles','action'=>'view','title'=>$aS['Article']['id'].'-'.$aS['Article']['permalink'])):$this->Html->url(array('controller'=>'Galery','action'=>'view','title'=>$aS['Albume']['id'].'-'.$aS['Albume']['permalink'])); ?>">
 									<div class="image">
 										<?php
 										$widthSmall = 1280;

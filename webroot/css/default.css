@@ -518,12 +518,16 @@ ul {
 			width: 100%;
 		}
 
-.galeryCont h1, .videoCont h1 {
+.galeryCont h1, .videoCont h1, .articleInto h1 {
 	color: #f47321;
 	font-family: 'PlayfairDisplayRegular';
 	font-size: 3em;
 	line-height: 1;
 	margin: 0;
+}
+
+.articleInto h1 {
+	margin-bottom: 0.5em;
 }
 
 .galeryCont #slide .image {
@@ -669,6 +673,10 @@ ul {
 	max-width: 960px;
 	padding: 1em 0;
 	text-align: right;
+}
+
+.orbit-container h2 {
+	color: #000;
 }
 
 .orbit-container .orbit-prev, .orbit-container .orbit-next {
@@ -958,7 +966,7 @@ li.otherB:last-child {}
 .top-bar {
 	background: transparent;
 	margin: 0 auto;
-	max-width: 960px;
+	max-width: 1120px;
 }
 
 .top-bar-section ul {

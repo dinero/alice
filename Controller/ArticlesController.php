@@ -367,7 +367,7 @@ class ArticlesController extends AppController {
 				$this->set(
 					array(
 						'title_for_layout' => $article['Article']['titulo'],
-						'title_for_section' => $article['Article']['titulo'],
+						'title_for_section' => $article['Categoria']['nombre'],
 						'article' => @$article,
 						'moreOfEdition' => @$moreOfEdition,
 						'moreOfEditor' => @$moreOfEditor,

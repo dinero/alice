@@ -101,6 +101,17 @@
 			);
 			?>
 		</li>
+		<li>
+			<?php
+			echo $this->Html->link(
+				'Fotorreportajes',
+				array(
+					'controller' => 'Articles',
+					'action' => 'viewAll?categoria=fotorreportajes'
+				)
+			);
+			?>
+		</li>
 	</ul>
 </div>
 <div class="large-3 columns">
