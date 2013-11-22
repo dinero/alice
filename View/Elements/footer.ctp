@@ -27,6 +27,16 @@
 		<li>
 			<?php
 			echo $this->Html->link(
+				'Inicio',
+				array(
+					'controller' => 'Home'
+				)
+			);
+			?>
+		</li>
+		<li>
+			<?php
+			echo $this->Html->link(
 				'Ediciones Anteriores',
 				array(
 					'controller' => 'Editions',
@@ -115,10 +125,10 @@
 		<li>
 			<?php
 			echo $this->Html->link(
-				'Fotorreportajes',
+				'Foto Reportajes',
 				array(
 					'controller' => 'Articles',
-					'action' => 'viewAll?categoria=fotorreportajes'
+					'action' => 'viewAll?categoria=foto-reportajes'
 				)
 			);
 			?>
@@ -155,7 +165,7 @@
 		<li>
 			<?php
 			echo $this->Html->link(
-				'Terminos de Uso',
+				'Términos de Uso',
 				array(
 					'controller' => 'Abouts',
 					'action' => 'view',
@@ -170,13 +180,16 @@
 	<span class="title-footer">Cont&aacute;ctenos</span>
 	<ul>
 		<li>
-			<span>Bolonia, Managua, Nicaragua</span>
+			<span>Bolonia, Hospital SUMEDICO 3 c. al oeste, Managua</span>
+		</li>
+		<li>
+			<span>C&oacute;digo Postal: LV04</span>
 		</li>
 		<li>
 			<span>+(505) 2266 3722</span></br><span>+(505) 2268 3916</span>
 		</li>
 		<li>
-			<span>alicerevista@gmail.com</span>
+			<span>revista@alice.com.ni</span>
 		</li>
 	</ul>
 </div>

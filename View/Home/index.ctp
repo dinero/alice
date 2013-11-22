@@ -103,9 +103,8 @@
 								<div class="content">
 									<h2><?php echo $lA['Article']['titulo']; ?></h2>
 									<span class="editor"><?php echo $lA['Editor']['nombre']; ?></span>
-									<span class="photo"><?php echo $lA['Photographer']['nombre']; ?></span>
 									<div class="text">
-										<?php echo $this->Text->truncate($lA['Article']['intro'], 200); ?>
+										<?php echo $lA['Article']['intro']; ?>
 									</div>
 								</div>
 							</a>

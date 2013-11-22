@@ -34,9 +34,8 @@
 									<div class="content">
 										<h2><?php echo $aS['Article']['titulo']; ?></h2>
 										<span class="editor"><?php echo $aS['Editor']['nombre']; ?></span>
-										<span class="photo"><?php echo $aS['Photographer']['nombre']; ?></span>
 										<div class="text">
-											<?php echo $this->Text->truncate($aS['Article']['intro'], 200); ?>
+											<?php echo $aS['Article']['intro']; ?>
 										</div>
 									</div>
 								</a>

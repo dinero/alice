@@ -54,7 +54,7 @@
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('titulo',array('class'=>'form-control'));
-		echo $this->Form->input('intro',array('class'=>'form-control'));
+		echo $this->Form->input('intro',array('class'=>'form-control','required'=>false));
 		echo $this->Form->input('contenido',array('class'=>'form-control wysiwyg'));
 		echo $this->Form->input('editor_id',array('class'=>'form-control'));
 		echo $this->Form->input('photographer_id',array('class'=>'form-control'));

@@ -34,7 +34,7 @@ class Article extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'intro' => array(
+		/*'intro' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
 				'message' => 'Este campo es requerido',
@@ -43,7 +43,7 @@ class Article extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-		),
+		),*/
 		'contenido' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
