@@ -229,7 +229,7 @@ class ArticlesController extends AppController {
             $articles = $this->paginate(
                 'Article',
                 array(
-                    'CONCAT(titulo, intro) LIKE "%'.$pclave.'%"'
+                    'CONCAT(Article.titulo, Article.intro, Editor.nombre) LIKE "%'.$pclave.'%"'
                 )
             );
 
@@ -312,6 +312,7 @@ class ArticlesController extends AppController {
 							'Article.estado' => 1,
 							'Article.edition_id' => $article['Article']['edition_id'],
 							'Article.id !=' => $article['Article']['id'],
+							'Article.categoria_id !=' => 6 
 						),
 						'order' => array(
 							'Article.relevancia_id' => 'ASC',
@@ -328,7 +329,8 @@ class ArticlesController extends AppController {
 							'Article.estado' => 1,
 							'Article.editor_id' => $article['Article']['editor_id'],
 							'Article.edition_id !=' => $article['Article']['edition_id'],
-							'Article.id !=' => $article['Article']['id']
+							'Article.id !=' => $article['Article']['id'],
+							'Article.categoria_id !=' => 6
 						),
 						'order' => array(
 							'Article.relevancia_id' => 'ASC',
@@ -369,7 +371,7 @@ class ArticlesController extends AppController {
 				$this->set(
 					array(
 						'title_for_layout' => $article['Article']['titulo'],
-						'title_for_section' => $article['Article']['titulo'],
+						'title_for_section' => $article['Categoria']['nombre'],
 						'article' => @$article,
 						'moreOfEdition' => @$moreOfEdition,
 						'moreOfEditor' => @$moreOfEditor,
