@@ -131,7 +131,7 @@ class Article extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-		),
+		)
 	);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -145,13 +145,6 @@ class Article extends AppModel {
 		'Editor' => array(
 			'className' => 'Editor',
 			'foreignKey' => 'editor_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'Photographer' => array(
-			'className' => 'Photographer',
-			'foreignKey' => 'photographer_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

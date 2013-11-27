@@ -559,6 +559,14 @@ Stack Trace:
 #3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+<<<<<<< HEAD
+2013-11-22 20:28:12 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+=======
 >>>>>>> 8d7a2ab01fed7864de85d68c7e1d9cb1089d31d0
 2013-11-20 18:10:21 Error: Fatal Error (4): syntax error, unexpected ':' in [C:\wamp\www\alice\View\Articles\view.ctp, line 37]
 2013-11-20 18:10:21 Error: [FatalErrorException] syntax error, unexpected ':'
@@ -595,6 +603,143 @@ Exception Attributes: array (
   'plugin' => NULL,
 )
 Request URL: /alice/config.xml
+>>>>>>> 7d62c4da32267bb0daa5bc6f4e1e149748dc788a
 Stack Trace:
 #0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-11-26 22:13:16 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/files/thumbs/
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-27 20:20:18 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Article.photographer_id' in 'on clause'
+Request URL: /alice/admin/articles/add
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Article...', Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Article...', Array, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Article...', false)
+#4 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Article), Array)
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2537): Model->find('all', Array)
+#6 C:\wamp\www\alice\Controller\ArticlesController.php(74): Model->deleteAll(Array)
+#7 [internal function]: ArticlesController->admin_add()
+#8 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ArticlesController), Array)
+#9 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-11-27 20:20:39 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Article.photographer_id' in 'on clause'
+Request URL: /alice/admin/articles/add
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Article...', Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Article...', Array, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Article...', false)
+#4 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Article), Array)
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2537): Model->find('all', Array)
+#6 C:\wamp\www\alice\Controller\ArticlesController.php(74): Model->deleteAll(Array)
+#7 [internal function]: ArticlesController->admin_add()
+#8 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ArticlesController), Array)
+#9 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-11-27 20:21:16 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Article.photographer_id' in 'on clause'
+Request URL: /alice/admin/articles/add
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Article...', Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Article...', Array, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Article...', false)
+#4 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Article), Array)
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2537): Model->find('all', Array)
+#6 C:\wamp\www\alice\Controller\ArticlesController.php(74): Model->deleteAll(Array)
+#7 [internal function]: ArticlesController->admin_add()
+#8 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ArticlesController), Array)
+#9 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-11-27 20:21:28 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Article.photographer_id' in 'on clause'
+Request URL: /alice/admin/articles/add
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Article...', Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Article...', Array, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Article...', false)
+#4 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Article), Array)
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2537): Model->find('all', Array)
+#6 C:\wamp\www\alice\Controller\ArticlesController.php(74): Model->deleteAll(Array)
+#7 [internal function]: ArticlesController->admin_add()
+#8 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ArticlesController), Array)
+#9 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-11-27 20:41:22 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-27 20:43:05 Error: [MissingTableException] Table news for model News was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'news',
+  'class' => 'News',
+  'ds' => 'default',
+)
+Request URL: /alice/admin/editors/add
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(3243): Model->setSource('news')
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(1066): Model->getDataSource()
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Editor), Array)
+#3 C:\wamp\www\alice\Controller\EditorsController.php(54): Model->find('first', Array)
+#4 [internal function]: EditorsController->admin_add()
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(EditorsController), Array)
+#6 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(EditorsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-11-27 20:43:18 Error: [MissingTableException] Table news for model News was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'news',
+  'class' => 'News',
+  'ds' => 'default',
+)
+Request URL: /alice/admin/editors/add
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(3243): Model->setSource('news')
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(1066): Model->getDataSource()
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Editor), Array)
+#3 C:\wamp\www\alice\Controller\EditorsController.php(54): Model->find('first', Array)
+#4 [internal function]: EditorsController->admin_add()
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(EditorsController), Array)
+#6 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(EditorsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-11-27 20:46:27 Error: [MissingTableException] Table news for model News was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'news',
+  'class' => 'News',
+  'ds' => 'default',
+)
+Request URL: /alice/admin/editors/add
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(3243): Model->setSource('news')
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(1066): Model->getDataSource()
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Editor), Array)
+#3 C:\wamp\www\alice\Controller\EditorsController.php(54): Model->find('first', Array)
+#4 [internal function]: EditorsController->admin_add()
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(EditorsController), Array)
+#6 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(EditorsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
