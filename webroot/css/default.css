@@ -898,6 +898,7 @@ li.otherB:last-child {}
 
 .pub-horizontal {
 	max-width: 960px;
+	min-height: 180px;
 	width: 100%;
 }
 
@@ -1228,6 +1229,10 @@ li.otherB:last-child {}
 	.paddingV {
 		padding: 1em 0;
 	}
+
+	.pub-horizontal {
+		min-height: 144px;
+	}
 }
 
 @media only screen and (max-width: 480px) {
@@ -1413,6 +1418,10 @@ li.otherB:last-child {}
 		width: 50%;
 	}
 
+	.pub-horizontal {
+		min-height: 90px;
+	}
+
 	.video:nth-child(2n+1) {
 		clear: both;
 	}
@@ -1512,6 +1521,10 @@ li.otherB:last-child {}
 
 	.searchForm .inputSearch {
 		width: 270px;
+	}
+
+	.pub-horizontal {
+		min-height: 60px;
 	}
 
 	.video {

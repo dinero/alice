@@ -598,3 +598,49 @@ Request URL: /alice/config.xml
 Stack Trace:
 #0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-11-23 14:32:29 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2013-11-23 14:32:34 Error: [InternalErrorException] Internal Server Error
+Request URL: /alice/Articles/viewAll?x=-1541&y=-275&keyword=ulises
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\cak...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\cak...', 460, Array)
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(927): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\cak...', 460, Array)
+#3 C:\wamp\www\cakephp2.3.6\lib\Cake\Core\App.php(900): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-11-27 19:48:00 Error: [MissingControllerException] Controller class Config.xmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Config.xmlController',
+  'plugin' => NULL,
+)
+Request URL: /alice/config.xml
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-27 19:49:31 Error: [MissingControllerException] Controller class Config.xmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Config.xmlController',
+  'plugin' => NULL,
+)
+Request URL: /alice/config.xml
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-27 19:50:59 Error: [MissingControllerException] Controller class Config.xmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Config.xmlController',
+  'plugin' => NULL,
+)
+Request URL: /alice/config.xml
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-27 19:53:25 Error: [MissingControllerException] Controller class Config.xmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Config.xmlController',
+  'plugin' => NULL,
+)
+Request URL: /alice/admin/config.xml
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
