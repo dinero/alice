@@ -680,3 +680,66 @@ Stack Trace:
 #10 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
 #11 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #12 {main}
+2013-11-27 20:41:22 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /alice/images/uploadifive-cancel.png
+Stack Trace:
+#0 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-27 20:43:05 Error: [MissingTableException] Table news for model News was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'news',
+  'class' => 'News',
+  'ds' => 'default',
+)
+Request URL: /alice/admin/editors/add
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(3243): Model->setSource('news')
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(1066): Model->getDataSource()
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Editor), Array)
+#3 C:\wamp\www\alice\Controller\EditorsController.php(54): Model->find('first', Array)
+#4 [internal function]: EditorsController->admin_add()
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(EditorsController), Array)
+#6 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(EditorsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-11-27 20:43:18 Error: [MissingTableException] Table news for model News was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'news',
+  'class' => 'News',
+  'ds' => 'default',
+)
+Request URL: /alice/admin/editors/add
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(3243): Model->setSource('news')
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(1066): Model->getDataSource()
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Editor), Array)
+#3 C:\wamp\www\alice\Controller\EditorsController.php(54): Model->find('first', Array)
+#4 [internal function]: EditorsController->admin_add()
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(EditorsController), Array)
+#6 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(EditorsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-11-27 20:46:27 Error: [MissingTableException] Table news for model News was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'news',
+  'class' => 'News',
+  'ds' => 'default',
+)
+Request URL: /alice/admin/editors/add
+Stack Trace:
+#0 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(3243): Model->setSource('news')
+#1 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Datasource\DboSource.php(1066): Model->getDataSource()
+#2 C:\wamp\www\cakephp2.3.6\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Editor), Array)
+#3 C:\wamp\www\alice\Controller\EditorsController.php(54): Model->find('first', Array)
+#4 [internal function]: EditorsController->admin_add()
+#5 C:\wamp\www\cakephp2.3.6\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(EditorsController), Array)
+#6 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp\www\cakephp2.3.6\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(EditorsController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\wamp\www\alice\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
