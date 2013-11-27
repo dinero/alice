@@ -79,7 +79,7 @@ class ArticlesController extends AppController {
 		$relevancias = $this->Article->Relevancia->find('list');
 		$users = $this->Article->User->find('list');
 		//$this->loadModel('Albume');
-		$albumes = $this->Article->Albume->find('list');
+		//$albumes = $this->Article->Albume->find('list');
 		$this->set(compact('editors', 'editions', 'categorias', 'relevancias', 'users','albumes'));
 	}
 
