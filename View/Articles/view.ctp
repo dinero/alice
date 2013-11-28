@@ -11,7 +11,9 @@
 				</div>
 			</div>
 			<div class="artAuthor">
-				<span>Por: <?php echo $article['Editor']['nombre']; ?></span>
+				<a href="<?php echo $this->Html->url(array('controller'=>'Articles','action'=>'viewAll?author='.$article['Editor']['permalink'])); ?>">
+					<span>Por: <?php echo $article['Editor']['nombre']; ?></span>
+				</a>
 			</div>
 			<div class="clear"></div>
 			<?php if (!empty($article['Image'])): ?>
@@ -101,7 +103,9 @@
 			
 			<aside class="asideB">
 				<div class="title columns">
-					<span>Otros art&iacute;culos del autor</span>
+					<a href="<?php echo $this->Html->url(array('controller'=>'Articles','action'=>'viewAll?author='.$article['Editor']['permalink'])); ?>">
+						<span>Otros art&iacute;culos del autor</span>
+					</a>
 				</div>
 				<div class="content columns">
 					<ul>

@@ -74,14 +74,18 @@
 								    		'/files/'.$I['seccion'].'/'.'thumbs/'.$srcSmall
 								    	); ?>
 									</div>
-									<div class="content">
-										<h2><?php echo $aS['Article']['titulo']; ?></h2>
-										<span class="editor"><?php echo $aS['Editor']['nombre']; ?></span>
-										<div class="text">
-											<?php echo $aS['Article']['intro']; ?>
-										</div>
-									</div>
 								</a>
+								<div class="content">
+									<a href="<?php echo ($aS['Article']['albume_id']==0)?$this->Html->url(array('controller'=>'Articles','action'=>'view','title'=>$aS['Article']['id'].'-'.$aS['Article']['permalink'])):$this->Html->url(array('controller'=>'Galery','action'=>'view','title'=>$aS['Albume']['id'].'-'.$aS['Albume']['permalink'])); ?>">
+										<h2><?php echo $aS['Article']['titulo']; ?></h2>
+									</a>
+									<a href="<?php echo $this->Html->url(array('controller'=>'Articles','action'=>'viewAll?author='.$aS['Editor']['permalink'])); ?>">
+										<span class="editor"><?php echo $aS['Editor']['nombre']; ?></span>
+									</a>
+									<div class="text">
+										<?php echo $aS['Article']['intro']; ?>
+									</div>
+								</div>
 								<div class="clear"></div>
 							</div>
 						<?php endforeach ?>
